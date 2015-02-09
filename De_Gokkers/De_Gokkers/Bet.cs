@@ -14,12 +14,14 @@ namespace De_Gokkers
 
         public string GetDescription()
         { 
-        
+            string iets = "iets";
+            return iets;
         }
 
         public int PayOut(int Winner)
         { 
-        
+            int iets = 1;
+            return iets;
         }
     }
 }
