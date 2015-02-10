@@ -1,6 +1,6 @@
 ﻿namespace De_Gokkers
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Renbaan = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Race = new System.Windows.Forms.Button();
+            this.Bet = new System.Windows.Forms.Button();
+            this.ChooseDog = new System.Windows.Forms.ComboBox();
+            this.BetAmount = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Renbaan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Renbaan
             // 
-            this.Renbaan.Image = global::De_Gokkers.Properties.Resources.renbaan_new;
-            this.Renbaan.Location = new System.Drawing.Point(9, 8);
+            this.Renbaan.Location = new System.Drawing.Point(12, 12);
             this.Renbaan.Name = "Renbaan";
-            this.Renbaan.Size = new System.Drawing.Size(655, 450);
-            this.Renbaan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Renbaan.Size = new System.Drawing.Size(523, 332);
             this.Renbaan.TabIndex = 2;
             this.Renbaan.TabStop = false;
             // 
-            // pictureBox1
+            // Race
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(208, 367);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 22);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.Race.Location = new System.Drawing.Point(459, 387);
+            this.Race.Name = "Race";
+            this.Race.Size = new System.Drawing.Size(75, 23);
+            this.Race.TabIndex = 3;
+            this.Race.Text = "Race";
+            this.Race.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Bet
+            // 
+            this.Bet.Location = new System.Drawing.Point(459, 416);
+            this.Bet.Name = "Bet";
+            this.Bet.Size = new System.Drawing.Size(75, 23);
+            this.Bet.TabIndex = 4;
+            this.Bet.Text = "Place bet";
+            this.Bet.UseVisualStyleBackColor = true;
+            // 
+            // ChooseDog
+            // 
+            this.ChooseDog.FormattingEnabled = true;
+            this.ChooseDog.Location = new System.Drawing.Point(332, 418);
+            this.ChooseDog.Name = "ChooseDog";
+            this.ChooseDog.Size = new System.Drawing.Size(121, 21);
+            this.ChooseDog.TabIndex = 5;
+            // 
+            // BetAmount
+            // 
+            this.BetAmount.FormattingEnabled = true;
+            this.BetAmount.Location = new System.Drawing.Point(332, 388);
+            this.BetAmount.Name = "BetAmount";
+            this.BetAmount.Size = new System.Drawing.Size(121, 21);
+            this.BetAmount.TabIndex = 6;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(246, 373);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(246, 396);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.TabIndex = 7;
+            this.checkBox2.Text = "checkBox1";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(246, 419);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.TabIndex = 7;
+            this.checkBox3.Text = "checkBox1";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 373);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 391);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "label1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 407);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "label1";
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 581);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(546, 447);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.BetAmount);
+            this.Controls.Add(this.ChooseDog);
+            this.Controls.Add(this.Bet);
+            this.Controls.Add(this.Race);
             this.Controls.Add(this.Renbaan);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gevarlijke Hondenrace";
             ((System.ComponentModel.ISupportInitialize)(this.Renbaan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -74,8 +170,17 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox Renbaan;
+        private System.Windows.Forms.Button Race;
+        private System.Windows.Forms.Button Bet;
+        private System.Windows.Forms.ComboBox ChooseDog;
+        private System.Windows.Forms.ComboBox BetAmount;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -63,6 +63,16 @@ namespace De_Gokkers.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap renbaan {
+            get {
+                object obj = ResourceManager.GetObject("renbaan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap renbaan_new {
             get {
                 object obj = ResourceManager.GetObject("renbaan-new", resourceCulture);
