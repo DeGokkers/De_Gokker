@@ -37,17 +37,19 @@
             // 
             // Renbaan
             // 
-            this.Renbaan.Image = ((System.Drawing.Image)(resources.GetObject("Renbaan.Image")));
-            this.Renbaan.Location = new System.Drawing.Point(12, 12);
+            this.Renbaan.Image = global::De_Gokkers.Properties.Resources.renbaan_new;
+            this.Renbaan.Location = new System.Drawing.Point(9, 8);
             this.Renbaan.Name = "Renbaan";
-            this.Renbaan.Size = new System.Drawing.Size(594, 184);
-            this.Renbaan.TabIndex = 0;
+            this.Renbaan.Size = new System.Drawing.Size(655, 450);
+            this.Renbaan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Renbaan.TabIndex = 2;
             this.Renbaan.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 162);
+            this.pictureBox1.Location = new System.Drawing.Point(208, 367);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 22);
             this.pictureBox1.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 388);
+            this.ClientSize = new System.Drawing.Size(674, 581);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Renbaan);
             this.Name = "Form1";
@@ -66,13 +68,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Renbaan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox Renbaan;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Renbaan;
     }
 }
 
