@@ -18,7 +18,7 @@ namespace De_Gokkers
 
         public void UpdateLabels()
         { 
-        
+            
         }
 
         public bool PlaceBet(int amount, int dog)

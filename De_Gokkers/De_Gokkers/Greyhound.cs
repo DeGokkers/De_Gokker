@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace De_Gokkers
 {
@@ -12,14 +13,13 @@ namespace De_Gokkers
         public PictureBox MyPictureBox = null;
         public Random Randomizer;
 
-        public bool Run()
+        public void Run()
         {
-            return true;
         }
 
         public void TakeStartingPosition()
-        { 
-        
+        {
+
         }
     }
 }
