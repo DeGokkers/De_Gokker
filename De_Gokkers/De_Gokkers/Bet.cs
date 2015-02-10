@@ -14,6 +14,7 @@ namespace De_Gokkers
         public Guy Bettor;
         public int Add_Substract = 0;
         public int AmountOfBettors = 4;
+        public int[] PlacedBets;
         public string GetDescription()
         {
             //Retourneer een string die aangeeft wie de weddenschap heeft gedaan,
@@ -48,13 +49,12 @@ namespace De_Gokkers
             }
         }
         public int PayOut(int Winner)
-        { 
-            int iets = 1;
-            return iets;
+        {
+            PlacedBets[Winner] = PlacedBets[Winner] * 2;
+            return Winner;
         }
         public void PlaceBet(int Bettor)
         {   
-            int[] PlacedBets;
             PlacedBets = new int[AmountOfBettors];
             PlacedBets[Bettor] = Amount;
         }
