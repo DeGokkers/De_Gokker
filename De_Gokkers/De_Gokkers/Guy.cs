@@ -12,7 +12,6 @@ namespace De_Gokkers
         public string Name;
         public Bet MyBet;
         public int Cash;
-
         public RadioButton MyRadiobutton;
         public Label MyLabel;
 
