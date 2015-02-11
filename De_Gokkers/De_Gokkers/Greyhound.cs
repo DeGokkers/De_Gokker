@@ -11,6 +11,7 @@ namespace De_Gokkers
     {
         public int RaceTrackLength;
         static Main test = new Main();
+
         // public PictureBox MyPictureBox = test.Hase1;
         public Random Randomizer;
 

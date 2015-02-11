@@ -13,6 +13,7 @@ namespace De_Gokkers
         public Bet MyBet;
         public int Cash;
         public RadioButton MyRadiobutton;
+        public PictureBox MyPictureBox = null;
         public Label MyLabel;
 
         public void UpdateLabels()
