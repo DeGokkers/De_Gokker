@@ -38,6 +38,9 @@ namespace De_Gokkers
                     case "Sietse":
                         PlaceBet(3);
                         break;
+                    case "Peter":
+                        PlaceBet(4);
+                        break;
                 }
                 return line;
             }

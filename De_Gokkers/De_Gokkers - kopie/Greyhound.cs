@@ -10,7 +10,7 @@ namespace De_Gokkers
     class Greyhound
     {
         public int RaceTrackLength;
-        static Form1 test = new Form1();
+   //     static Form1 test = new Form1();
         public PictureBox MyPictureBox = test.pictureBox1;
         public Random Randomizer;
 
