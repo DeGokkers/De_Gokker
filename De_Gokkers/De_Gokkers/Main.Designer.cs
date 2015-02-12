@@ -491,6 +491,7 @@
             // 
             // num_AmountMoney
             // 
+            this.num_AmountMoney.Hexadecimal = true;
             this.num_AmountMoney.Location = new System.Drawing.Point(102, 92);
             this.num_AmountMoney.Maximum = new decimal(new int[] {
             15,
@@ -503,6 +504,7 @@
             0,
             0});
             this.num_AmountMoney.Name = "num_AmountMoney";
+            this.num_AmountMoney.ReadOnly = true;
             this.num_AmountMoney.Size = new System.Drawing.Size(39, 20);
             this.num_AmountMoney.TabIndex = 5;
             this.num_AmountMoney.TabStop = false;
