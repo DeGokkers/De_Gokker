@@ -21,8 +21,9 @@ namespace De_Gokkers
             //Verander mijn label in de omschrijving van mijn weddenschap.
             //Verander de label op mijn radioknop zodat deze mijn saldo laat zien.
             //(Bijv. "Lidy heeft 43 euro".)
-   //         MyLabel = Player1Stats;
-            MyLabel.Text = "test";
+            MyLabel = lbl_Player1Stats;
+            string update = (Name + ": €" + Cash);
+            MyLabel.Text = update;
         }
 
         public bool PlaceBet(decimal amount, int dog)
