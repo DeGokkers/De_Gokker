@@ -66,6 +66,7 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_User = new System.Windows.Forms.Label();
             this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
+            this.resetSpelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -245,6 +246,8 @@
             // 
             // bestandToolStripMenuItem1
             // 
+            this.bestandToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetSpelToolStripMenuItem});
             this.bestandToolStripMenuItem1.Name = "bestandToolStripMenuItem1";
             this.bestandToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.bestandToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
@@ -516,6 +519,13 @@
             0,
             0});
             // 
+            // resetSpelToolStripMenuItem
+            // 
+            this.resetSpelToolStripMenuItem.Name = "resetSpelToolStripMenuItem";
+            this.resetSpelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.resetSpelToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.resetSpelToolStripMenuItem.Text = "&Reset spel";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,5 +606,6 @@
         public System.Windows.Forms.Label lbl_Player4Cash;
         public System.Windows.Forms.Label lbl_Player3Cash;
         public System.Windows.Forms.Label lbl_Player2Cash;
+        private System.Windows.Forms.ToolStripMenuItem resetSpelToolStripMenuItem;
     }
 }
