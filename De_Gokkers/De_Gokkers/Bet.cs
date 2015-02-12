@@ -47,6 +47,7 @@ namespace De_Gokkers
                 string line = Bettor + "heeft geen geldig bedrag ingevoerd, het bedrag moet tussen 5 en 15 euro liggen";
                 MessageBox.Show(line);
                 return line;
+                // Hier krijg ik ook wel beetje kanker van
             }
         }
         public int PayOut(int Winner)
