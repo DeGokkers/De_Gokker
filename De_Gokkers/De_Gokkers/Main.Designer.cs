@@ -445,7 +445,7 @@
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
-            this.lbl_Bet2.Location = new System.Drawing.Point(74, 95);
+            this.lbl_Bet2.Location = new System.Drawing.Point(75, 95);
             this.lbl_Bet2.Name = "lbl_Bet2";
             this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
             this.lbl_Bet2.TabIndex = 11;
