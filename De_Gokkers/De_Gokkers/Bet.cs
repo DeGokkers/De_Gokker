@@ -17,6 +17,7 @@ namespace De_Gokkers
         public int[] PlacedBets;
         public string GetDescription()
         {
+            // ik krijg hier kanker veel kanker van
             //Retourneer een string die aangeeft wie de weddenschap heeft gedaan,
             //voor welk bedrag er is gewed en op welke hond er is gewed.
             //Bijv. “Sietse wedt 8 euro op hond 4”.
