@@ -43,6 +43,7 @@
             this.lbl_Player1Cash = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.bestandToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetSpelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.overHazenRaceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bestandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,9 +65,8 @@
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
             this.rdio_Player4 = new System.Windows.Forms.RadioButton();
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
-            this.lbl_User = new System.Windows.Forms.Label();
-            this.resetSpelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
+            this.lbl_User = new System.Windows.Forms.Label();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -82,7 +82,7 @@
             // btn_Bet
             // 
             this.btn_Bet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Bet.Location = new System.Drawing.Point(457, 91);
+            this.btn_Bet.Location = new System.Drawing.Point(457, 93);
             this.btn_Bet.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Bet.Name = "btn_Bet";
             this.btn_Bet.Size = new System.Drawing.Size(83, 23);
@@ -95,7 +95,7 @@
             // 
             this.slct_Hare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.slct_Hare.FormattingEnabled = true;
-            this.slct_Hare.Location = new System.Drawing.Point(195, 92);
+            this.slct_Hare.Location = new System.Drawing.Point(195, 94);
             this.slct_Hare.Margin = new System.Windows.Forms.Padding(2);
             this.slct_Hare.Name = "slct_Hare";
             this.slct_Hare.Size = new System.Drawing.Size(257, 21);
@@ -156,7 +156,7 @@
             this.lbl_Winner.AutoSize = true;
             this.lbl_Winner.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Winner.ForeColor = System.Drawing.Color.Green;
-            this.lbl_Winner.Location = new System.Drawing.Point(4, 18);
+            this.lbl_Winner.Location = new System.Drawing.Point(37, 21);
             this.lbl_Winner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Winner.Name = "lbl_Winner";
             this.lbl_Winner.Size = new System.Drawing.Size(266, 23);
@@ -175,11 +175,11 @@
             this.grb_Players.Controls.Add(this.lbl_Player1Cash);
             this.grb_Players.Controls.Add(this.lbl_Player1);
             this.grb_Players.Controls.Add(this.lbl_Player2);
-            this.grb_Players.Location = new System.Drawing.Point(0, 2);
+            this.grb_Players.Location = new System.Drawing.Point(0, 0);
             this.grb_Players.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Players.Name = "grb_Players";
             this.grb_Players.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Players.Size = new System.Drawing.Size(191, 120);
+            this.grb_Players.Size = new System.Drawing.Size(145, 120);
             this.grb_Players.TabIndex = 7;
             this.grb_Players.TabStop = false;
             this.grb_Players.Text = "Geld per speler:";
@@ -253,6 +253,13 @@
             this.bestandToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
             this.bestandToolStripMenuItem1.Text = "&Bestand";
             // 
+            // resetSpelToolStripMenuItem
+            // 
+            this.resetSpelToolStripMenuItem.Name = "resetSpelToolStripMenuItem";
+            this.resetSpelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.resetSpelToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.resetSpelToolStripMenuItem.Text = "&Reset spel";
+            // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -295,11 +302,11 @@
             // grb_Winner
             // 
             this.grb_Winner.Controls.Add(this.lbl_Winner);
-            this.grb_Winner.Location = new System.Drawing.Point(190, 2);
+            this.grb_Winner.Location = new System.Drawing.Point(142, 0);
             this.grb_Winner.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Winner.Name = "grb_Winner";
             this.grb_Winner.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Winner.Size = new System.Drawing.Size(272, 128);
+            this.grb_Winner.Size = new System.Drawing.Size(322, 130);
             this.grb_Winner.TabIndex = 9;
             this.grb_Winner.TabStop = false;
             this.grb_Winner.Text = "Winnaar:";
@@ -309,7 +316,7 @@
             this.btn_Run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Run.BackColor = System.Drawing.Color.Transparent;
             this.btn_Run.Image = global::De_Gokkers.Properties.Resources.Ren;
-            this.btn_Run.Location = new System.Drawing.Point(457, 15);
+            this.btn_Run.Location = new System.Drawing.Point(457, 17);
             this.btn_Run.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Run.Name = "btn_Run";
             this.btn_Run.Size = new System.Drawing.Size(83, 72);
@@ -374,11 +381,11 @@
             this.Background.Controls.Add(this.grb_Players);
             this.Background.Controls.Add(this.grb_Menu);
             this.Background.Controls.Add(this.grb_Winner);
-            this.Background.Location = new System.Drawing.Point(0, 495);
+            this.Background.Location = new System.Drawing.Point(0, 497);
             this.Background.Margin = new System.Windows.Forms.Padding(2);
             this.Background.Name = "Background";
             this.Background.Padding = new System.Windows.Forms.Padding(2);
-            this.Background.Size = new System.Drawing.Size(1002, 122);
+            this.Background.Size = new System.Drawing.Size(1002, 120);
             this.Background.TabIndex = 10;
             this.Background.TabStop = false;
             // 
@@ -396,11 +403,11 @@
             this.grb_Menu.Controls.Add(this.slct_Hare);
             this.grb_Menu.Controls.Add(this.btn_Bet);
             this.grb_Menu.Controls.Add(this.btn_Run);
-            this.grb_Menu.Location = new System.Drawing.Point(458, 2);
+            this.grb_Menu.Location = new System.Drawing.Point(458, 0);
             this.grb_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Menu.Name = "grb_Menu";
             this.grb_Menu.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Menu.Size = new System.Drawing.Size(544, 138);
+            this.grb_Menu.Size = new System.Drawing.Size(544, 140);
             this.grb_Menu.TabIndex = 10;
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
@@ -482,23 +489,6 @@
             this.rdio_Player1.Text = "Fer";
             this.rdio_Player1.UseVisualStyleBackColor = true;
             // 
-            // lbl_User
-            // 
-            this.lbl_User.AutoSize = true;
-            this.lbl_User.Location = new System.Drawing.Point(766, 11);
-            this.lbl_User.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_User.Name = "lbl_User";
-            this.lbl_User.Size = new System.Drawing.Size(53, 13);
-            this.lbl_User.TabIndex = 4;
-            this.lbl_User.Text = "Gebruiker";
-            // 
-            // resetSpelToolStripMenuItem
-            // 
-            this.resetSpelToolStripMenuItem.Name = "resetSpelToolStripMenuItem";
-            this.resetSpelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.resetSpelToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.resetSpelToolStripMenuItem.Text = "&Reset spel";
-            // 
             // num_AmountMoney
             // 
             this.num_AmountMoney.Hexadecimal = true;
@@ -525,6 +515,16 @@
             0,
             0,
             0});
+            // 
+            // lbl_User
+            // 
+            this.lbl_User.AutoSize = true;
+            this.lbl_User.Location = new System.Drawing.Point(766, 11);
+            this.lbl_User.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_User.Name = "lbl_User";
+            this.lbl_User.Size = new System.Drawing.Size(53, 13);
+            this.lbl_User.TabIndex = 4;
+            this.lbl_User.Text = "Gebruiker";
             // 
             // Main
             // 
