@@ -66,7 +66,7 @@
             this.rdio_Player4 = new System.Windows.Forms.RadioButton();
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -76,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare2)).BeginInit();
             this.Background.SuspendLayout();
             this.grb_Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Bet
@@ -156,7 +156,7 @@
             this.lbl_Winner.AutoSize = true;
             this.lbl_Winner.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Winner.ForeColor = System.Drawing.Color.Green;
-            this.lbl_Winner.Location = new System.Drawing.Point(37, 21);
+            this.lbl_Winner.Location = new System.Drawing.Point(31, 21);
             this.lbl_Winner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Winner.Name = "lbl_Winner";
             this.lbl_Winner.Size = new System.Drawing.Size(266, 23);
@@ -316,7 +316,7 @@
             this.btn_Run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Run.BackColor = System.Drawing.Color.Transparent;
             this.btn_Run.Image = global::De_Gokkers.Properties.Resources.Ren;
-            this.btn_Run.Location = new System.Drawing.Point(457, 17);
+            this.btn_Run.Location = new System.Drawing.Point(457, 16);
             this.btn_Run.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Run.Name = "btn_Run";
             this.btn_Run.Size = new System.Drawing.Size(83, 72);
@@ -391,7 +391,7 @@
             // 
             // grb_Menu
             // 
-            this.grb_Menu.Controls.Add(this.numericUpDown1);
+            this.grb_Menu.Controls.Add(this.num_AmountMoney);
             this.grb_Menu.Controls.Add(this.lbl_BetOn);
             this.grb_Menu.Controls.Add(this.lbl_Bet2);
             this.grb_Menu.Controls.Add(this.lbl_Bet);
@@ -415,7 +415,7 @@
             // lbl_BetOn
             // 
             this.lbl_BetOn.AutoSize = true;
-            this.lbl_BetOn.Location = new System.Drawing.Point(143, 95);
+            this.lbl_BetOn.Location = new System.Drawing.Point(145, 97);
             this.lbl_BetOn.Name = "lbl_BetOn";
             this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
             this.lbl_BetOn.TabIndex = 12;
@@ -424,7 +424,7 @@
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
-            this.lbl_Bet2.Location = new System.Drawing.Point(75, 95);
+            this.lbl_Bet2.Location = new System.Drawing.Point(75, 97);
             this.lbl_Bet2.Name = "lbl_Bet2";
             this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
             this.lbl_Bet2.TabIndex = 11;
@@ -499,23 +499,24 @@
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
             // 
-            // numericUpDown1
+            // num_AmountMoney
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(107, 92);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.num_AmountMoney.Location = new System.Drawing.Point(102, 94);
+            this.num_AmountMoney.Maximum = new decimal(new int[] {
             15,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.num_AmountMoney.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown1.TabIndex = 13;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.num_AmountMoney.Name = "num_AmountMoney";
+            this.num_AmountMoney.Size = new System.Drawing.Size(38, 20);
+            this.num_AmountMoney.TabIndex = 13;
+            this.num_AmountMoney.TabStop = false;
+            this.num_AmountMoney.Value = new decimal(new int[] {
             5,
             0,
             0,
@@ -556,7 +557,7 @@
             this.Background.ResumeLayout(false);
             this.grb_Menu.ResumeLayout(false);
             this.grb_Menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,6 +602,6 @@
         public System.Windows.Forms.PictureBox img_Hare3;
         public System.Windows.Forms.PictureBox img_Hare4;
         public System.Windows.Forms.PictureBox img_Hare1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        public CustomNumericUpDown num_AmountMoney;
     }
 }
