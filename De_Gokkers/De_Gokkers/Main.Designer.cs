@@ -37,6 +37,10 @@
             this.lbl_Player4 = new System.Windows.Forms.Label();
             this.lbl_Winner = new System.Windows.Forms.Label();
             this.grb_Players = new System.Windows.Forms.GroupBox();
+            this.lbl_Player4Cash = new System.Windows.Forms.Label();
+            this.lbl_Player3Cash = new System.Windows.Forms.Label();
+            this.lbl_Player2Cash = new System.Windows.Forms.Label();
+            this.lbl_Player1Cash = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.bestandToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,12 +64,8 @@
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
             this.rdio_Player4 = new System.Windows.Forms.RadioButton();
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
-            this.num_AmountMoney = new System.Windows.Forms.NumericUpDown();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.lbl_Player1Cash = new System.Windows.Forms.Label();
-            this.lbl_Player2Cash = new System.Windows.Forms.Label();
-            this.lbl_Player3Cash = new System.Windows.Forms.Label();
-            this.lbl_Player4Cash = new System.Windows.Forms.Label();
+            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -106,7 +106,7 @@
             this.lbl_Player1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player1.AutoSize = true;
             this.lbl_Player1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player1.Location = new System.Drawing.Point(7, 15);
+            this.lbl_Player1.Location = new System.Drawing.Point(7, 17);
             this.lbl_Player1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player1.Name = "lbl_Player1";
             this.lbl_Player1.Size = new System.Drawing.Size(70, 26);
@@ -118,7 +118,7 @@
             this.lbl_Player2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player2.AutoSize = true;
             this.lbl_Player2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player2.Location = new System.Drawing.Point(31, 39);
+            this.lbl_Player2.Location = new System.Drawing.Point(31, 40);
             this.lbl_Player2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player2.Name = "lbl_Player2";
             this.lbl_Player2.Size = new System.Drawing.Size(46, 26);
@@ -182,6 +182,54 @@
             this.grb_Players.TabIndex = 7;
             this.grb_Players.TabStop = false;
             this.grb_Players.Text = "Geld per speler:";
+            // 
+            // lbl_Player4Cash
+            // 
+            this.lbl_Player4Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player4Cash.AutoSize = true;
+            this.lbl_Player4Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player4Cash.Location = new System.Drawing.Point(72, 88);
+            this.lbl_Player4Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player4Cash.Name = "lbl_Player4Cash";
+            this.lbl_Player4Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player4Cash.TabIndex = 5;
+            this.lbl_Player4Cash.Text = "€ 0,00";
+            // 
+            // lbl_Player3Cash
+            // 
+            this.lbl_Player3Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player3Cash.AutoSize = true;
+            this.lbl_Player3Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 64);
+            this.lbl_Player3Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player3Cash.Name = "lbl_Player3Cash";
+            this.lbl_Player3Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player3Cash.TabIndex = 5;
+            this.lbl_Player3Cash.Text = "€ 0,00";
+            // 
+            // lbl_Player2Cash
+            // 
+            this.lbl_Player2Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player2Cash.AutoSize = true;
+            this.lbl_Player2Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player2Cash.Location = new System.Drawing.Point(72, 41);
+            this.lbl_Player2Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player2Cash.Name = "lbl_Player2Cash";
+            this.lbl_Player2Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player2Cash.TabIndex = 5;
+            this.lbl_Player2Cash.Text = "€ 0,00";
+            // 
+            // lbl_Player1Cash
+            // 
+            this.lbl_Player1Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player1Cash.AutoSize = true;
+            this.lbl_Player1Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player1Cash.Location = new System.Drawing.Point(72, 18);
+            this.lbl_Player1Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player1Cash.Name = "lbl_Player1Cash";
+            this.lbl_Player1Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player1Cash.TabIndex = 5;
+            this.lbl_Player1Cash.Text = "€ 0,00";
             // 
             // menuStrip
             // 
@@ -271,10 +319,11 @@
             this.img_Hare4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare4.BackColor = System.Drawing.Color.Transparent;
             this.img_Hare4.Image = global::De_Gokkers.Properties.Resources.Hare_4;
-            this.img_Hare4.Location = new System.Drawing.Point(926, 342);
+            this.img_Hare4.Location = new System.Drawing.Point(931, 346);
             this.img_Hare4.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare4.Name = "img_Hare4";
-            this.img_Hare4.Size = new System.Drawing.Size(71, 71);
+            this.img_Hare4.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare4.TabIndex = 1;
             this.img_Hare4.TabStop = false;
             // 
@@ -283,11 +332,11 @@
             this.img_Hare1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare1.BackColor = System.Drawing.Color.Transparent;
             this.img_Hare1.Image = global::De_Gokkers.Properties.Resources.Hare_1;
-            this.img_Hare1.Location = new System.Drawing.Point(927, 87);
+            this.img_Hare1.Location = new System.Drawing.Point(931, 91);
             this.img_Hare1.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare1.Name = "img_Hare1";
-            this.img_Hare1.Size = new System.Drawing.Size(71, 71);
-            this.img_Hare1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.img_Hare1.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare1.TabIndex = 1;
             this.img_Hare1.TabStop = false;
             // 
@@ -296,11 +345,11 @@
             this.img_Hare3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare3.BackColor = System.Drawing.Color.Transparent;
             this.img_Hare3.Image = global::De_Gokkers.Properties.Resources.Hare_3;
-            this.img_Hare3.Location = new System.Drawing.Point(927, 257);
+            this.img_Hare3.Location = new System.Drawing.Point(931, 261);
             this.img_Hare3.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare3.Name = "img_Hare3";
-            this.img_Hare3.Size = new System.Drawing.Size(71, 71);
-            this.img_Hare3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.img_Hare3.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare3.TabIndex = 1;
             this.img_Hare3.TabStop = false;
             // 
@@ -309,11 +358,11 @@
             this.img_Hare2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare2.BackColor = System.Drawing.Color.Transparent;
             this.img_Hare2.Image = global::De_Gokkers.Properties.Resources.Hare_2;
-            this.img_Hare2.Location = new System.Drawing.Point(927, 172);
+            this.img_Hare2.Location = new System.Drawing.Point(931, 176);
             this.img_Hare2.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare2.Name = "img_Hare2";
-            this.img_Hare2.Size = new System.Drawing.Size(71, 71);
-            this.img_Hare2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.img_Hare2.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare2.TabIndex = 1;
             this.img_Hare2.TabStop = false;
             // 
@@ -365,7 +414,7 @@
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
-            this.lbl_Bet2.Location = new System.Drawing.Point(74, 95);
+            this.lbl_Bet2.Location = new System.Drawing.Point(75, 95);
             this.lbl_Bet2.Name = "lbl_Bet2";
             this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
             this.lbl_Bet2.TabIndex = 11;
@@ -430,9 +479,19 @@
             this.rdio_Player1.Text = "Fer";
             this.rdio_Player1.UseVisualStyleBackColor = true;
             // 
+            // lbl_User
+            // 
+            this.lbl_User.AutoSize = true;
+            this.lbl_User.Location = new System.Drawing.Point(766, 11);
+            this.lbl_User.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_User.Name = "lbl_User";
+            this.lbl_User.Size = new System.Drawing.Size(53, 13);
+            this.lbl_User.TabIndex = 4;
+            this.lbl_User.Text = "Gebruiker";
+            // 
             // num_AmountMoney
             // 
-            this.num_AmountMoney.Location = new System.Drawing.Point(101, 92);
+            this.num_AmountMoney.Location = new System.Drawing.Point(102, 92);
             this.num_AmountMoney.Maximum = new decimal(new int[] {
             15,
             0,
@@ -454,64 +513,6 @@
             0,
             0,
             0});
-            // 
-            // lbl_User
-            // 
-            this.lbl_User.AutoSize = true;
-            this.lbl_User.Location = new System.Drawing.Point(766, 11);
-            this.lbl_User.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_User.Name = "lbl_User";
-            this.lbl_User.Size = new System.Drawing.Size(53, 13);
-            this.lbl_User.TabIndex = 4;
-            this.lbl_User.Text = "Gebruiker";
-            // 
-            // lbl_Player1Cash
-            // 
-            this.lbl_Player1Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player1Cash.AutoSize = true;
-            this.lbl_Player1Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player1Cash.Location = new System.Drawing.Point(72, 16);
-            this.lbl_Player1Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player1Cash.Name = "lbl_Player1Cash";
-            this.lbl_Player1Cash.Size = new System.Drawing.Size(66, 26);
-            this.lbl_Player1Cash.TabIndex = 5;
-            this.lbl_Player1Cash.Text = "€ 0,00";
-            // 
-            // lbl_Player2Cash
-            // 
-            this.lbl_Player2Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player2Cash.AutoSize = true;
-            this.lbl_Player2Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player2Cash.Location = new System.Drawing.Point(72, 41);
-            this.lbl_Player2Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player2Cash.Name = "lbl_Player2Cash";
-            this.lbl_Player2Cash.Size = new System.Drawing.Size(66, 26);
-            this.lbl_Player2Cash.TabIndex = 5;
-            this.lbl_Player2Cash.Text = "€ 0,00";
-            // 
-            // lbl_Player3Cash
-            // 
-            this.lbl_Player3Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player3Cash.AutoSize = true;
-            this.lbl_Player3Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 65);
-            this.lbl_Player3Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player3Cash.Name = "lbl_Player3Cash";
-            this.lbl_Player3Cash.Size = new System.Drawing.Size(66, 26);
-            this.lbl_Player3Cash.TabIndex = 5;
-            this.lbl_Player3Cash.Text = "€ 0,00";
-            // 
-            // lbl_Player4Cash
-            // 
-            this.lbl_Player4Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player4Cash.AutoSize = true;
-            this.lbl_Player4Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player4Cash.Location = new System.Drawing.Point(72, 89);
-            this.lbl_Player4Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player4Cash.Name = "lbl_Player4Cash";
-            this.lbl_Player4Cash.Size = new System.Drawing.Size(66, 26);
-            this.lbl_Player4Cash.TabIndex = 5;
-            this.lbl_Player4Cash.Text = "€ 0,00";
             // 
             // Main
             // 
@@ -576,7 +577,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem1;
         private System.Windows.Forms.Label lbl_User;
-        private System.Windows.Forms.NumericUpDown num_AmountMoney;
+        private CustomNumericUpDown num_AmountMoney;
         public System.Windows.Forms.Label lbl_Player1;
         public System.Windows.Forms.Label lbl_Player2;
         public System.Windows.Forms.Label lbl_Player3;

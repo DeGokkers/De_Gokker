@@ -26,7 +26,7 @@ namespace De_Gokkers
             //Verander mijn label in de omschrijving van mijn weddenschap.
             //Verander de label op mijn radioknop zodat deze mijn saldo laat zien.
             //(Bijv. "Lidy heeft 43 euro".)
-            string update = (": €" + cash);
+            string update = ("€" + cash);
             return update;
         }
 
@@ -49,6 +49,44 @@ namespace De_Gokkers
             //Betaal mijn weddenschap uit.
             //Maak mijn weddenschap leeg.
             //Werk mijn labels bij.
+
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // lbl_Player1Cash
+            // 
+            this.lbl_Player1Cash.Location = new System.Drawing.Point(72, 14);
+            this.lbl_Player1Cash.Size = new System.Drawing.Size(67, 26);
+            this.lbl_Player1Cash.Text = "€1337";
+            // 
+            // lbl_Player4Cash
+            // 
+            this.lbl_Player4Cash.Location = new System.Drawing.Point(72, 87);
+            this.lbl_Player4Cash.Size = new System.Drawing.Size(67, 26);
+            this.lbl_Player4Cash.Text = "€4321";
+            // 
+            // lbl_Player3Cash
+            // 
+            this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 63);
+            this.lbl_Player3Cash.Size = new System.Drawing.Size(67, 26);
+            this.lbl_Player3Cash.Text = "€9001";
+            // 
+            // lbl_Player2Cash
+            // 
+            this.lbl_Player2Cash.Location = new System.Drawing.Point(72, 39);
+            this.lbl_Player2Cash.Size = new System.Drawing.Size(56, 26);
+            this.lbl_Player2Cash.Text = "€123";
+            // 
+            // Guy
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1002, 617);
+            this.Name = "Guy";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
     }
