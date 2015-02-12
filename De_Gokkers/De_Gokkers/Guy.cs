@@ -26,7 +26,7 @@ namespace De_Gokkers
             //Verander mijn label in de omschrijving van mijn weddenschap.
             //Verander de label op mijn radioknop zodat deze mijn saldo laat zien.
             //(Bijv. "Lidy heeft 43 euro".)
-            string update = (name + ": €" + cash);
+            string update = (": €" + cash);
             return update;
         }
 

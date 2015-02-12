@@ -23,10 +23,10 @@ namespace De_Gokkers
             Guy Fer = new Guy("Fer", 123);
             Guy Lidy = new Guy("Lidy", 9001);
             Guy Peter = new Guy("Peter", 4321);
-            lbl_Player1Stats.Text = Sietse.UpdateLabels();
-            lbl_Player2Stats.Text = Fer.UpdateLabels();
-            lbl_Player3Stats.Text = Lidy.UpdateLabels();
-            lbl_Player4Stats.Text = Peter.UpdateLabels();
+            lbl_Player1Cash.Text = Sietse.UpdateLabels();
+            lbl_Player2Cash.Text = Fer.UpdateLabels();
+            lbl_Player3Cash.Text = Lidy.UpdateLabels();
+            lbl_Player4Cash.Text = Peter.UpdateLabels();
 
         }
     }

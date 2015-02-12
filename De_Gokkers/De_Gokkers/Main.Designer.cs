@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btn_Bet = new System.Windows.Forms.Button();
             this.slct_Hare = new System.Windows.Forms.ComboBox();
-            this.lbl_Player1Stats = new System.Windows.Forms.Label();
-            this.lbl_Player2Stats = new System.Windows.Forms.Label();
-            this.lbl_Player3Stats = new System.Windows.Forms.Label();
-            this.lbl_Player4Stats = new System.Windows.Forms.Label();
+            this.lbl_Player1 = new System.Windows.Forms.Label();
+            this.lbl_Player2 = new System.Windows.Forms.Label();
+            this.lbl_Player3 = new System.Windows.Forms.Label();
+            this.lbl_Player4 = new System.Windows.Forms.Label();
             this.lbl_Winner = new System.Windows.Forms.Label();
             this.grb_Players = new System.Windows.Forms.GroupBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -52,6 +52,9 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
+            this.lbl_BetOn = new System.Windows.Forms.Label();
+            this.lbl_Bet2 = new System.Windows.Forms.Label();
+            this.lbl_Bet = new System.Windows.Forms.Label();
             this.list_Announce = new System.Windows.Forms.ListBox();
             this.rdio_Player3 = new System.Windows.Forms.RadioButton();
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
@@ -59,9 +62,10 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.num_AmountMoney = new System.Windows.Forms.NumericUpDown();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.lbl_Bet = new System.Windows.Forms.Label();
-            this.lbl_Bet2 = new System.Windows.Forms.Label();
-            this.lbl_BetOn = new System.Windows.Forms.Label();
+            this.lbl_Player1Cash = new System.Windows.Forms.Label();
+            this.lbl_Player2Cash = new System.Windows.Forms.Label();
+            this.lbl_Player3Cash = new System.Windows.Forms.Label();
+            this.lbl_Player4Cash = new System.Windows.Forms.Label();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -97,53 +101,53 @@
             this.slct_Hare.TabIndex = 7;
             this.slct_Hare.TabStop = false;
             // 
-            // lbl_Player1Stats
+            // lbl_Player1
             // 
-            this.lbl_Player1Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player1Stats.AutoSize = true;
-            this.lbl_Player1Stats.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player1Stats.Location = new System.Drawing.Point(29, 21);
-            this.lbl_Player1Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player1Stats.Name = "lbl_Player1Stats";
-            this.lbl_Player1Stats.Size = new System.Drawing.Size(117, 26);
-            this.lbl_Player1Stats.TabIndex = 5;
-            this.lbl_Player1Stats.Text = "Lidy:  € 0,00";
+            this.lbl_Player1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player1.AutoSize = true;
+            this.lbl_Player1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player1.Location = new System.Drawing.Point(7, 15);
+            this.lbl_Player1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player1.Name = "lbl_Player1";
+            this.lbl_Player1.Size = new System.Drawing.Size(70, 26);
+            this.lbl_Player1.TabIndex = 5;
+            this.lbl_Player1.Text = "Sietse:";
             // 
-            // lbl_Player2Stats
+            // lbl_Player2
             // 
-            this.lbl_Player2Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player2Stats.AutoSize = true;
-            this.lbl_Player2Stats.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player2Stats.Location = new System.Drawing.Point(36, 44);
-            this.lbl_Player2Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player2Stats.Name = "lbl_Player2Stats";
-            this.lbl_Player2Stats.Size = new System.Drawing.Size(110, 26);
-            this.lbl_Player2Stats.TabIndex = 5;
-            this.lbl_Player2Stats.Text = "Fer:  € 0,00";
+            this.lbl_Player2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player2.AutoSize = true;
+            this.lbl_Player2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player2.Location = new System.Drawing.Point(31, 39);
+            this.lbl_Player2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player2.Name = "lbl_Player2";
+            this.lbl_Player2.Size = new System.Drawing.Size(46, 26);
+            this.lbl_Player2.TabIndex = 5;
+            this.lbl_Player2.Text = "Fer:";
             // 
-            // lbl_Player3Stats
+            // lbl_Player3
             // 
-            this.lbl_Player3Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player3Stats.AutoSize = true;
-            this.lbl_Player3Stats.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player3Stats.Location = new System.Drawing.Point(12, 65);
-            this.lbl_Player3Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player3Stats.Name = "lbl_Player3Stats";
-            this.lbl_Player3Stats.Size = new System.Drawing.Size(134, 26);
-            this.lbl_Player3Stats.TabIndex = 5;
-            this.lbl_Player3Stats.Text = "Sietse:  € 0,00";
+            this.lbl_Player3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player3.AutoSize = true;
+            this.lbl_Player3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player3.Location = new System.Drawing.Point(24, 63);
+            this.lbl_Player3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player3.Name = "lbl_Player3";
+            this.lbl_Player3.Size = new System.Drawing.Size(53, 26);
+            this.lbl_Player3.TabIndex = 5;
+            this.lbl_Player3.Text = "Lidy:";
             // 
-            // lbl_Player4Stats
+            // lbl_Player4
             // 
-            this.lbl_Player4Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player4Stats.AutoSize = true;
-            this.lbl_Player4Stats.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player4Stats.Location = new System.Drawing.Point(22, 85);
-            this.lbl_Player4Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player4Stats.Name = "lbl_Player4Stats";
-            this.lbl_Player4Stats.Size = new System.Drawing.Size(124, 26);
-            this.lbl_Player4Stats.TabIndex = 5;
-            this.lbl_Player4Stats.Text = "Peter: € 0,00";
+            this.lbl_Player4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player4.AutoSize = true;
+            this.lbl_Player4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player4.Location = new System.Drawing.Point(12, 87);
+            this.lbl_Player4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player4.Name = "lbl_Player4";
+            this.lbl_Player4.Size = new System.Drawing.Size(65, 26);
+            this.lbl_Player4.TabIndex = 5;
+            this.lbl_Player4.Text = "Peter:";
             // 
             // lbl_Winner
             // 
@@ -162,10 +166,14 @@
             // 
             this.grb_Players.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grb_Players.Controls.Add(this.lbl_Player3Stats);
-            this.grb_Players.Controls.Add(this.lbl_Player4Stats);
-            this.grb_Players.Controls.Add(this.lbl_Player1Stats);
-            this.grb_Players.Controls.Add(this.lbl_Player2Stats);
+            this.grb_Players.Controls.Add(this.lbl_Player3);
+            this.grb_Players.Controls.Add(this.lbl_Player4);
+            this.grb_Players.Controls.Add(this.lbl_Player4Cash);
+            this.grb_Players.Controls.Add(this.lbl_Player3Cash);
+            this.grb_Players.Controls.Add(this.lbl_Player2Cash);
+            this.grb_Players.Controls.Add(this.lbl_Player1Cash);
+            this.grb_Players.Controls.Add(this.lbl_Player1);
+            this.grb_Players.Controls.Add(this.lbl_Player2);
             this.grb_Players.Location = new System.Drawing.Point(0, 2);
             this.grb_Players.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Players.Name = "grb_Players";
@@ -345,6 +353,33 @@
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
             // 
+            // lbl_BetOn
+            // 
+            this.lbl_BetOn.AutoSize = true;
+            this.lbl_BetOn.Location = new System.Drawing.Point(143, 95);
+            this.lbl_BetOn.Name = "lbl_BetOn";
+            this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
+            this.lbl_BetOn.TabIndex = 12;
+            this.lbl_BetOn.Text = "Op haas:";
+            // 
+            // lbl_Bet2
+            // 
+            this.lbl_Bet2.AutoSize = true;
+            this.lbl_Bet2.Location = new System.Drawing.Point(74, 95);
+            this.lbl_Bet2.Name = "lbl_Bet2";
+            this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
+            this.lbl_Bet2.TabIndex = 11;
+            this.lbl_Bet2.Text = "Zet:";
+            // 
+            // lbl_Bet
+            // 
+            this.lbl_Bet.AutoSize = true;
+            this.lbl_Bet.Location = new System.Drawing.Point(76, 1);
+            this.lbl_Bet.Name = "lbl_Bet";
+            this.lbl_Bet.Size = new System.Drawing.Size(149, 13);
+            this.lbl_Bet.TabIndex = 10;
+            this.lbl_Bet.Text = "Geplaatste weddenschappen:";
+            // 
             // list_Announce
             // 
             this.list_Announce.FormattingEnabled = true;
@@ -430,32 +465,53 @@
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
             // 
-            // lbl_Bet
+            // lbl_Player1Cash
             // 
-            this.lbl_Bet.AutoSize = true;
-            this.lbl_Bet.Location = new System.Drawing.Point(76, 1);
-            this.lbl_Bet.Name = "lbl_Bet";
-            this.lbl_Bet.Size = new System.Drawing.Size(149, 13);
-            this.lbl_Bet.TabIndex = 10;
-            this.lbl_Bet.Text = "Geplaatste weddenschappen:";
+            this.lbl_Player1Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player1Cash.AutoSize = true;
+            this.lbl_Player1Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player1Cash.Location = new System.Drawing.Point(72, 16);
+            this.lbl_Player1Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player1Cash.Name = "lbl_Player1Cash";
+            this.lbl_Player1Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player1Cash.TabIndex = 5;
+            this.lbl_Player1Cash.Text = "€ 0,00";
             // 
-            // lbl_Bet2
+            // lbl_Player2Cash
             // 
-            this.lbl_Bet2.AutoSize = true;
-            this.lbl_Bet2.Location = new System.Drawing.Point(74, 95);
-            this.lbl_Bet2.Name = "lbl_Bet2";
-            this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
-            this.lbl_Bet2.TabIndex = 11;
-            this.lbl_Bet2.Text = "Zet:";
+            this.lbl_Player2Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player2Cash.AutoSize = true;
+            this.lbl_Player2Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player2Cash.Location = new System.Drawing.Point(72, 41);
+            this.lbl_Player2Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player2Cash.Name = "lbl_Player2Cash";
+            this.lbl_Player2Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player2Cash.TabIndex = 5;
+            this.lbl_Player2Cash.Text = "€ 0,00";
             // 
-            // lbl_BetOn
+            // lbl_Player3Cash
             // 
-            this.lbl_BetOn.AutoSize = true;
-            this.lbl_BetOn.Location = new System.Drawing.Point(143, 95);
-            this.lbl_BetOn.Name = "lbl_BetOn";
-            this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
-            this.lbl_BetOn.TabIndex = 12;
-            this.lbl_BetOn.Text = "Op haas:";
+            this.lbl_Player3Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player3Cash.AutoSize = true;
+            this.lbl_Player3Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 65);
+            this.lbl_Player3Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player3Cash.Name = "lbl_Player3Cash";
+            this.lbl_Player3Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player3Cash.TabIndex = 5;
+            this.lbl_Player3Cash.Text = "€ 0,00";
+            // 
+            // lbl_Player4Cash
+            // 
+            this.lbl_Player4Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Player4Cash.AutoSize = true;
+            this.lbl_Player4Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Player4Cash.Location = new System.Drawing.Point(72, 89);
+            this.lbl_Player4Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Player4Cash.Name = "lbl_Player4Cash";
+            this.lbl_Player4Cash.Size = new System.Drawing.Size(66, 26);
+            this.lbl_Player4Cash.TabIndex = 5;
+            this.lbl_Player4Cash.Text = "€ 0,00";
             // 
             // Main
             // 
@@ -521,10 +577,10 @@
         private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem1;
         private System.Windows.Forms.Label lbl_User;
         private System.Windows.Forms.NumericUpDown num_AmountMoney;
-        public System.Windows.Forms.Label lbl_Player1Stats;
-        public System.Windows.Forms.Label lbl_Player2Stats;
-        public System.Windows.Forms.Label lbl_Player3Stats;
-        public System.Windows.Forms.Label lbl_Player4Stats;
+        public System.Windows.Forms.Label lbl_Player1;
+        public System.Windows.Forms.Label lbl_Player2;
+        public System.Windows.Forms.Label lbl_Player3;
+        public System.Windows.Forms.Label lbl_Player4;
         private System.Windows.Forms.RadioButton rdio_Player1;
         private System.Windows.Forms.RadioButton rdio_Player3;
         private System.Windows.Forms.RadioButton rdio_Player2;
@@ -533,5 +589,9 @@
         private System.Windows.Forms.Label lbl_Bet;
         private System.Windows.Forms.Label lbl_BetOn;
         private System.Windows.Forms.Label lbl_Bet2;
+        public System.Windows.Forms.Label lbl_Player1Cash;
+        public System.Windows.Forms.Label lbl_Player4Cash;
+        public System.Windows.Forms.Label lbl_Player3Cash;
+        public System.Windows.Forms.Label lbl_Player2Cash;
     }
 }
