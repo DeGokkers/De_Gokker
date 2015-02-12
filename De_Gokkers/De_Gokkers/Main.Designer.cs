@@ -56,10 +56,9 @@
             this.Hase2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.MenuTable = new System.Windows.Forms.GroupBox();
+            this.txt_Announce = new System.Windows.Forms.TextBox();
             this.num_AmountMoney = new System.Windows.Forms.NumericUpDown();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.txt_Announce = new System.Windows.Forms.TextBox();
             this.PlayerTable.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.WinnerTable.SuspendLayout();
@@ -313,7 +312,6 @@
             this.Hase4.Margin = new System.Windows.Forms.Padding(2);
             this.Hase4.Name = "Hase4";
             this.Hase4.Size = new System.Drawing.Size(71, 71);
-            this.Hase4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Hase4.TabIndex = 1;
             this.Hase4.TabStop = false;
             // 
@@ -389,6 +387,15 @@
             this.MenuTable.TabStop = false;
             this.MenuTable.Text = "Menu:";
             // 
+            // txt_Announce
+            // 
+            this.txt_Announce.Location = new System.Drawing.Point(78, 18);
+            this.txt_Announce.Multiline = true;
+            this.txt_Announce.Name = "txt_Announce";
+            this.txt_Announce.ReadOnly = true;
+            this.txt_Announce.Size = new System.Drawing.Size(374, 73);
+            this.txt_Announce.TabIndex = 8;
+            // 
             // num_AmountMoney
             // 
             this.num_AmountMoney.Location = new System.Drawing.Point(132, 94);
@@ -421,30 +428,12 @@
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(757, 485);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(8, 4);
-            this.listBox1.TabIndex = 11;
-            // 
-            // txt_Announce
-            // 
-            this.txt_Announce.Location = new System.Drawing.Point(78, 18);
-            this.txt_Announce.Multiline = true;
-            this.txt_Announce.Name = "txt_Announce";
-            this.txt_Announce.ReadOnly = true;
-            this.txt_Announce.Size = new System.Drawing.Size(374, 73);
-            this.txt_Announce.TabIndex = 8;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::De_Gokkers.Properties.Resources.Renbaan;
             this.ClientSize = new System.Drawing.Size(1002, 617);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.Hase4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Hase3);
@@ -511,7 +500,6 @@
         private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem1;
         private System.Windows.Forms.Label lbl_User;
         private System.Windows.Forms.NumericUpDown num_AmountMoney;
-        private System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.TextBox txt_Announce;
     }
 }
