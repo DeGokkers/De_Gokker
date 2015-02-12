@@ -57,7 +57,6 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
-            this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_Bet2 = new System.Windows.Forms.Label();
             this.lbl_Bet = new System.Windows.Forms.Label();
             this.list_Announce = new System.Windows.Forms.ListBox();
@@ -65,6 +64,7 @@
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
             this.rdio_Player4 = new System.Windows.Forms.RadioButton();
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
+            this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
             this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
@@ -88,17 +88,17 @@
             this.btn_Bet.Size = new System.Drawing.Size(83, 23);
             this.btn_Bet.TabIndex = 8;
             this.btn_Bet.TabStop = false;
-            this.btn_Bet.Text = "Wed!";
+            this.btn_Bet.Text = "Wed";
             this.btn_Bet.UseVisualStyleBackColor = true;
             // 
             // slct_Hare
             // 
             this.slct_Hare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.slct_Hare.FormattingEnabled = true;
-            this.slct_Hare.Location = new System.Drawing.Point(188, 94);
+            this.slct_Hare.Location = new System.Drawing.Point(194, 94);
             this.slct_Hare.Margin = new System.Windows.Forms.Padding(2);
             this.slct_Hare.Name = "slct_Hare";
-            this.slct_Hare.Size = new System.Drawing.Size(264, 21);
+            this.slct_Hare.Size = new System.Drawing.Size(258, 21);
             this.slct_Hare.TabIndex = 7;
             this.slct_Hare.TabStop = false;
             // 
@@ -412,19 +412,10 @@
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
             // 
-            // lbl_BetOn
-            // 
-            this.lbl_BetOn.AutoSize = true;
-            this.lbl_BetOn.Location = new System.Drawing.Point(139, 97);
-            this.lbl_BetOn.Name = "lbl_BetOn";
-            this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
-            this.lbl_BetOn.TabIndex = 12;
-            this.lbl_BetOn.Text = "Op haas:";
-            // 
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
-            this.lbl_Bet2.Location = new System.Drawing.Point(73, 97);
+            this.lbl_Bet2.Location = new System.Drawing.Point(75, 96);
             this.lbl_Bet2.Name = "lbl_Bet2";
             this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
             this.lbl_Bet2.TabIndex = 11;
@@ -489,6 +480,15 @@
             this.rdio_Player1.Text = "Fer";
             this.rdio_Player1.UseVisualStyleBackColor = true;
             // 
+            // lbl_BetOn
+            // 
+            this.lbl_BetOn.AutoSize = true;
+            this.lbl_BetOn.Location = new System.Drawing.Point(145, 97);
+            this.lbl_BetOn.Name = "lbl_BetOn";
+            this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
+            this.lbl_BetOn.TabIndex = 12;
+            this.lbl_BetOn.Text = "Op haas:";
+            // 
             // lbl_User
             // 
             this.lbl_User.AutoSize = true;
@@ -501,8 +501,7 @@
             // 
             // num_AmountMoney
             // 
-            this.num_AmountMoney.AutoSize = true;
-            this.num_AmountMoney.Location = new System.Drawing.Point(98, 94);
+            this.num_AmountMoney.Location = new System.Drawing.Point(100, 94);
             this.num_AmountMoney.Maximum = new decimal(new int[] {
             15,
             0,
@@ -514,7 +513,7 @@
             0,
             0});
             this.num_AmountMoney.Name = "num_AmountMoney";
-            this.num_AmountMoney.Size = new System.Drawing.Size(40, 20);
+            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
             this.num_AmountMoney.TabIndex = 13;
             this.num_AmountMoney.TabStop = false;
             this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
