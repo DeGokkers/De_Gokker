@@ -65,8 +65,8 @@
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
             this.rdio_Player4 = new System.Windows.Forms.RadioButton();
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
-            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.lbl_User = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -76,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare2)).BeginInit();
             this.Background.SuspendLayout();
             this.grb_Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Bet
@@ -391,6 +391,7 @@
             // 
             // grb_Menu
             // 
+            this.grb_Menu.Controls.Add(this.numericUpDown1);
             this.grb_Menu.Controls.Add(this.lbl_BetOn);
             this.grb_Menu.Controls.Add(this.lbl_Bet2);
             this.grb_Menu.Controls.Add(this.lbl_Bet);
@@ -399,7 +400,6 @@
             this.grb_Menu.Controls.Add(this.rdio_Player2);
             this.grb_Menu.Controls.Add(this.rdio_Player4);
             this.grb_Menu.Controls.Add(this.rdio_Player1);
-            this.grb_Menu.Controls.Add(this.num_AmountMoney);
             this.grb_Menu.Controls.Add(this.slct_Hare);
             this.grb_Menu.Controls.Add(this.btn_Bet);
             this.grb_Menu.Controls.Add(this.btn_Run);
@@ -489,33 +489,6 @@
             this.rdio_Player1.Text = "Fer";
             this.rdio_Player1.UseVisualStyleBackColor = true;
             // 
-            // num_AmountMoney
-            // 
-            this.num_AmountMoney.Hexadecimal = true;
-            this.num_AmountMoney.Location = new System.Drawing.Point(102, 92);
-            this.num_AmountMoney.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Name = "num_AmountMoney";
-            this.num_AmountMoney.ReadOnly = true;
-            this.num_AmountMoney.Size = new System.Drawing.Size(39, 20);
-            this.num_AmountMoney.TabIndex = 5;
-            this.num_AmountMoney.TabStop = false;
-            this.num_AmountMoney.Tag = "";
-            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.num_AmountMoney.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
             // lbl_User
             // 
             this.lbl_User.AutoSize = true;
@@ -525,6 +498,28 @@
             this.lbl_User.Size = new System.Drawing.Size(53, 13);
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(107, 92);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(29, 20);
+            this.numericUpDown1.TabIndex = 13;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // Main
             // 
@@ -561,7 +556,7 @@
             this.Background.ResumeLayout(false);
             this.grb_Menu.ResumeLayout(false);
             this.grb_Menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,7 +580,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem1;
         private System.Windows.Forms.Label lbl_User;
-        private CustomNumericUpDown num_AmountMoney;
         public System.Windows.Forms.Label lbl_Player1;
         public System.Windows.Forms.Label lbl_Player2;
         public System.Windows.Forms.Label lbl_Player3;
@@ -607,5 +601,6 @@
         public System.Windows.Forms.PictureBox img_Hare3;
         public System.Windows.Forms.PictureBox img_Hare4;
         public System.Windows.Forms.PictureBox img_Hare1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
