@@ -36,5 +36,15 @@ namespace De_Gokkers
         {
 
         }
+
+        private void list_Announce_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void num_AmountMoney_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

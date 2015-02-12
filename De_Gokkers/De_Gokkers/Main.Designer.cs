@@ -36,7 +36,7 @@
             this.lbl_Player3Stats = new System.Windows.Forms.Label();
             this.lbl_Player4Stats = new System.Windows.Forms.Label();
             this.lbl_Winner = new System.Windows.Forms.Label();
-            this.PlayerTable = new System.Windows.Forms.GroupBox();
+            this.grb_Players = new System.Windows.Forms.GroupBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.bestandToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,14 +44,14 @@
             this.bestandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overHazenRaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WinnerTable = new System.Windows.Forms.GroupBox();
+            this.grb_Winner = new System.Windows.Forms.GroupBox();
             this.btn_Run = new System.Windows.Forms.Button();
             this.img_Hare4 = new System.Windows.Forms.PictureBox();
             this.img_Hare1 = new System.Windows.Forms.PictureBox();
             this.img_Hare3 = new System.Windows.Forms.PictureBox();
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
-            this.MenuTable = new System.Windows.Forms.GroupBox();
+            this.grb_Menu = new System.Windows.Forms.GroupBox();
             this.list_Announce = new System.Windows.Forms.ListBox();
             this.rdio_Player3 = new System.Windows.Forms.RadioButton();
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
@@ -59,25 +59,28 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.num_AmountMoney = new System.Windows.Forms.NumericUpDown();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.PlayerTable.SuspendLayout();
+            this.lbl_Bet = new System.Windows.Forms.Label();
+            this.lbl_Bet2 = new System.Windows.Forms.Label();
+            this.lbl_BetOn = new System.Windows.Forms.Label();
+            this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            this.WinnerTable.SuspendLayout();
+            this.grb_Winner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare2)).BeginInit();
             this.Background.SuspendLayout();
-            this.MenuTable.SuspendLayout();
+            this.grb_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Bet
             // 
             this.btn_Bet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Bet.Location = new System.Drawing.Point(457, 94);
+            this.btn_Bet.Location = new System.Drawing.Point(457, 91);
             this.btn_Bet.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Bet.Name = "btn_Bet";
-            this.btn_Bet.Size = new System.Drawing.Size(83, 22);
+            this.btn_Bet.Size = new System.Drawing.Size(83, 23);
             this.btn_Bet.TabIndex = 8;
             this.btn_Bet.TabStop = false;
             this.btn_Bet.Text = "Wed!";
@@ -87,10 +90,10 @@
             // 
             this.slct_Hare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.slct_Hare.FormattingEnabled = true;
-            this.slct_Hare.Location = new System.Drawing.Point(122, 94);
+            this.slct_Hare.Location = new System.Drawing.Point(195, 92);
             this.slct_Hare.Margin = new System.Windows.Forms.Padding(2);
             this.slct_Hare.Name = "slct_Hare";
-            this.slct_Hare.Size = new System.Drawing.Size(330, 21);
+            this.slct_Hare.Size = new System.Drawing.Size(257, 21);
             this.slct_Hare.TabIndex = 7;
             this.slct_Hare.TabStop = false;
             // 
@@ -155,22 +158,22 @@
             this.lbl_Winner.TabIndex = 6;
             this.lbl_Winner.Text = "ID: Heeft deze ronde gewonnen!";
             // 
-            // PlayerTable
+            // grb_Players
             // 
-            this.PlayerTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.grb_Players.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PlayerTable.Controls.Add(this.lbl_Player3Stats);
-            this.PlayerTable.Controls.Add(this.lbl_Player4Stats);
-            this.PlayerTable.Controls.Add(this.lbl_Player1Stats);
-            this.PlayerTable.Controls.Add(this.lbl_Player2Stats);
-            this.PlayerTable.Location = new System.Drawing.Point(0, 2);
-            this.PlayerTable.Margin = new System.Windows.Forms.Padding(2);
-            this.PlayerTable.Name = "PlayerTable";
-            this.PlayerTable.Padding = new System.Windows.Forms.Padding(2);
-            this.PlayerTable.Size = new System.Drawing.Size(191, 120);
-            this.PlayerTable.TabIndex = 7;
-            this.PlayerTable.TabStop = false;
-            this.PlayerTable.Text = "Spelers:";
+            this.grb_Players.Controls.Add(this.lbl_Player3Stats);
+            this.grb_Players.Controls.Add(this.lbl_Player4Stats);
+            this.grb_Players.Controls.Add(this.lbl_Player1Stats);
+            this.grb_Players.Controls.Add(this.lbl_Player2Stats);
+            this.grb_Players.Location = new System.Drawing.Point(0, 2);
+            this.grb_Players.Margin = new System.Windows.Forms.Padding(2);
+            this.grb_Players.Name = "grb_Players";
+            this.grb_Players.Padding = new System.Windows.Forms.Padding(2);
+            this.grb_Players.Size = new System.Drawing.Size(191, 120);
+            this.grb_Players.TabIndex = 7;
+            this.grb_Players.TabStop = false;
+            this.grb_Players.Text = "Geld per speler:";
             // 
             // menuStrip
             // 
@@ -230,27 +233,27 @@
             this.overHazenRaceToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.overHazenRaceToolStripMenuItem.Text = "&Over HazenRace ";
             // 
-            // WinnerTable
+            // grb_Winner
             // 
-            this.WinnerTable.Controls.Add(this.lbl_Winner);
-            this.WinnerTable.Location = new System.Drawing.Point(190, 2);
-            this.WinnerTable.Margin = new System.Windows.Forms.Padding(2);
-            this.WinnerTable.Name = "WinnerTable";
-            this.WinnerTable.Padding = new System.Windows.Forms.Padding(2);
-            this.WinnerTable.Size = new System.Drawing.Size(272, 128);
-            this.WinnerTable.TabIndex = 9;
-            this.WinnerTable.TabStop = false;
-            this.WinnerTable.Text = "Winnaar:";
+            this.grb_Winner.Controls.Add(this.lbl_Winner);
+            this.grb_Winner.Location = new System.Drawing.Point(190, 2);
+            this.grb_Winner.Margin = new System.Windows.Forms.Padding(2);
+            this.grb_Winner.Name = "grb_Winner";
+            this.grb_Winner.Padding = new System.Windows.Forms.Padding(2);
+            this.grb_Winner.Size = new System.Drawing.Size(272, 128);
+            this.grb_Winner.TabIndex = 9;
+            this.grb_Winner.TabStop = false;
+            this.grb_Winner.Text = "Winnaar:";
             // 
             // btn_Run
             // 
             this.btn_Run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Run.BackColor = System.Drawing.Color.Transparent;
             this.btn_Run.Image = global::De_Gokkers.Properties.Resources.Ren;
-            this.btn_Run.Location = new System.Drawing.Point(457, 16);
+            this.btn_Run.Location = new System.Drawing.Point(457, 15);
             this.btn_Run.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Run.Name = "btn_Run";
-            this.btn_Run.Size = new System.Drawing.Size(83, 70);
+            this.btn_Run.Size = new System.Drawing.Size(83, 72);
             this.btn_Run.TabIndex = 9;
             this.btn_Run.TabStop = false;
             this.btn_Run.UseVisualStyleBackColor = false;
@@ -308,9 +311,9 @@
             // 
             // Background
             // 
-            this.Background.Controls.Add(this.PlayerTable);
-            this.Background.Controls.Add(this.MenuTable);
-            this.Background.Controls.Add(this.WinnerTable);
+            this.Background.Controls.Add(this.grb_Players);
+            this.Background.Controls.Add(this.grb_Menu);
+            this.Background.Controls.Add(this.grb_Winner);
             this.Background.Location = new System.Drawing.Point(0, 495);
             this.Background.Margin = new System.Windows.Forms.Padding(2);
             this.Background.Name = "Background";
@@ -319,26 +322,29 @@
             this.Background.TabIndex = 10;
             this.Background.TabStop = false;
             // 
-            // MenuTable
+            // grb_Menu
             // 
-            this.MenuTable.Controls.Add(this.list_Announce);
-            this.MenuTable.Controls.Add(this.rdio_Player3);
-            this.MenuTable.Controls.Add(this.rdio_Player2);
-            this.MenuTable.Controls.Add(this.rdio_Player4);
-            this.MenuTable.Controls.Add(this.rdio_Player1);
-            this.MenuTable.Controls.Add(this.num_AmountMoney);
-            this.MenuTable.Controls.Add(this.slct_Hare);
-            this.MenuTable.Controls.Add(this.btn_Bet);
-            this.MenuTable.Controls.Add(this.btn_Run);
-            this.MenuTable.Location = new System.Drawing.Point(458, 2);
-            this.MenuTable.Margin = new System.Windows.Forms.Padding(2);
-            this.MenuTable.Name = "MenuTable";
-            this.MenuTable.Padding = new System.Windows.Forms.Padding(2);
-            this.MenuTable.Size = new System.Drawing.Size(544, 138);
-            this.MenuTable.TabIndex = 10;
-            this.MenuTable.TabStop = false;
-            this.MenuTable.Text = "Menu:";
-            this.MenuTable.Enter += new System.EventHandler(this.MenuTable_Enter);
+            this.grb_Menu.Controls.Add(this.lbl_BetOn);
+            this.grb_Menu.Controls.Add(this.lbl_Bet2);
+            this.grb_Menu.Controls.Add(this.lbl_Bet);
+            this.grb_Menu.Controls.Add(this.list_Announce);
+            this.grb_Menu.Controls.Add(this.rdio_Player3);
+            this.grb_Menu.Controls.Add(this.rdio_Player2);
+            this.grb_Menu.Controls.Add(this.rdio_Player4);
+            this.grb_Menu.Controls.Add(this.rdio_Player1);
+            this.grb_Menu.Controls.Add(this.num_AmountMoney);
+            this.grb_Menu.Controls.Add(this.slct_Hare);
+            this.grb_Menu.Controls.Add(this.btn_Bet);
+            this.grb_Menu.Controls.Add(this.btn_Run);
+            this.grb_Menu.Location = new System.Drawing.Point(458, 2);
+            this.grb_Menu.Margin = new System.Windows.Forms.Padding(2);
+            this.grb_Menu.Name = "grb_Menu";
+            this.grb_Menu.Padding = new System.Windows.Forms.Padding(2);
+            this.grb_Menu.Size = new System.Drawing.Size(544, 138);
+            this.grb_Menu.TabIndex = 10;
+            this.grb_Menu.TabStop = false;
+            this.grb_Menu.Text = "Menu:";
+            this.grb_Menu.Enter += new System.EventHandler(this.MenuTable_Enter);
             // 
             // list_Announce
             // 
@@ -348,6 +354,8 @@
             this.list_Announce.Size = new System.Drawing.Size(374, 69);
             this.list_Announce.TabIndex = 6;
             this.list_Announce.TabStop = false;
+            this.list_Announce.Tag = "";
+            this.list_Announce.SelectedIndexChanged += new System.EventHandler(this.list_Announce_SelectedIndexChanged);
             // 
             // rdio_Player3
             // 
@@ -391,7 +399,7 @@
             // 
             // num_AmountMoney
             // 
-            this.num_AmountMoney.Location = new System.Drawing.Point(78, 95);
+            this.num_AmountMoney.Location = new System.Drawing.Point(101, 92);
             this.num_AmountMoney.Maximum = new decimal(new int[] {
             15,
             0,
@@ -406,11 +414,14 @@
             this.num_AmountMoney.Size = new System.Drawing.Size(39, 20);
             this.num_AmountMoney.TabIndex = 5;
             this.num_AmountMoney.TabStop = false;
+            this.num_AmountMoney.Tag = "";
+            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.num_AmountMoney.Value = new decimal(new int[] {
             5,
             0,
             0,
             0});
+            this.num_AmountMoney.ValueChanged += new System.EventHandler(this.num_AmountMoney_ValueChanged);
             // 
             // lbl_User
             // 
@@ -421,6 +432,33 @@
             this.lbl_User.Size = new System.Drawing.Size(53, 13);
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
+            // 
+            // lbl_Bet
+            // 
+            this.lbl_Bet.AutoSize = true;
+            this.lbl_Bet.Location = new System.Drawing.Point(76, 1);
+            this.lbl_Bet.Name = "lbl_Bet";
+            this.lbl_Bet.Size = new System.Drawing.Size(149, 13);
+            this.lbl_Bet.TabIndex = 10;
+            this.lbl_Bet.Text = "Geplaatste weddenschappen:";
+            // 
+            // lbl_Bet2
+            // 
+            this.lbl_Bet2.AutoSize = true;
+            this.lbl_Bet2.Location = new System.Drawing.Point(75, 95);
+            this.lbl_Bet2.Name = "lbl_Bet2";
+            this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
+            this.lbl_Bet2.TabIndex = 11;
+            this.lbl_Bet2.Text = "Zet:";
+            // 
+            // lbl_BetOn
+            // 
+            this.lbl_BetOn.AutoSize = true;
+            this.lbl_BetOn.Location = new System.Drawing.Point(143, 95);
+            this.lbl_BetOn.Name = "lbl_BetOn";
+            this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
+            this.lbl_BetOn.TabIndex = 12;
+            this.lbl_BetOn.Text = "Op haas:";
             // 
             // Main
             // 
@@ -444,19 +482,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HazenRace";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.PlayerTable.ResumeLayout(false);
-            this.PlayerTable.PerformLayout();
+            this.grb_Players.ResumeLayout(false);
+            this.grb_Players.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.WinnerTable.ResumeLayout(false);
-            this.WinnerTable.PerformLayout();
+            this.grb_Winner.ResumeLayout(false);
+            this.grb_Winner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_Hare2)).EndInit();
             this.Background.ResumeLayout(false);
-            this.MenuTable.ResumeLayout(false);
-            this.MenuTable.PerformLayout();
+            this.grb_Menu.ResumeLayout(false);
+            this.grb_Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -472,15 +510,15 @@
         private System.Windows.Forms.Button btn_Bet;
         private System.Windows.Forms.ComboBox slct_Hare;
         private System.Windows.Forms.Label lbl_Winner;
-        private System.Windows.Forms.GroupBox PlayerTable;
+        private System.Windows.Forms.GroupBox grb_Players;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem bestandToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem;
-        private System.Windows.Forms.GroupBox WinnerTable;
+        private System.Windows.Forms.GroupBox grb_Winner;
         private System.Windows.Forms.PictureBox img_Hare1;
         private System.Windows.Forms.GroupBox Background;
-        private System.Windows.Forms.GroupBox MenuTable;
+        private System.Windows.Forms.GroupBox grb_Menu;
         private System.Windows.Forms.ToolStripMenuItem bestandToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem1;
@@ -495,5 +533,8 @@
         private System.Windows.Forms.RadioButton rdio_Player2;
         private System.Windows.Forms.RadioButton rdio_Player4;
         private System.Windows.Forms.ListBox list_Announce;
+        private System.Windows.Forms.Label lbl_Bet;
+        private System.Windows.Forms.Label lbl_BetOn;
+        private System.Windows.Forms.Label lbl_Bet2;
     }
 }
