@@ -10,7 +10,7 @@ namespace De_Gokkers
     class Bet
     {
         public int Amount;
-        public int Hase;
+        public int hare;
         public Guy Bettor;
         public int Add_Substract = 0;
         public int AmountOfBettors = 4;
@@ -26,7 +26,7 @@ namespace De_Gokkers
 
             if (Amount > 5 & Amount < 15)
             {
-                string line = Bettor + "heeft " + Amount + "gewed op haas: " + Hase;
+                string line = Bettor + "heeft " + Amount + "gewed op haas: " + hare;
                 switch (Bettor.Name)
                 {
                     case "Fer":
