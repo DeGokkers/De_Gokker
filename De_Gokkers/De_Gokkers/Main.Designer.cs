@@ -344,7 +344,6 @@
             this.grb_Menu.TabIndex = 10;
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
-            this.grb_Menu.Enter += new System.EventHandler(this.MenuTable_Enter);
             // 
             // list_Announce
             // 
@@ -355,7 +354,6 @@
             this.list_Announce.TabIndex = 6;
             this.list_Announce.TabStop = false;
             this.list_Announce.Tag = "";
-            this.list_Announce.SelectedIndexChanged += new System.EventHandler(this.list_Announce_SelectedIndexChanged);
             // 
             // rdio_Player3
             // 
@@ -421,7 +419,6 @@
             0,
             0,
             0});
-            this.num_AmountMoney.ValueChanged += new System.EventHandler(this.num_AmountMoney_ValueChanged);
             // 
             // lbl_User
             // 

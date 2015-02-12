@@ -16,34 +16,17 @@ namespace De_Gokkers
         {
             InitializeComponent();
         }
-        public static Main _Main;
 
         private void Main_Load(object sender, EventArgs e)
         {
-        }
-
-        public void update(string text)
-        { 
-            
-        }
-
-        public decimal amount()
-        {
-            return num_AmountMoney.Value;
-        }
-
-        private void MenuTable_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void list_Announce_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void num_AmountMoney_ValueChanged(object sender, EventArgs e)
-        {
+            Guy Sietse = new Guy("Sietse", 1337);
+            Guy Fer = new Guy("Fer", 123);
+            Guy Lidy = new Guy("Lidy", 9001);
+            Guy Peter = new Guy("Peter", 4321);
+            lbl_Player1Stats.Text = Sietse.UpdateLabels();
+            lbl_Player2Stats.Text = Fer.UpdateLabels();
+            lbl_Player3Stats.Text = Lidy.UpdateLabels();
+            lbl_Player4Stats.Text = Peter.UpdateLabels();
 
         }
     }
