@@ -80,7 +80,7 @@
             this.PlaceBet.Size = new System.Drawing.Size(83, 22);
             this.PlaceBet.TabIndex = 2;
             this.PlaceBet.TabStop = false;
-            this.PlaceBet.Text = "Plaats gok";
+            this.PlaceBet.Text = "Wed!";
             this.PlaceBet.UseVisualStyleBackColor = true;
             this.PlaceBet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlaceBet_MouseClick);
             // 
