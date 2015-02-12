@@ -65,8 +65,8 @@
             this.rdio_Player4 = new System.Windows.Forms.RadioButton();
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.resetSpelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -445,7 +445,7 @@
             // rdio_Player3
             // 
             this.rdio_Player3.AutoSize = true;
-            this.rdio_Player3.Location = new System.Drawing.Point(11, 70);
+            this.rdio_Player3.Location = new System.Drawing.Point(11, 69);
             this.rdio_Player3.Name = "rdio_Player3";
             this.rdio_Player3.Size = new System.Drawing.Size(54, 17);
             this.rdio_Player3.TabIndex = 3;
@@ -455,7 +455,7 @@
             // rdio_Player2
             // 
             this.rdio_Player2.AutoSize = true;
-            this.rdio_Player2.Location = new System.Drawing.Point(11, 47);
+            this.rdio_Player2.Location = new System.Drawing.Point(11, 46);
             this.rdio_Player2.Name = "rdio_Player2";
             this.rdio_Player2.Size = new System.Drawing.Size(44, 17);
             this.rdio_Player2.TabIndex = 2;
@@ -465,7 +465,7 @@
             // rdio_Player4
             // 
             this.rdio_Player4.AutoSize = true;
-            this.rdio_Player4.Location = new System.Drawing.Point(11, 93);
+            this.rdio_Player4.Location = new System.Drawing.Point(11, 92);
             this.rdio_Player4.Name = "rdio_Player4";
             this.rdio_Player4.Size = new System.Drawing.Size(50, 17);
             this.rdio_Player4.TabIndex = 4;
@@ -475,7 +475,7 @@
             // rdio_Player1
             // 
             this.rdio_Player1.AutoSize = true;
-            this.rdio_Player1.Location = new System.Drawing.Point(11, 24);
+            this.rdio_Player1.Location = new System.Drawing.Point(11, 23);
             this.rdio_Player1.Name = "rdio_Player1";
             this.rdio_Player1.Size = new System.Drawing.Size(40, 17);
             this.rdio_Player1.TabIndex = 1;
@@ -491,6 +491,13 @@
             this.lbl_User.Size = new System.Drawing.Size(53, 13);
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
+            // 
+            // resetSpelToolStripMenuItem
+            // 
+            this.resetSpelToolStripMenuItem.Name = "resetSpelToolStripMenuItem";
+            this.resetSpelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.resetSpelToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.resetSpelToolStripMenuItem.Text = "&Reset spel";
             // 
             // num_AmountMoney
             // 
@@ -518,13 +525,6 @@
             0,
             0,
             0});
-            // 
-            // resetSpelToolStripMenuItem
-            // 
-            this.resetSpelToolStripMenuItem.Name = "resetSpelToolStripMenuItem";
-            this.resetSpelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.resetSpelToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.resetSpelToolStripMenuItem.Text = "&Reset spel";
             // 
             // Main
             // 
