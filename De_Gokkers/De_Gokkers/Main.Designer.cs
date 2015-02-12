@@ -82,7 +82,6 @@
             this.btn_Bet.TabStop = false;
             this.btn_Bet.Text = "Wed!";
             this.btn_Bet.UseVisualStyleBackColor = true;
-            this.btn_Bet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlaceBet_MouseClick);
             // 
             // slct_Hare
             // 
