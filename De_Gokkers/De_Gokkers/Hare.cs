@@ -11,13 +11,11 @@ namespace De_Gokkers
     {
         public int RaceTrackLength;
         static Main test = new Main();
-        // public PictureBox MyPictureBox = test.Hase1;
         public Random Randomizer;
 
         public void Run()
         {
-           // int distance = Randomizer.Next(1, 4);
-           // MyPictureBox.Location = new Point(MyPictureBox.Location.X + distance, MyPictureBox.Location.Y);
+            
         }
 
         public void TakeStartingPosition()
