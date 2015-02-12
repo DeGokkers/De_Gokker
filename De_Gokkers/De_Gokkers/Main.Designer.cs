@@ -546,7 +546,7 @@
             this.MinimizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HazenRace";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Main_Load);
             this.grb_Players.ResumeLayout(false);
             this.grb_Players.PerformLayout();
@@ -569,9 +569,6 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox img_Hare2;
-        private System.Windows.Forms.PictureBox img_Hare3;
-        private System.Windows.Forms.PictureBox img_Hare4;
         private System.Windows.Forms.Button btn_Run;
         private System.Windows.Forms.Button btn_Bet;
         private System.Windows.Forms.ComboBox slct_Hare;
@@ -582,7 +579,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem;
         private System.Windows.Forms.GroupBox grb_Winner;
-        private System.Windows.Forms.PictureBox img_Hare1;
         private System.Windows.Forms.GroupBox Background;
         private System.Windows.Forms.GroupBox grb_Menu;
         private System.Windows.Forms.ToolStripMenuItem bestandToolStripMenuItem1;
@@ -607,5 +603,9 @@
         public System.Windows.Forms.Label lbl_Player3Cash;
         public System.Windows.Forms.Label lbl_Player2Cash;
         private System.Windows.Forms.ToolStripMenuItem resetSpelToolStripMenuItem;
+        public System.Windows.Forms.PictureBox img_Hare2;
+        public System.Windows.Forms.PictureBox img_Hare3;
+        public System.Windows.Forms.PictureBox img_Hare4;
+        public System.Windows.Forms.PictureBox img_Hare1;
     }
 }
