@@ -52,13 +52,13 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.MenuTable = new System.Windows.Forms.GroupBox();
+            this.list_Announce = new System.Windows.Forms.ListBox();
+            this.rdio_Player3 = new System.Windows.Forms.RadioButton();
+            this.rdio_Player2 = new System.Windows.Forms.RadioButton();
+            this.rdio_Player4 = new System.Windows.Forms.RadioButton();
+            this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.num_AmountMoney = new System.Windows.Forms.NumericUpDown();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.rdio_Player1 = new System.Windows.Forms.RadioButton();
-            this.rdio_Player4 = new System.Windows.Forms.RadioButton();
-            this.rdio_Player2 = new System.Windows.Forms.RadioButton();
-            this.rdio_Player3 = new System.Windows.Forms.RadioButton();
-            this.list_Announce = new System.Windows.Forms.ListBox();
             this.PlayerTable.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.WinnerTable.SuspendLayout();
@@ -245,11 +245,11 @@
             // 
             this.btn_Run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Run.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Run.Image = ((System.Drawing.Image)(resources.GetObject("btn_Run.Image")));
-            this.btn_Run.Location = new System.Drawing.Point(457, 17);
+            this.btn_Run.Image = global::De_Gokkers.Properties.Resources.Ren;
+            this.btn_Run.Location = new System.Drawing.Point(457, 16);
             this.btn_Run.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Run.Name = "btn_Run";
-            this.btn_Run.Size = new System.Drawing.Size(83, 74);
+            this.btn_Run.Size = new System.Drawing.Size(83, 70);
             this.btn_Run.TabIndex = 2;
             this.btn_Run.TabStop = false;
             this.btn_Run.UseVisualStyleBackColor = false;
@@ -338,6 +338,58 @@
             this.MenuTable.TabStop = false;
             this.MenuTable.Text = "Menu:";
             // 
+            // list_Announce
+            // 
+            this.list_Announce.FormattingEnabled = true;
+            this.list_Announce.Location = new System.Drawing.Point(78, 17);
+            this.list_Announce.Name = "list_Announce";
+            this.list_Announce.Size = new System.Drawing.Size(374, 69);
+            this.list_Announce.TabIndex = 13;
+            // 
+            // rdio_Player3
+            // 
+            this.rdio_Player3.AutoSize = true;
+            this.rdio_Player3.Location = new System.Drawing.Point(11, 70);
+            this.rdio_Player3.Name = "rdio_Player3";
+            this.rdio_Player3.Size = new System.Drawing.Size(54, 17);
+            this.rdio_Player3.TabIndex = 12;
+            this.rdio_Player3.TabStop = true;
+            this.rdio_Player3.Text = "Sietse";
+            this.rdio_Player3.UseVisualStyleBackColor = true;
+            // 
+            // rdio_Player2
+            // 
+            this.rdio_Player2.AutoSize = true;
+            this.rdio_Player2.Location = new System.Drawing.Point(11, 47);
+            this.rdio_Player2.Name = "rdio_Player2";
+            this.rdio_Player2.Size = new System.Drawing.Size(44, 17);
+            this.rdio_Player2.TabIndex = 11;
+            this.rdio_Player2.TabStop = true;
+            this.rdio_Player2.Text = "Lidy";
+            this.rdio_Player2.UseVisualStyleBackColor = true;
+            // 
+            // rdio_Player4
+            // 
+            this.rdio_Player4.AutoSize = true;
+            this.rdio_Player4.Location = new System.Drawing.Point(11, 93);
+            this.rdio_Player4.Name = "rdio_Player4";
+            this.rdio_Player4.Size = new System.Drawing.Size(50, 17);
+            this.rdio_Player4.TabIndex = 10;
+            this.rdio_Player4.TabStop = true;
+            this.rdio_Player4.Text = "Peter";
+            this.rdio_Player4.UseVisualStyleBackColor = true;
+            // 
+            // rdio_Player1
+            // 
+            this.rdio_Player1.AutoSize = true;
+            this.rdio_Player1.Location = new System.Drawing.Point(11, 24);
+            this.rdio_Player1.Name = "rdio_Player1";
+            this.rdio_Player1.Size = new System.Drawing.Size(40, 17);
+            this.rdio_Player1.TabIndex = 9;
+            this.rdio_Player1.TabStop = true;
+            this.rdio_Player1.Text = "Fer";
+            this.rdio_Player1.UseVisualStyleBackColor = true;
+            // 
             // num_AmountMoney
             // 
             this.num_AmountMoney.Location = new System.Drawing.Point(78, 95);
@@ -369,58 +421,6 @@
             this.lbl_User.Size = new System.Drawing.Size(53, 13);
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
-            // 
-            // rdio_Player1
-            // 
-            this.rdio_Player1.AutoSize = true;
-            this.rdio_Player1.Location = new System.Drawing.Point(5, 19);
-            this.rdio_Player1.Name = "rdio_Player1";
-            this.rdio_Player1.Size = new System.Drawing.Size(40, 17);
-            this.rdio_Player1.TabIndex = 9;
-            this.rdio_Player1.TabStop = true;
-            this.rdio_Player1.Text = "Fer";
-            this.rdio_Player1.UseVisualStyleBackColor = true;
-            // 
-            // rdio_Player4
-            // 
-            this.rdio_Player4.AutoSize = true;
-            this.rdio_Player4.Location = new System.Drawing.Point(5, 88);
-            this.rdio_Player4.Name = "rdio_Player4";
-            this.rdio_Player4.Size = new System.Drawing.Size(50, 17);
-            this.rdio_Player4.TabIndex = 10;
-            this.rdio_Player4.TabStop = true;
-            this.rdio_Player4.Text = "Peter";
-            this.rdio_Player4.UseVisualStyleBackColor = true;
-            // 
-            // rdio_Player2
-            // 
-            this.rdio_Player2.AutoSize = true;
-            this.rdio_Player2.Location = new System.Drawing.Point(5, 42);
-            this.rdio_Player2.Name = "rdio_Player2";
-            this.rdio_Player2.Size = new System.Drawing.Size(44, 17);
-            this.rdio_Player2.TabIndex = 11;
-            this.rdio_Player2.TabStop = true;
-            this.rdio_Player2.Text = "Lidy";
-            this.rdio_Player2.UseVisualStyleBackColor = true;
-            // 
-            // rdio_Player3
-            // 
-            this.rdio_Player3.AutoSize = true;
-            this.rdio_Player3.Location = new System.Drawing.Point(5, 65);
-            this.rdio_Player3.Name = "rdio_Player3";
-            this.rdio_Player3.Size = new System.Drawing.Size(54, 17);
-            this.rdio_Player3.TabIndex = 12;
-            this.rdio_Player3.TabStop = true;
-            this.rdio_Player3.Text = "Sietse";
-            this.rdio_Player3.UseVisualStyleBackColor = true;
-            // 
-            // list_Announce
-            // 
-            this.list_Announce.FormattingEnabled = true;
-            this.list_Announce.Location = new System.Drawing.Point(78, 17);
-            this.list_Announce.Name = "list_Announce";
-            this.list_Announce.Size = new System.Drawing.Size(374, 69);
-            this.list_Announce.TabIndex = 13;
             // 
             // Main
             // 
