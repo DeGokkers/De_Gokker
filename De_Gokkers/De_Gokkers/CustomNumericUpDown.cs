@@ -11,7 +11,7 @@ namespace De_Gokkers
     {
         protected override void UpdateEditText()
         {
-            this.Text = "€" + this.Value.ToString();
+            this.Text = "€ " + this.Value.ToString();
         }
     }
 }
