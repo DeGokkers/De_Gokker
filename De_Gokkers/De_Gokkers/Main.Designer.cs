@@ -74,10 +74,10 @@
             // PlaceBet
             // 
             this.PlaceBet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.PlaceBet.Location = new System.Drawing.Point(365, 94);
+            this.PlaceBet.Location = new System.Drawing.Point(457, 94);
             this.PlaceBet.Margin = new System.Windows.Forms.Padding(2);
             this.PlaceBet.Name = "PlaceBet";
-            this.PlaceBet.Size = new System.Drawing.Size(87, 22);
+            this.PlaceBet.Size = new System.Drawing.Size(83, 22);
             this.PlaceBet.TabIndex = 2;
             this.PlaceBet.TabStop = false;
             this.PlaceBet.Text = "Plaats gok";
@@ -88,10 +88,10 @@
             // 
             this.HaseChoosing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.HaseChoosing.FormattingEnabled = true;
-            this.HaseChoosing.Location = new System.Drawing.Point(176, 94);
+            this.HaseChoosing.Location = new System.Drawing.Point(122, 94);
             this.HaseChoosing.Margin = new System.Windows.Forms.Padding(2);
             this.HaseChoosing.Name = "HaseChoosing";
-            this.HaseChoosing.Size = new System.Drawing.Size(185, 21);
+            this.HaseChoosing.Size = new System.Drawing.Size(330, 21);
             this.HaseChoosing.TabIndex = 6;
             // 
             // Player1
@@ -196,7 +196,7 @@
             this.Winner.AutoSize = true;
             this.Winner.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Winner.ForeColor = System.Drawing.Color.Green;
-            this.Winner.Location = new System.Drawing.Point(6, 18);
+            this.Winner.Location = new System.Drawing.Point(4, 18);
             this.Winner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Winner.Name = "Winner";
             this.Winner.Size = new System.Drawing.Size(266, 23);
@@ -295,10 +295,10 @@
             this.Run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Run.BackColor = System.Drawing.Color.Transparent;
             this.Run.Image = ((System.Drawing.Image)(resources.GetObject("Run.Image")));
-            this.Run.Location = new System.Drawing.Point(461, 43);
+            this.Run.Location = new System.Drawing.Point(457, 17);
             this.Run.Margin = new System.Windows.Forms.Padding(2);
             this.Run.Name = "Run";
-            this.Run.Size = new System.Drawing.Size(72, 71);
+            this.Run.Size = new System.Drawing.Size(83, 74);
             this.Run.TabIndex = 2;
             this.Run.TabStop = false;
             this.Run.UseVisualStyleBackColor = false;
@@ -398,7 +398,7 @@
             // 
             // num_AmountMoney
             // 
-            this.num_AmountMoney.Location = new System.Drawing.Point(132, 94);
+            this.num_AmountMoney.Location = new System.Drawing.Point(78, 95);
             this.num_AmountMoney.Maximum = new decimal(new int[] {
             15,
             0,
