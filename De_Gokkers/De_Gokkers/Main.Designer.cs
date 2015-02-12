@@ -95,10 +95,10 @@
             // 
             this.slct_Hare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.slct_Hare.FormattingEnabled = true;
-            this.slct_Hare.Location = new System.Drawing.Point(195, 94);
+            this.slct_Hare.Location = new System.Drawing.Point(188, 94);
             this.slct_Hare.Margin = new System.Windows.Forms.Padding(2);
             this.slct_Hare.Name = "slct_Hare";
-            this.slct_Hare.Size = new System.Drawing.Size(257, 21);
+            this.slct_Hare.Size = new System.Drawing.Size(264, 21);
             this.slct_Hare.TabIndex = 7;
             this.slct_Hare.TabStop = false;
             // 
@@ -392,7 +392,6 @@
             // grb_Menu
             // 
             this.grb_Menu.Controls.Add(this.num_AmountMoney);
-            this.grb_Menu.Controls.Add(this.lbl_BetOn);
             this.grb_Menu.Controls.Add(this.lbl_Bet2);
             this.grb_Menu.Controls.Add(this.lbl_Bet);
             this.grb_Menu.Controls.Add(this.list_Announce);
@@ -403,6 +402,7 @@
             this.grb_Menu.Controls.Add(this.slct_Hare);
             this.grb_Menu.Controls.Add(this.btn_Bet);
             this.grb_Menu.Controls.Add(this.btn_Run);
+            this.grb_Menu.Controls.Add(this.lbl_BetOn);
             this.grb_Menu.Location = new System.Drawing.Point(458, 0);
             this.grb_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Menu.Name = "grb_Menu";
@@ -415,7 +415,7 @@
             // lbl_BetOn
             // 
             this.lbl_BetOn.AutoSize = true;
-            this.lbl_BetOn.Location = new System.Drawing.Point(145, 97);
+            this.lbl_BetOn.Location = new System.Drawing.Point(139, 97);
             this.lbl_BetOn.Name = "lbl_BetOn";
             this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
             this.lbl_BetOn.TabIndex = 12;
@@ -424,7 +424,7 @@
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
-            this.lbl_Bet2.Location = new System.Drawing.Point(75, 97);
+            this.lbl_Bet2.Location = new System.Drawing.Point(73, 97);
             this.lbl_Bet2.Name = "lbl_Bet2";
             this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
             this.lbl_Bet2.TabIndex = 11;
@@ -501,7 +501,8 @@
             // 
             // num_AmountMoney
             // 
-            this.num_AmountMoney.Location = new System.Drawing.Point(102, 94);
+            this.num_AmountMoney.AutoSize = true;
+            this.num_AmountMoney.Location = new System.Drawing.Point(98, 94);
             this.num_AmountMoney.Maximum = new decimal(new int[] {
             15,
             0,
@@ -513,9 +514,10 @@
             0,
             0});
             this.num_AmountMoney.Name = "num_AmountMoney";
-            this.num_AmountMoney.Size = new System.Drawing.Size(38, 20);
+            this.num_AmountMoney.Size = new System.Drawing.Size(40, 20);
             this.num_AmountMoney.TabIndex = 13;
             this.num_AmountMoney.TabStop = false;
+            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.num_AmountMoney.Value = new decimal(new int[] {
             5,
             0,
