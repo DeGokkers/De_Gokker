@@ -80,7 +80,7 @@
             this.PlaceBet.Size = new System.Drawing.Size(87, 22);
             this.PlaceBet.TabIndex = 2;
             this.PlaceBet.TabStop = false;
-            this.PlaceBet.Text = "Place bet";
+            this.PlaceBet.Text = "Plaats gok";
             this.PlaceBet.UseVisualStyleBackColor = true;
             // 
             // HaseChoosing
@@ -198,9 +198,9 @@
             this.Winner.Location = new System.Drawing.Point(6, 18);
             this.Winner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Winner.Name = "Winner";
-            this.Winner.Size = new System.Drawing.Size(161, 23);
+            this.Winner.Size = new System.Drawing.Size(266, 23);
             this.Winner.TabIndex = 6;
-            this.Winner.Text = "ID: won this round!";
+            this.Winner.Text = "ID: Heeft deze ronde gewonnen!";
             // 
             // PlayerTable
             // 
@@ -217,7 +217,7 @@
             this.PlayerTable.Size = new System.Drawing.Size(191, 120);
             this.PlayerTable.TabIndex = 7;
             this.PlayerTable.TabStop = false;
-            this.PlayerTable.Text = "Players:";
+            this.PlayerTable.Text = "Spelers:";
             // 
             // menuStrip
             // 
@@ -287,17 +287,17 @@
             this.WinnerTable.Size = new System.Drawing.Size(272, 128);
             this.WinnerTable.TabIndex = 9;
             this.WinnerTable.TabStop = false;
-            this.WinnerTable.Text = "Winner:";
+            this.WinnerTable.Text = "Winnaar:";
             // 
             // Run
             // 
             this.Run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Run.BackColor = System.Drawing.Color.Transparent;
             this.Run.Image = ((System.Drawing.Image)(resources.GetObject("Run.Image")));
-            this.Run.Location = new System.Drawing.Point(461, 42);
+            this.Run.Location = new System.Drawing.Point(461, 43);
             this.Run.Margin = new System.Windows.Forms.Padding(2);
             this.Run.Name = "Run";
-            this.Run.Size = new System.Drawing.Size(72, 73);
+            this.Run.Size = new System.Drawing.Size(72, 71);
             this.Run.TabIndex = 2;
             this.Run.TabStop = false;
             this.Run.UseVisualStyleBackColor = false;
@@ -306,7 +306,7 @@
             // 
             this.Hase4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Hase4.BackColor = System.Drawing.Color.Transparent;
-            this.Hase4.Image = global::De_Gokkers.Properties.Resources.Hase_4;
+            this.Hase4.Image = global::De_Gokkers.Properties.Resources.Hare_4;
             this.Hase4.Location = new System.Drawing.Point(927, 342);
             this.Hase4.Margin = new System.Windows.Forms.Padding(2);
             this.Hase4.Name = "Hase4";
@@ -319,7 +319,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::De_Gokkers.Properties.Resources.Hase_1;
+            this.pictureBox1.Image = global::De_Gokkers.Properties.Resources.Hare_1;
             this.pictureBox1.Location = new System.Drawing.Point(927, 87);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -332,7 +332,7 @@
             // 
             this.Hase3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Hase3.BackColor = System.Drawing.Color.Transparent;
-            this.Hase3.Image = global::De_Gokkers.Properties.Resources.Hase_3;
+            this.Hase3.Image = global::De_Gokkers.Properties.Resources.Hare_3;
             this.Hase3.Location = new System.Drawing.Point(927, 257);
             this.Hase3.Margin = new System.Windows.Forms.Padding(2);
             this.Hase3.Name = "Hase3";
@@ -345,7 +345,7 @@
             // 
             this.Hase2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Hase2.BackColor = System.Drawing.Color.Transparent;
-            this.Hase2.Image = global::De_Gokkers.Properties.Resources.Hase_2;
+            this.Hase2.Image = global::De_Gokkers.Properties.Resources.Hare_2;
             this.Hase2.Location = new System.Drawing.Point(927, 172);
             this.Hase2.Margin = new System.Windows.Forms.Padding(2);
             this.Hase2.Name = "Hase2";
@@ -445,6 +445,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HazenRace";

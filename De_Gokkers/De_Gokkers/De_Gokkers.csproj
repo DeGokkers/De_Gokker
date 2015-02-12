@@ -88,13 +88,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <None Include="Resources\Hare_4.png" />
+    <None Include="Resources\Hare_3.png" />
+    <None Include="Resources\Hare_2.png" />
+    <None Include="Resources\Hare_1.png" />
     <None Include="Resources\Renbaan.png" />
-    <None Include="Resources\Hase-4.png" />
-    <None Include="Resources\Hase-3.png" />
-    <None Include="Resources\Hase-2.png" />
-    <None Include="Resources\Hase-1.png" />
     <None Include="Resources\Run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="Resources\Ren.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
