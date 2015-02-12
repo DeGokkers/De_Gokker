@@ -15,23 +15,27 @@ namespace De_Gokkers
         public Main()
         {
             InitializeComponent();
-            _Main = this;
         }
         public static Main _Main;
 
-        public void update(string message)
-        {
-            txt_Announce.Text = message;
-        }
-
         private void Main_Load(object sender, EventArgs e)
         {
-            Guy sample = new Guy();
+        }
+
+        public void update(string text)
+        { 
+            
         }
 
         public decimal amount()
         {
             return num_AmountMoney.Value;
         }
+
+        private void PlaceBet_MouseClick(object sender, MouseEventArgs e)
+        {
+            Guy test = new Guy();
+            txt_Announce.Text = test.UpdateLabels();
+        } 
     }
 }
