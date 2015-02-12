@@ -52,9 +52,6 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
-            this.lbl_BetOn = new System.Windows.Forms.Label();
-            this.lbl_Bet2 = new System.Windows.Forms.Label();
-            this.lbl_Bet = new System.Windows.Forms.Label();
             this.list_Announce = new System.Windows.Forms.ListBox();
             this.rdio_Player3 = new System.Windows.Forms.RadioButton();
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
@@ -62,6 +59,9 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.num_AmountMoney = new System.Windows.Forms.NumericUpDown();
             this.lbl_User = new System.Windows.Forms.Label();
+            this.lbl_Bet = new System.Windows.Forms.Label();
+            this.lbl_Bet2 = new System.Windows.Forms.Label();
+            this.lbl_BetOn = new System.Windows.Forms.Label();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -105,9 +105,9 @@
             this.lbl_Player1Stats.Location = new System.Drawing.Point(29, 21);
             this.lbl_Player1Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player1Stats.Name = "lbl_Player1Stats";
-            this.lbl_Player1Stats.Size = new System.Drawing.Size(96, 26);
+            this.lbl_Player1Stats.Size = new System.Drawing.Size(117, 26);
             this.lbl_Player1Stats.TabIndex = 5;
-            this.lbl_Player1Stats.Text = "ID: € 0,00";
+            this.lbl_Player1Stats.Text = "Lidy:  € 0,00";
             // 
             // lbl_Player2Stats
             // 
@@ -117,9 +117,9 @@
             this.lbl_Player2Stats.Location = new System.Drawing.Point(36, 44);
             this.lbl_Player2Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player2Stats.Name = "lbl_Player2Stats";
-            this.lbl_Player2Stats.Size = new System.Drawing.Size(96, 26);
+            this.lbl_Player2Stats.Size = new System.Drawing.Size(110, 26);
             this.lbl_Player2Stats.TabIndex = 5;
-            this.lbl_Player2Stats.Text = "ID: € 0,00";
+            this.lbl_Player2Stats.Text = "Fer:  € 0,00";
             // 
             // lbl_Player3Stats
             // 
@@ -129,9 +129,9 @@
             this.lbl_Player3Stats.Location = new System.Drawing.Point(12, 65);
             this.lbl_Player3Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player3Stats.Name = "lbl_Player3Stats";
-            this.lbl_Player3Stats.Size = new System.Drawing.Size(96, 26);
+            this.lbl_Player3Stats.Size = new System.Drawing.Size(134, 26);
             this.lbl_Player3Stats.TabIndex = 5;
-            this.lbl_Player3Stats.Text = "ID: € 0,00";
+            this.lbl_Player3Stats.Text = "Sietse:  € 0,00";
             // 
             // lbl_Player4Stats
             // 
@@ -141,9 +141,9 @@
             this.lbl_Player4Stats.Location = new System.Drawing.Point(22, 85);
             this.lbl_Player4Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player4Stats.Name = "lbl_Player4Stats";
-            this.lbl_Player4Stats.Size = new System.Drawing.Size(96, 26);
+            this.lbl_Player4Stats.Size = new System.Drawing.Size(124, 26);
             this.lbl_Player4Stats.TabIndex = 5;
-            this.lbl_Player4Stats.Text = "ID: € 0,00";
+            this.lbl_Player4Stats.Text = "Peter: € 0,00";
             // 
             // lbl_Winner
             // 
@@ -344,33 +344,7 @@
             this.grb_Menu.TabIndex = 10;
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
-            // 
-            // lbl_BetOn
-            // 
-            this.lbl_BetOn.AutoSize = true;
-            this.lbl_BetOn.Location = new System.Drawing.Point(143, 95);
-            this.lbl_BetOn.Name = "lbl_BetOn";
-            this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
-            this.lbl_BetOn.TabIndex = 12;
-            this.lbl_BetOn.Text = "Op haas:";
-            // 
-            // lbl_Bet2
-            // 
-            this.lbl_Bet2.AutoSize = true;
-            this.lbl_Bet2.Location = new System.Drawing.Point(74, 95);
-            this.lbl_Bet2.Name = "lbl_Bet2";
-            this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
-            this.lbl_Bet2.TabIndex = 11;
-            this.lbl_Bet2.Text = "Zet:";
-            // 
-            // lbl_Bet
-            // 
-            this.lbl_Bet.AutoSize = true;
-            this.lbl_Bet.Location = new System.Drawing.Point(76, 1);
-            this.lbl_Bet.Name = "lbl_Bet";
-            this.lbl_Bet.Size = new System.Drawing.Size(149, 13);
-            this.lbl_Bet.TabIndex = 10;
-            this.lbl_Bet.Text = "Geplaatste weddenschappen:";
+            this.grb_Menu.Enter += new System.EventHandler(this.MenuTable_Enter);
             // 
             // list_Announce
             // 
@@ -381,6 +355,7 @@
             this.list_Announce.TabIndex = 6;
             this.list_Announce.TabStop = false;
             this.list_Announce.Tag = "";
+            this.list_Announce.SelectedIndexChanged += new System.EventHandler(this.list_Announce_SelectedIndexChanged);
             // 
             // rdio_Player3
             // 
@@ -446,6 +421,7 @@
             0,
             0,
             0});
+            this.num_AmountMoney.ValueChanged += new System.EventHandler(this.num_AmountMoney_ValueChanged);
             // 
             // lbl_User
             // 
@@ -456,6 +432,33 @@
             this.lbl_User.Size = new System.Drawing.Size(53, 13);
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
+            // 
+            // lbl_Bet
+            // 
+            this.lbl_Bet.AutoSize = true;
+            this.lbl_Bet.Location = new System.Drawing.Point(76, 1);
+            this.lbl_Bet.Name = "lbl_Bet";
+            this.lbl_Bet.Size = new System.Drawing.Size(149, 13);
+            this.lbl_Bet.TabIndex = 10;
+            this.lbl_Bet.Text = "Geplaatste weddenschappen:";
+            // 
+            // lbl_Bet2
+            // 
+            this.lbl_Bet2.AutoSize = true;
+            this.lbl_Bet2.Location = new System.Drawing.Point(74, 95);
+            this.lbl_Bet2.Name = "lbl_Bet2";
+            this.lbl_Bet2.Size = new System.Drawing.Size(26, 13);
+            this.lbl_Bet2.TabIndex = 11;
+            this.lbl_Bet2.Text = "Zet:";
+            // 
+            // lbl_BetOn
+            // 
+            this.lbl_BetOn.AutoSize = true;
+            this.lbl_BetOn.Location = new System.Drawing.Point(143, 95);
+            this.lbl_BetOn.Name = "lbl_BetOn";
+            this.lbl_BetOn.Size = new System.Drawing.Size(50, 13);
+            this.lbl_BetOn.TabIndex = 12;
+            this.lbl_BetOn.Text = "Op haas:";
             // 
             // Main
             // 
