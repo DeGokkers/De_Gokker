@@ -31,11 +31,5 @@ namespace De_Gokkers
         {
             return num_AmountMoney.Value;
         }
-
-        private void PlaceBet_MouseClick(object sender, MouseEventArgs e)
-        {
-            Guy test = new Guy();
-            txt_Announce.Text = test.UpdateLabels();
-        } 
     }
 }
