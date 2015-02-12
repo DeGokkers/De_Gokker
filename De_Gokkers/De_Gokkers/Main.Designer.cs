@@ -82,7 +82,6 @@
             this.PlaceBet.TabStop = false;
             this.PlaceBet.Text = "Wed!";
             this.PlaceBet.UseVisualStyleBackColor = true;
-            this.PlaceBet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlaceBet_MouseClick);
             // 
             // HaseChoosing
             // 
