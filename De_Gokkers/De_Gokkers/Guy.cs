@@ -9,21 +9,27 @@ namespace De_Gokkers
 {
     class Guy : Main
     {
-        public string Name;
+        protected string name;
+        protected int cash;
         public Bet MyBet;
-        public int Cash;
         public RadioButton MyRadiobutton;
         public Label MyLabel;
         public TextBox textbox;
 
-        public void UpdateLabels()
+        public Guy(string name, int cash)
+        {
+            this.name = name;
+            this.cash = cash;
+        }
+
+        public string UpdateLabels()
         {
             //Verander mijn label in de omschrijving van mijn weddenschap.
             //Verander de label op mijn radioknop zodat deze mijn saldo laat zien.
             //(Bijv. "Lidy heeft 43 euro".)
             MyLabel = lbl_Player1Stats;
-            string update = (Name + ": €" + Cash);
-            MyLabel.Text = update;
+            string update = (name + ": €" + cash);
+            return update;
         }
 
         public bool PlaceBet(decimal amount, int dog)
