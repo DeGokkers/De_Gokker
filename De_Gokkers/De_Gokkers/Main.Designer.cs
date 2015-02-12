@@ -183,12 +183,12 @@
             this.Player4Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Player4Stats.AutoSize = true;
             this.Player4Stats.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Player4Stats.Location = new System.Drawing.Point(17, 88);
+            this.Player4Stats.Location = new System.Drawing.Point(22, 85);
             this.Player4Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player4Stats.Name = "Player4Stats";
-            this.Player4Stats.Size = new System.Drawing.Size(129, 26);
+            this.Player4Stats.Size = new System.Drawing.Size(124, 26);
             this.Player4Stats.TabIndex = 5;
-            this.Player4Stats.Text = "Peter:  € 0,00";
+            this.Player4Stats.Text = "Peter: € 0,00";
             // 
             // Winner
             // 
