@@ -271,7 +271,7 @@
             this.img_Hare4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare4.BackColor = System.Drawing.Color.Transparent;
             this.img_Hare4.Image = global::De_Gokkers.Properties.Resources.Hare_4;
-            this.img_Hare4.Location = new System.Drawing.Point(927, 342);
+            this.img_Hare4.Location = new System.Drawing.Point(926, 342);
             this.img_Hare4.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare4.Name = "img_Hare4";
             this.img_Hare4.Size = new System.Drawing.Size(71, 71);
