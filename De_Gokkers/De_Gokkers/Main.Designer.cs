@@ -183,12 +183,12 @@
             this.Player4Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Player4Stats.AutoSize = true;
             this.Player4Stats.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Player4Stats.Location = new System.Drawing.Point(45, 87);
+            this.Player4Stats.Location = new System.Drawing.Point(22, 85);
             this.Player4Stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player4Stats.Name = "Player4Stats";
-            this.Player4Stats.Size = new System.Drawing.Size(101, 26);
+            this.Player4Stats.Size = new System.Drawing.Size(124, 26);
             this.Player4Stats.TabIndex = 5;
-            this.Player4Stats.Text = "ID:  € 0,00";
+            this.Player4Stats.Text = "Peter: € 0,00";
             // 
             // Winner
             // 
@@ -479,11 +479,7 @@
         private System.Windows.Forms.ComboBox HaseChoosing;
         private System.Windows.Forms.CheckBox Player2;
         private System.Windows.Forms.CheckBox Player3;
-        private System.Windows.Forms.Label Player1Stats;
-        private System.Windows.Forms.Label Player2Stats;
-        private System.Windows.Forms.Label Player3Stats;
         private System.Windows.Forms.CheckBox Player4;
-        private System.Windows.Forms.Label Player4Stats;
         private System.Windows.Forms.Label Winner;
         private System.Windows.Forms.GroupBox PlayerTable;
         private System.Windows.Forms.MenuStrip menuStrip;
@@ -501,5 +497,9 @@
         private System.Windows.Forms.Label lbl_User;
         private System.Windows.Forms.NumericUpDown num_AmountMoney;
         public System.Windows.Forms.TextBox txt_Announce;
+        public System.Windows.Forms.Label Player1Stats;
+        public System.Windows.Forms.Label Player2Stats;
+        public System.Windows.Forms.Label Player3Stats;
+        public System.Windows.Forms.Label Player4Stats;
     }
 }

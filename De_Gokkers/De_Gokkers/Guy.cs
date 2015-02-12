@@ -16,13 +16,13 @@ namespace De_Gokkers
         public Label MyLabel;
         public TextBox textbox;
 
-        public string UpdateLabels()
+        public void UpdateLabels()
         {
             //Verander mijn label in de omschrijving van mijn weddenschap.
             //Verander de label op mijn radioknop zodat deze mijn saldo laat zien.
             //(Bijv. "Lidy heeft 43 euro".)
-            textbox = txt_Announce;
-            return textbox.Text = "test";
+            MyLabel = Player1Stats;
+            MyLabel.Text = "test";
         }
 
         public bool PlaceBet(decimal amount, int dog)
