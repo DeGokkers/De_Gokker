@@ -31,5 +31,10 @@ namespace De_Gokkers
         {
             return num_AmountMoney.Value;
         }
+
+        private void MenuTable_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

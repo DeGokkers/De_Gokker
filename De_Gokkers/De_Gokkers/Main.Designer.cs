@@ -78,7 +78,7 @@
             this.btn_Bet.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Bet.Name = "btn_Bet";
             this.btn_Bet.Size = new System.Drawing.Size(83, 22);
-            this.btn_Bet.TabIndex = 2;
+            this.btn_Bet.TabIndex = 8;
             this.btn_Bet.TabStop = false;
             this.btn_Bet.Text = "Wed!";
             this.btn_Bet.UseVisualStyleBackColor = true;
@@ -91,7 +91,8 @@
             this.slct_Hare.Margin = new System.Windows.Forms.Padding(2);
             this.slct_Hare.Name = "slct_Hare";
             this.slct_Hare.Size = new System.Drawing.Size(330, 21);
-            this.slct_Hare.TabIndex = 6;
+            this.slct_Hare.TabIndex = 7;
+            this.slct_Hare.TabStop = false;
             // 
             // lbl_Player1Stats
             // 
@@ -250,7 +251,7 @@
             this.btn_Run.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Run.Name = "btn_Run";
             this.btn_Run.Size = new System.Drawing.Size(83, 70);
-            this.btn_Run.TabIndex = 2;
+            this.btn_Run.TabIndex = 9;
             this.btn_Run.TabStop = false;
             this.btn_Run.UseVisualStyleBackColor = false;
             // 
@@ -337,6 +338,7 @@
             this.MenuTable.TabIndex = 10;
             this.MenuTable.TabStop = false;
             this.MenuTable.Text = "Menu:";
+            this.MenuTable.Enter += new System.EventHandler(this.MenuTable_Enter);
             // 
             // list_Announce
             // 
@@ -344,7 +346,8 @@
             this.list_Announce.Location = new System.Drawing.Point(78, 17);
             this.list_Announce.Name = "list_Announce";
             this.list_Announce.Size = new System.Drawing.Size(374, 69);
-            this.list_Announce.TabIndex = 13;
+            this.list_Announce.TabIndex = 6;
+            this.list_Announce.TabStop = false;
             // 
             // rdio_Player3
             // 
@@ -352,8 +355,7 @@
             this.rdio_Player3.Location = new System.Drawing.Point(11, 70);
             this.rdio_Player3.Name = "rdio_Player3";
             this.rdio_Player3.Size = new System.Drawing.Size(54, 17);
-            this.rdio_Player3.TabIndex = 12;
-            this.rdio_Player3.TabStop = true;
+            this.rdio_Player3.TabIndex = 3;
             this.rdio_Player3.Text = "Sietse";
             this.rdio_Player3.UseVisualStyleBackColor = true;
             // 
@@ -363,8 +365,7 @@
             this.rdio_Player2.Location = new System.Drawing.Point(11, 47);
             this.rdio_Player2.Name = "rdio_Player2";
             this.rdio_Player2.Size = new System.Drawing.Size(44, 17);
-            this.rdio_Player2.TabIndex = 11;
-            this.rdio_Player2.TabStop = true;
+            this.rdio_Player2.TabIndex = 2;
             this.rdio_Player2.Text = "Lidy";
             this.rdio_Player2.UseVisualStyleBackColor = true;
             // 
@@ -374,8 +375,7 @@
             this.rdio_Player4.Location = new System.Drawing.Point(11, 93);
             this.rdio_Player4.Name = "rdio_Player4";
             this.rdio_Player4.Size = new System.Drawing.Size(50, 17);
-            this.rdio_Player4.TabIndex = 10;
-            this.rdio_Player4.TabStop = true;
+            this.rdio_Player4.TabIndex = 4;
             this.rdio_Player4.Text = "Peter";
             this.rdio_Player4.UseVisualStyleBackColor = true;
             // 
@@ -385,8 +385,7 @@
             this.rdio_Player1.Location = new System.Drawing.Point(11, 24);
             this.rdio_Player1.Name = "rdio_Player1";
             this.rdio_Player1.Size = new System.Drawing.Size(40, 17);
-            this.rdio_Player1.TabIndex = 9;
-            this.rdio_Player1.TabStop = true;
+            this.rdio_Player1.TabIndex = 1;
             this.rdio_Player1.Text = "Fer";
             this.rdio_Player1.UseVisualStyleBackColor = true;
             // 
@@ -405,7 +404,8 @@
             0});
             this.num_AmountMoney.Name = "num_AmountMoney";
             this.num_AmountMoney.Size = new System.Drawing.Size(39, 20);
-            this.num_AmountMoney.TabIndex = 7;
+            this.num_AmountMoney.TabIndex = 5;
+            this.num_AmountMoney.TabStop = false;
             this.num_AmountMoney.Value = new decimal(new int[] {
             5,
             0,
