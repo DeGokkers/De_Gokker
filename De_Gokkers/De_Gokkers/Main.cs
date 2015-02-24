@@ -27,8 +27,6 @@ namespace De_Gokkers
             lbl_Player2Cash.Text = Fer.UpdateLabels();
             lbl_Player3Cash.Text = Lidy.UpdateLabels();
             lbl_Player4Cash.Text = Peter.UpdateLabels();
-
-
         }
     }
 }
