@@ -57,6 +57,11 @@ namespace De_Gokkers
             cash *= 2;
         }
 
+        public int GetCash()
+        {
+            return cash;
+        }
+
         private void InitializeComponent()
         {
             this.SuspendLayout();
