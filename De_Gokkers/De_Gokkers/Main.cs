@@ -23,10 +23,17 @@ namespace De_Gokkers
             Guy Fer = new Guy("Fer", 123);
             Guy Lidy = new Guy("Lidy", 9001);
             Guy Peter = new Guy("Peter", 4321);
+
+            Hare Hare1 = new Hare("")
             lbl_Player1Cash.Text = Sietse.UpdateLabels();
             lbl_Player2Cash.Text = Fer.UpdateLabels();
             lbl_Player3Cash.Text = Lidy.UpdateLabels();
             lbl_Player4Cash.Text = Peter.UpdateLabels();
+        }
+
+        private void btn_Run_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
