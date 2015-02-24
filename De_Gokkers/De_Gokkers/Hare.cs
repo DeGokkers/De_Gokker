@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace De_Gokkers
 {
-    class Hare
+    class Hare : Main
     {
         public int StartingPosition;
         public int RaceTrackLength = 91;
@@ -17,7 +17,7 @@ namespace De_Gokkers
 
         public bool Run()
         {
-            int MoveSpaces = Randomizer.Next(1, 4);
+            MyPictureBox = img_Hare1;
 
             MyPictureBox.Left = StartingPosition + Location;
 
@@ -28,14 +28,14 @@ namespace De_Gokkers
             }
             else
             {
-                Location += MoveSpaces;
+                Location += 5;
                 return false;
             }
         }
 
         public void TakeStartingPosition()
         {
-
+            
         }
     }
 }
