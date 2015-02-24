@@ -9,12 +9,28 @@ namespace De_Gokkers
 {
     class Hare
     {
-        public int RaceTrackLength;
+        public int StartingPosition;
+        public int RaceTrackLength = ;
+        public PictureBox MyPictureBox = null;
+        public int Location = 931;
         public Random Randomizer;
 
-        public void Run()
+        public bool Run()
         {
+            int moveSpaces = Randomizer.Next(1, 4);
+
+            MyPictureBox.Left = StartingPosition + Location;
+
             
+            if (Location >= RaceTrackLength)
+            {
+                return true;
+            }
+            else
+            {
+                Location += moveSpaces;
+                return false;
+            }
         }
 
         public void TakeStartingPosition()
