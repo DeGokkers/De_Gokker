@@ -30,26 +30,31 @@ namespace De_Gokkers
             return update;
         }
 
-        public bool PlaceBet(decimal amount, int dog)
+        public bool PlaceBet(int amount, int hare)
         {
             //Plaats een nieuwe weddenschap en sla het op in de variable MyBet.
             //Retourneer een true als de gokker genoeg geld heeft om te wedden
-            MyBet.GetDescription();
-            return true;
+            if (amount <= cash)
+            {
+                cash -= amount;
+                MyBet.Amount = amount;
+                MyBet.hare = hare;
+                return true;
+            }
+            else
+                return false;
         }
 
         public void ClearBet()
         { 
             //Maak de weddenschap leeg
-            
+            MyBet.Amount = 0;
+            MyBet.hare = 0;
         }
 
         public void Collect(int Winner)
-        { 
-            //Betaal mijn weddenschap uit.
-            //Maak mijn weddenschap leeg.
-            //Werk mijn labels bij.
-
+        {
+            cash *= 2;
         }
 
         private void InitializeComponent()
