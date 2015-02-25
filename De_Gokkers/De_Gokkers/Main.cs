@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace De_Gokkers
 {
-    public partial class Main : Form
+    public partial class Main : Form 
     {
 
         List<Hare> Hares = new List<Hare>();
@@ -38,11 +38,15 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
-            Hare iets = new Hare();
-            iets.Run();
+            AddDogsToList();
+            foreach (Hare hare in Hares)
+            { 
+            
+            }
+            
         }
         void AddDogsToList()
-        {
+        { 
             Hare Hare1 = new Hare(img_Hare1, racetracklength); //Maakt de hazen aan
             Hare Hare2 = new Hare(img_Hare2, racetracklength); 
             Hare Hare3 = new Hare(img_Hare3, racetracklength);
