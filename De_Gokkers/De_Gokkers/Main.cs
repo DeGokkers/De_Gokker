@@ -12,6 +12,10 @@ namespace De_Gokkers
 {
     public partial class Main : Form
     {
+
+        List<Hare> Hares = new List<Hare>();
+
+        int racetracklength = 100;
         public Main()
         {
             InitializeComponent();
@@ -37,9 +41,17 @@ namespace De_Gokkers
             Hare iets = new Hare();
             iets.Run();
         }
-        void AddDogsToList
-        { 
-            Hare  = NewsStyleUriParser Hare(img_Hare1);
+        void AddDogsToList()
+        {
+            Hare Hare1 = new Hare(img_Hare1, racetracklength); //Maakt de hazen aan
+            Hare Hare2 = new Hare(img_Hare2, racetracklength); 
+            Hare Hare3 = new Hare(img_Hare3, racetracklength);
+            Hare Hare4 = new Hare(img_Hare4, racetracklength);
+
+            Hares.Add(Hare1);
+            Hares.Add(Hare2);
+            Hares.Add(Hare3);
+            Hares.Add(Hare4);
         }
     }
 }
