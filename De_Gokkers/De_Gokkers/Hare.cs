@@ -14,7 +14,17 @@ namespace De_Gokkers
         public int Location;
         public PictureBox MyPictureBox = null;
         public Random Randomizer;
-
+        
+        public Hare()
+        {
+            MyPictureBox = null;
+            RaceTrackLength = 100;
+        }
+        public Hare(PictureBox pictureBox, int raceTrackLength)
+        {
+            MyPictureBox = pictureBox;
+            RaceTrackLength = raceTrackLength;
+        }
         public bool Run()
         {
             MyPictureBox = img_Hare1;

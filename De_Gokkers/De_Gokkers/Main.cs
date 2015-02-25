@@ -37,5 +37,9 @@ namespace De_Gokkers
             Hare iets = new Hare();
             iets.Run();
         }
+        void AddDogsToList
+        { 
+            Hare  = NewsStyleUriParser Hare(img_Hare1);
+        }
     }
 }
