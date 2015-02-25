@@ -15,6 +15,12 @@ namespace De_Gokkers
         public RadioButton MyRadiobutton;
         public Label MyLabel;
 
+        public Guy()
+        {
+            name = "Bert";
+            cash = 1337;
+        }
+
         public Guy(string name, int cash)
         {
             this.name = name;
