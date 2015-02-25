@@ -9,9 +9,9 @@ namespace De_Gokkers
 {
     class Hare : Main
     {
-        public int StartingPosition;
+        public int StartingPosition = 931;
         public int RaceTrackLength = 91;
-        public int Location;
+        public int Location = 0;
         public PictureBox MyPictureBox = null;
         public Random Randomizer;
         
@@ -27,18 +27,30 @@ namespace De_Gokkers
         }
         public bool Run()
         {
-            MyPictureBox = img_Hare1;
+            if (Location == 0)
+            {
+                MyPictureBox.Left = StartingPosition + Location;
+            }
+            else if(Location != 0)
+            {
+                MyPictureBox.Left = MyPictureBox.Left + Location;
+            }
+            else
+            {
+                MessageBox.Show("Huh");
+            }
+            System.Threading.Thread.Sleep(10);
+            Location = MyPictureBox.Left;
 
-            MyPictureBox.Left = StartingPosition + Location;
-
-            
             if (Location >= RaceTrackLength)
             {
                 return true;
             }
             else
             {
-                Location += 5;
+                Point NewPos = new Point(MyPictureBox.Location.X + 5, MyPictureBox.Location.Y);
+                MyPictureBox.Location = NewPos;
+                MyPictureBox.Refresh();
                 return false;
             }
         }

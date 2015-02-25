@@ -13,7 +13,7 @@ namespace De_Gokkers
     public partial class Main : Form 
     {
 
-        List<Hare> Hares = new List<Hare>();
+        Hare[] Hares = new Hare[4];
 
         int racetracklength = 100;
         public Main()
@@ -38,24 +38,22 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
-            AddDogsToList();
+            AddHareToList();
             foreach (Hare hare in Hares)
-            { 
-            
+            {
+                Hares[0].Run();
+                Hares[1].Run();
+                Hares[2].Run();
+                Hares[3].Run();
             }
             
         }
-        void AddDogsToList()
+        void AddHareToList()
         { 
-            Hare Hare1 = new Hare(img_Hare1, racetracklength); //Maakt de hazen aan
-            Hare Hare2 = new Hare(img_Hare2, racetracklength); 
-            Hare Hare3 = new Hare(img_Hare3, racetracklength);
-            Hare Hare4 = new Hare(img_Hare4, racetracklength);
-
-            Hares.Add(Hare1);
-            Hares.Add(Hare2);
-            Hares.Add(Hare3);
-            Hares.Add(Hare4);
+            Hares[0] = new Hare(img_Hare1, racetracklength);
+            Hares[1] = new Hare(img_Hare2, racetracklength);
+            Hares[2] = new Hare(img_Hare3, racetracklength);
+            Hares[3] = new Hare(img_Hare4, racetracklength);
         }
     }
 }
