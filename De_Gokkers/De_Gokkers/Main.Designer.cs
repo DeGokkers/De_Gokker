@@ -55,7 +55,6 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
-            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.lbl_Bet2 = new System.Windows.Forms.Label();
             this.lbl_Bet = new System.Windows.Forms.Label();
             this.list_Announce = new System.Windows.Forms.ListBox();
@@ -64,6 +63,7 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
+            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -306,7 +306,7 @@
             this.img_Hare4.Location = new System.Drawing.Point(931, 346);
             this.img_Hare4.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare4.Name = "img_Hare4";
-            this.img_Hare4.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare4.Size = new System.Drawing.Size(80, 64);
             this.img_Hare4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare4.TabIndex = 1;
             this.img_Hare4.TabStop = false;
@@ -319,7 +319,7 @@
             this.img_Hare1.Location = new System.Drawing.Point(931, 91);
             this.img_Hare1.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare1.Name = "img_Hare1";
-            this.img_Hare1.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare1.Size = new System.Drawing.Size(80, 64);
             this.img_Hare1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare1.TabIndex = 1;
             this.img_Hare1.TabStop = false;
@@ -332,7 +332,7 @@
             this.img_Hare3.Location = new System.Drawing.Point(931, 261);
             this.img_Hare3.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare3.Name = "img_Hare3";
-            this.img_Hare3.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare3.Size = new System.Drawing.Size(80, 64);
             this.img_Hare3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare3.TabIndex = 1;
             this.img_Hare3.TabStop = false;
@@ -345,7 +345,7 @@
             this.img_Hare2.Location = new System.Drawing.Point(931, 176);
             this.img_Hare2.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare2.Name = "img_Hare2";
-            this.img_Hare2.Size = new System.Drawing.Size(64, 64);
+            this.img_Hare2.Size = new System.Drawing.Size(80, 64);
             this.img_Hare2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_Hare2.TabIndex = 1;
             this.img_Hare2.TabStop = false;
@@ -384,32 +384,6 @@
             this.grb_Menu.TabIndex = 10;
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
-            // 
-            // num_AmountMoney
-            // 
-            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
-            this.num_AmountMoney.Location = new System.Drawing.Point(100, 94);
-            this.num_AmountMoney.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Name = "num_AmountMoney";
-            this.num_AmountMoney.ReadOnly = true;
-            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
-            this.num_AmountMoney.TabIndex = 0;
-            this.num_AmountMoney.TabStop = false;
-            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.num_AmountMoney.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             // 
             // lbl_Bet2
             // 
@@ -488,6 +462,32 @@
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
             // 
+            // num_AmountMoney
+            // 
+            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
+            this.num_AmountMoney.Location = new System.Drawing.Point(100, 94);
+            this.num_AmountMoney.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Name = "num_AmountMoney";
+            this.num_AmountMoney.ReadOnly = true;
+            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
+            this.num_AmountMoney.TabIndex = 0;
+            this.num_AmountMoney.TabStop = false;
+            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.num_AmountMoney.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,6 +501,7 @@
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.Background);
             this.Controls.Add(this.lbl_User);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
