@@ -14,7 +14,6 @@ namespace De_Gokkers
         public string Name;
         public int Location = 0;
         public PictureBox MyPictureBox = null;
-        public Random Randomizer;
         
         public Hare()
         {
@@ -29,28 +28,17 @@ namespace De_Gokkers
         }
         public bool Run()
         {
-            if (Location == 0)
-            {
-                MyPictureBox.Left = StartingPosition + Location;
-            }
-            else if(Location != 0)
-            {
-                MyPictureBox.Left = MyPictureBox.Left + Location;
-            }
-            else
-            {
-                MessageBox.Show("Huh");
-            }
-            System.Threading.Thread.Sleep(10);
-            Location = MyPictureBox.Left;
+            Random iets = new Random();
+            int distance = iets.Next(5, 10);
 
-            if (Location >= RaceTrackLength)
+            if (MyPictureBox.Location.X >= RaceTrackLength)
             {
+                MessageBox.Show("cool");
                 return true;
             }
             else
             {
-                Point NewPos = new Point(MyPictureBox.Location.X + 5, MyPictureBox.Location.Y);
+                Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
                 MyPictureBox.Location = NewPos;
                 MyPictureBox.Refresh();
                 return false;
@@ -66,6 +54,11 @@ namespace De_Gokkers
         public string GetName()
         {
             return Name;
+        }
+
+        public int GetLoc()
+        {
+            return MyPictureBox.Location.X;
         }
     }
 }

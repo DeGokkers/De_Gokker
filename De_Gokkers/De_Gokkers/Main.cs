@@ -47,19 +47,23 @@ namespace De_Gokkers
             AddHareToList();
             foreach (Hare hare in Hares)
             {
-                Hares[0].Run();
-                Hares[1].Run();
-                Hares[2].Run();
-                Hares[3].Run();
+                for (int i = 0; i < Hares[0].GetLoc(); i++)
+                {
+                    Hares[0].Run();
+                    Hares[1].Run();
+                    Hares[2].Run();
+                    Hares[3].Run();  
+                    
+                }
             }
             
         }
         void AddHareToList()
-        { 
-            Hares[0] = new Hare(img_Hare1, racetracklength, "Speedy");
-            Hares[1] = new Hare(img_Hare2, racetracklength, "Slowy");
-            Hares[2] = new Hare(img_Hare3, racetracklength, "Turtle");
-            Hares[3] = new Hare(img_Hare4, racetracklength, "Flying");
+        {
+            Hares[0] = new Hare(img_Hare1, 1031, "Speedy");
+            Hares[1] = new Hare(img_Hare2, 1031, "Slowy");
+            Hares[2] = new Hare(img_Hare3, 1031, "Turtle");
+            Hares[3] = new Hare(img_Hare4, 1031, "Flying");
         }
 
         private void resetSpelToolStripMenuItem_Click(object sender, EventArgs e)
