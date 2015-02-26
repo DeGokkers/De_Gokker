@@ -55,5 +55,13 @@ namespace De_Gokkers
             Hares[2] = new Hare(img_Hare3, racetracklength);
             Hares[3] = new Hare(img_Hare4, racetracklength);
         }
+
+        private void resetSpelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hares[0].TakeStartingPosition(91);
+            Hares[1].TakeStartingPosition(176);
+            Hares[2].TakeStartingPosition(261);
+            Hares[3].TakeStartingPosition(346);
+        }
     }
 }

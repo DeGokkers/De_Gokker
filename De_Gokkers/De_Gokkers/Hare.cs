@@ -55,9 +55,10 @@ namespace De_Gokkers
             }
         }
 
-        public void TakeStartingPosition()
+        public void TakeStartingPosition(int Y)
         {
-            
+            Point StartPos = new Point(931, Y);
+            MyPictureBox.Location = StartPos;
         }
     }
 }
