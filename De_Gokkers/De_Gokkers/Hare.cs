@@ -31,9 +31,9 @@ namespace De_Gokkers
             Random iets = new Random();
             int distance = iets.Next(5, 10);
 
-            if (MyPictureBox.Location.X >= RaceTrackLength)
+            if (MyPictureBox.Location.X > RaceTrackLength)
             {
-                MessageBox.Show("cool");
+                MessageBox.Show("Swag");
                 return true;
             }
             else
