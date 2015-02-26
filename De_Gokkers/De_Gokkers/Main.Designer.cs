@@ -34,10 +34,8 @@
             this.lbl_Player1 = new System.Windows.Forms.Label();
             this.lbl_Player2 = new System.Windows.Forms.Label();
             this.lbl_Player3 = new System.Windows.Forms.Label();
-            this.lbl_Player4 = new System.Windows.Forms.Label();
             this.lbl_Winner = new System.Windows.Forms.Label();
             this.grb_Players = new System.Windows.Forms.GroupBox();
-            this.lbl_Player4Cash = new System.Windows.Forms.Label();
             this.lbl_Player3Cash = new System.Windows.Forms.Label();
             this.lbl_Player2Cash = new System.Windows.Forms.Label();
             this.lbl_Player1Cash = new System.Windows.Forms.Label();
@@ -138,18 +136,6 @@
             this.lbl_Player3.TabIndex = 5;
             this.lbl_Player3.Text = "Lidy:";
             // 
-            // lbl_Player4
-            // 
-            this.lbl_Player4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player4.AutoSize = true;
-            this.lbl_Player4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player4.Location = new System.Drawing.Point(12, 87);
-            this.lbl_Player4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player4.Name = "lbl_Player4";
-            this.lbl_Player4.Size = new System.Drawing.Size(65, 26);
-            this.lbl_Player4.TabIndex = 5;
-            this.lbl_Player4.Text = "Peter:";
-            // 
             // lbl_Winner
             // 
             this.lbl_Winner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -168,8 +154,6 @@
             this.grb_Players.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grb_Players.Controls.Add(this.lbl_Player3);
-            this.grb_Players.Controls.Add(this.lbl_Player4);
-            this.grb_Players.Controls.Add(this.lbl_Player4Cash);
             this.grb_Players.Controls.Add(this.lbl_Player3Cash);
             this.grb_Players.Controls.Add(this.lbl_Player2Cash);
             this.grb_Players.Controls.Add(this.lbl_Player1Cash);
@@ -183,18 +167,6 @@
             this.grb_Players.TabIndex = 7;
             this.grb_Players.TabStop = false;
             this.grb_Players.Text = "Geld per speler:";
-            // 
-            // lbl_Player4Cash
-            // 
-            this.lbl_Player4Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Player4Cash.AutoSize = true;
-            this.lbl_Player4Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player4Cash.Location = new System.Drawing.Point(72, 88);
-            this.lbl_Player4Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Player4Cash.Name = "lbl_Player4Cash";
-            this.lbl_Player4Cash.Size = new System.Drawing.Size(66, 26);
-            this.lbl_Player4Cash.TabIndex = 5;
-            this.lbl_Player4Cash.Text = "€ 0,00";
             // 
             // lbl_Player3Cash
             // 
@@ -578,7 +550,6 @@
         public System.Windows.Forms.Label lbl_Player1;
         public System.Windows.Forms.Label lbl_Player2;
         public System.Windows.Forms.Label lbl_Player3;
-        public System.Windows.Forms.Label lbl_Player4;
         private System.Windows.Forms.RadioButton rdio_Player1;
         private System.Windows.Forms.RadioButton rdio_Player3;
         private System.Windows.Forms.RadioButton rdio_Player2;
@@ -587,7 +558,6 @@
         private System.Windows.Forms.Label lbl_BetOn;
         private System.Windows.Forms.Label lbl_Bet2;
         public System.Windows.Forms.Label lbl_Player1Cash;
-        public System.Windows.Forms.Label lbl_Player4Cash;
         public System.Windows.Forms.Label lbl_Player3Cash;
         public System.Windows.Forms.Label lbl_Player2Cash;
         private System.Windows.Forms.ToolStripMenuItem resetSpelToolStripMenuItem;

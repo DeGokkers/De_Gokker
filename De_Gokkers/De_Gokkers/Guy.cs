@@ -78,12 +78,6 @@ namespace De_Gokkers
             this.lbl_Player1Cash.Size = new System.Drawing.Size(67, 26);
             this.lbl_Player1Cash.Text = "€1337";
             // 
-            // lbl_Player4Cash
-            // 
-            this.lbl_Player4Cash.Location = new System.Drawing.Point(72, 87);
-            this.lbl_Player4Cash.Size = new System.Drawing.Size(67, 26);
-            this.lbl_Player4Cash.Text = "€4321";
-            // 
             // lbl_Player3Cash
             // 
             this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 63);

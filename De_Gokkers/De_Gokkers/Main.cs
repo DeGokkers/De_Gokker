@@ -27,13 +27,11 @@ namespace De_Gokkers
             Bettor[0] = new Guy("Sietse", 10);
             Bettor[1] = new Guy("Fer", 10);
             Bettor[2] = new Guy("Lidy", 10);
-            Bettor[3] = new Guy("Peter", 10);
 
 
             lbl_Player1Cash.Text = Bettor[0].UpdateLabels();
             lbl_Player2Cash.Text = Bettor[1].UpdateLabels();
             lbl_Player3Cash.Text = Bettor[2].UpdateLabels();
-            lbl_Player4Cash.Text = Bettor[3].UpdateLabels();
 
             AddHareToList();
             for (int i = 0; i < 4; i++)
@@ -53,7 +51,6 @@ namespace De_Gokkers
                     Hares[1].Run();
                     Hares[2].Run();
                     Hares[3].Run();  
-                    
                 }
             }
             
