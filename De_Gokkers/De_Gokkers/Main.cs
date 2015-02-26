@@ -27,13 +27,13 @@ namespace De_Gokkers
             Bettor[0] = new Guy("Sietse", 10);
             Bettor[1] = new Guy("Fer", 10);
             Bettor[2] = new Guy("Lidy", 10);
-            Bettor[3] = new Guy("Peter", 10);
+      //      Bettor[3] = new Guy("Peter", 10);
 
 
             lbl_Player1Cash.Text = Bettor[0].UpdateLabels();
             lbl_Player2Cash.Text = Bettor[1].UpdateLabels();
             lbl_Player3Cash.Text = Bettor[2].UpdateLabels();
-            lbl_Player4Cash.Text = Bettor[3].UpdateLabels();
+     //       lbl_Player4Cash.Text = Bettor[3].UpdateLabels();
         }
 
         private void btn_Run_Click(object sender, EventArgs e)
@@ -62,6 +62,29 @@ namespace De_Gokkers
             Hares[1].TakeStartingPosition(176);
             Hares[2].TakeStartingPosition(261);
             Hares[3].TakeStartingPosition(346);
+        }
+        private void Lock(bool Locked)
+        {
+            if (Locked = true)
+            {
+                num_AmountMoney.Enabled = false;
+                slct_Hare.Enabled = false;
+                rdio_Player1.Enabled = false;
+                rdio_Player2.Enabled = false;
+                rdio_Player3.Enabled = false;
+                rdio_Player4.Enabled = false;
+                btn_Run.Enabled = false;    
+            }
+            if (Locked = false)
+            {
+                num_AmountMoney.Enabled = true;
+                slct_Hare.Enabled = true;
+                rdio_Player1.Enabled = true;
+                rdio_Player2.Enabled = true;
+                rdio_Player3.Enabled = true;
+                rdio_Player4.Enabled = true;
+                btn_Run.Enabled = true;    
+            }
         }
     }
 }
