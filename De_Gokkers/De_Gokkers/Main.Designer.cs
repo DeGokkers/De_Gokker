@@ -63,7 +63,6 @@
             this.list_Announce = new System.Windows.Forms.ListBox();
             this.rdio_Player3 = new System.Windows.Forms.RadioButton();
             this.rdio_Player2 = new System.Windows.Forms.RadioButton();
-            this.rdio_Player4 = new System.Windows.Forms.RadioButton();
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
@@ -90,6 +89,7 @@
             this.btn_Bet.TabStop = false;
             this.btn_Bet.Text = "Wed";
             this.btn_Bet.UseVisualStyleBackColor = true;
+            this.btn_Bet.Click += new System.EventHandler(this.btn_Bet_Click);
             // 
             // slct_Hare
             // 
@@ -400,7 +400,6 @@
             this.grb_Menu.Controls.Add(this.list_Announce);
             this.grb_Menu.Controls.Add(this.rdio_Player3);
             this.grb_Menu.Controls.Add(this.rdio_Player2);
-            this.grb_Menu.Controls.Add(this.rdio_Player4);
             this.grb_Menu.Controls.Add(this.rdio_Player1);
             this.grb_Menu.Controls.Add(this.slct_Hare);
             this.grb_Menu.Controls.Add(this.btn_Bet);
@@ -488,16 +487,6 @@
             this.rdio_Player2.TabIndex = 0;
             this.rdio_Player2.Text = "Lidy";
             this.rdio_Player2.UseVisualStyleBackColor = true;
-            // 
-            // rdio_Player4
-            // 
-            this.rdio_Player4.AutoSize = true;
-            this.rdio_Player4.Location = new System.Drawing.Point(11, 92);
-            this.rdio_Player4.Name = "rdio_Player4";
-            this.rdio_Player4.Size = new System.Drawing.Size(50, 17);
-            this.rdio_Player4.TabIndex = 0;
-            this.rdio_Player4.Text = "Peter";
-            this.rdio_Player4.UseVisualStyleBackColor = true;
             // 
             // rdio_Player1
             // 
@@ -594,7 +583,6 @@
         private System.Windows.Forms.RadioButton rdio_Player1;
         private System.Windows.Forms.RadioButton rdio_Player3;
         private System.Windows.Forms.RadioButton rdio_Player2;
-        private System.Windows.Forms.RadioButton rdio_Player4;
         private System.Windows.Forms.ListBox list_Announce;
         private System.Windows.Forms.Label lbl_Bet;
         private System.Windows.Forms.Label lbl_BetOn;
