@@ -11,6 +11,7 @@ namespace De_Gokkers
     {
         public int StartingPosition = 931;
         public int RaceTrackLength = 91;
+        public string Name;
         public int Location = 0;
         public PictureBox MyPictureBox = null;
         public Random Randomizer;
@@ -18,12 +19,13 @@ namespace De_Gokkers
         public Hare()
         {
             MyPictureBox = null;
-            RaceTrackLength = 100;
+            RaceTrackLength = 1031;
         }
-        public Hare(PictureBox pictureBox, int raceTrackLength)
+        public Hare(PictureBox pictureBox, int raceTrackLength, string name)
         {
             MyPictureBox = pictureBox;
             RaceTrackLength = raceTrackLength;
+            Name = name;
         }
         public bool Run()
         {
@@ -59,6 +61,11 @@ namespace De_Gokkers
         {
             Point StartPos = new Point(931, Y);
             MyPictureBox.Location = StartPos;
+        }
+
+        public string GetName()
+        {
+            return Name;
         }
     }
 }

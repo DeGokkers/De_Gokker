@@ -34,6 +34,12 @@ namespace De_Gokkers
             lbl_Player2Cash.Text = Bettor[1].UpdateLabels();
             lbl_Player3Cash.Text = Bettor[2].UpdateLabels();
             lbl_Player4Cash.Text = Bettor[3].UpdateLabels();
+
+            AddHareToList();
+            for (int i = 0; i < 4; i++)
+            {
+                slct_Hare.Items.Add(Hares[i].GetName());
+            }
         }
 
         private void btn_Run_Click(object sender, EventArgs e)
@@ -50,10 +56,10 @@ namespace De_Gokkers
         }
         void AddHareToList()
         { 
-            Hares[0] = new Hare(img_Hare1, racetracklength);
-            Hares[1] = new Hare(img_Hare2, racetracklength);
-            Hares[2] = new Hare(img_Hare3, racetracklength);
-            Hares[3] = new Hare(img_Hare4, racetracklength);
+            Hares[0] = new Hare(img_Hare1, racetracklength, "Speedy");
+            Hares[1] = new Hare(img_Hare2, racetracklength, "Slowy");
+            Hares[2] = new Hare(img_Hare3, racetracklength, "Turtle");
+            Hares[3] = new Hare(img_Hare4, racetracklength, "Flying");
         }
 
         private void resetSpelToolStripMenuItem_Click(object sender, EventArgs e)
