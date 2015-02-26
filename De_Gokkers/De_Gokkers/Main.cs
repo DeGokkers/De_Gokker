@@ -38,6 +38,7 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
+            Lock(true);
             AddHareToList();
             foreach (Hare hare in Hares)
             {
@@ -46,7 +47,7 @@ namespace De_Gokkers
                 Hares[2].Run();
                 Hares[3].Run();
             }
-            
+            Lock(false);
         }
         void AddHareToList()
         { 
@@ -72,7 +73,7 @@ namespace De_Gokkers
                 rdio_Player1.Enabled = false;
                 rdio_Player2.Enabled = false;
                 rdio_Player3.Enabled = false;
-                rdio_Player4.Enabled = false;
+    //            rdio_Player4.Enabled = false;
                 btn_Run.Enabled = false;    
             }
             if (Locked = false)
@@ -82,9 +83,14 @@ namespace De_Gokkers
                 rdio_Player1.Enabled = true;
                 rdio_Player2.Enabled = true;
                 rdio_Player3.Enabled = true;
-                rdio_Player4.Enabled = true;
+             //   rdio_Player4.Enabled = true;
                 btn_Run.Enabled = true;    
             }
+        }
+
+        private void btn_Bet_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }
