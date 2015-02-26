@@ -38,8 +38,7 @@ namespace De_Gokkers
             }
             else
             {
-                Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
-                MyPictureBox.Location = NewPos;
+                MyPictureBox.Left =- distance;
                 MyPictureBox.Refresh();
                 return false;
             }
