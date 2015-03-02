@@ -38,8 +38,8 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
-            Lock(true);
             btn_Bet.Text = "Reset!";
+            Lock(true);
             AddHares();
             foreach (Hare hare in Hares)
             {
@@ -69,9 +69,9 @@ namespace De_Gokkers
 
         private void btn_Bet_Click(object sender, EventArgs e)
         {
-            Lock(false);
             if (btn_Bet.Text == "Reset!")
             {
+                Lock(false);
                 btn_Bet.Text = "Wed!";
                 Hares[0].TakeStartingPosition(91);
                 Hares[1].TakeStartingPosition(176);

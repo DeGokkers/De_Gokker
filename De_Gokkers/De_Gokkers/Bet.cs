@@ -39,17 +39,17 @@ namespace De_Gokkers
 
             if (Amount >= 5 & Amount <= 15)
             {
-                string line = Bettor.Name + "heeft " + Amount + "gewed op haas: " + hare;
+                string line = Bettor.Name + "Heeft €" + Amount + "gewed op haas: " + hare;
                 switch (Bettor.Name)
                 {
                     case "Fer":
-                        PlaceBet(1, hare, Amount);
+                        PlaceBet(1, Hare, Amount);
                         break;
                     case "Lidy":
-                        PlaceBet(2, hare, Amount);
+                        PlaceBet(2, Hare, Amount);
                         break;
                     case "Sietse":
-                        PlaceBet(3, hare, Amount);
+                        PlaceBet(3, Hare, Amount);
                         break;
                 }
                 return line;

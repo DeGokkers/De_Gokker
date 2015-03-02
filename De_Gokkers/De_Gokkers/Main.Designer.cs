@@ -41,8 +41,7 @@
             this.lbl_Player1Cash = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.bestandToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.overHazenRaceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overHazenRaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +61,6 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -208,8 +206,7 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bestandToolStripMenuItem1,
-            this.helpToolStripMenuItem1});
+            this.bestandToolStripMenuItem1});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -226,21 +223,13 @@
             this.bestandToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
             this.bestandToolStripMenuItem1.Text = "&Bestand";
             // 
-            // helpToolStripMenuItem1
+            // afsluitenToolStripMenuItem
             // 
-            this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.overHazenRaceToolStripMenuItem1});
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem1.Text = "&Help";
-            // 
-            // overHazenRaceToolStripMenuItem1
-            // 
-            this.overHazenRaceToolStripMenuItem1.Name = "overHazenRaceToolStripMenuItem1";
-            this.overHazenRaceToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.overHazenRaceToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
-            this.overHazenRaceToolStripMenuItem1.Text = "&Over HazenRace";
+            this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
+            this.afsluitenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.afsluitenToolStripMenuItem.Text = "Afsluiten";
+            this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.afsluitenToolStripMenuItem_Click);
             // 
             // bestandToolStripMenuItem
             // 
@@ -455,14 +444,6 @@
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
             // 
-            // afsluitenToolStripMenuItem
-            // 
-            this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
-            this.afsluitenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.afsluitenToolStripMenuItem.Text = "Afsluiten";
-            this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.afsluitenToolStripMenuItem_Click);
-            // 
             // num_AmountMoney
             // 
             this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
@@ -546,8 +527,6 @@
         private System.Windows.Forms.GroupBox Background;
         private System.Windows.Forms.GroupBox grb_Menu;
         private System.Windows.Forms.ToolStripMenuItem bestandToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem overHazenRaceToolStripMenuItem1;
         private System.Windows.Forms.Label lbl_User;
         public System.Windows.Forms.Label lbl_Player1;
         public System.Windows.Forms.Label lbl_Player2;
