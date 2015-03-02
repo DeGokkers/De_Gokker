@@ -41,32 +41,15 @@ namespace De_Gokkers
             AddHares();
             foreach (Hare hare in Hares)
             {
-                for (int i = 0; i < Hares[0].GetLoc(); i++)
+                for (int i = 2; (3 < Hares[0].GetLoc() && 1 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && -1 < Hares[3].GetLoc()); )
                 {
                     Hares[0].Run();
                     Hares[1].Run();
                     Hares[2].Run();
-                    Hares[3].Run();  
+                    Hares[3].Run();
                 }
             }
-            foreach (Hare hare in Hares)
-            {
-                for (int e = 0; e < Hares; i++)
-                {
 
-
-                    for (int i = 0; i < 4; i++)
-                    {
-                        if (i < Hares[i].GetLoc())
-                        {
-                            Hares[i].Run();
-
-                        }
-
-                    }
-                }
-            }
-            
         }
         void AddHares()
         {
@@ -89,6 +72,13 @@ namespace De_Gokkers
             Hares[1].TakeStartingPosition(176);
             Hares[2].TakeStartingPosition(261);
             Hares[3].TakeStartingPosition(346);
+        }
+
+        private void btn_Bet_Click(object sender, EventArgs e)
+        {
+            AddPlayers();
+            Bet Bet = new Bet(Players[0].Name, Convert.ToInt32(numericUpDown1.Value));
+            list_Announce.Items.Add(Bet.GetDescription());
         }
     }
 }

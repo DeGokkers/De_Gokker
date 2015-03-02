@@ -11,10 +11,18 @@ namespace De_Gokkers
     {
         public int Amount;
         public int hare;
-        public Guy Bettor;
         public int Add_Substract = 0;
-        public int AmountOfBettors = 4;
+        public int AmountOfBettors = 3;
         public int[] PlacedBets;
+        public string Name;
+
+        public Bet(string name, int amount)
+        {
+            Name = name;
+            Amount = amount;
+        }
+
+
         public string GetDescription()
         {
             //Retourneer een string die aangeeft wie de weddenschap heeft gedaan,
@@ -26,8 +34,8 @@ namespace De_Gokkers
 
             if (Amount > 5 & Amount < 15)
             {
-                string line = Bettor + "heeft " + Amount + "gewed op haas: " + hare;
-                switch (Bettor.Name)
+                string line = Name + "heeft " + Amount + "gewed op haas: " + hare;
+                switch (Name)
                 {
                     case "Fer":
                         PlaceBet(1);
@@ -43,7 +51,7 @@ namespace De_Gokkers
             }
             else
             {
-                string line = Bettor + "heeft geen geldig bedrag ingevoerd, het bedrag moet tussen 5 en 15 euro liggen";
+                string line = Name + "heeft geen geldig bedrag ingevoerd, het bedrag moet tussen 5 en 15 euro liggen";
                 MessageBox.Show(line);
                 return line;
             }
