@@ -41,12 +41,29 @@ namespace De_Gokkers
             AddHares();
             foreach (Hare hare in Hares)
             {
-                for (int i = 0; i < Hares[1].GetLoc(); i++)
+                for (int i = 0; i < Hares[0].GetLoc(); i++)
                 {
                     Hares[0].Run();
                     Hares[1].Run();
                     Hares[2].Run();
                     Hares[3].Run();  
+                }
+            }
+            foreach (Hare hare in Hares)
+            {
+                for (int e = 0; e < Hares; i++)
+                {
+
+
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (i < Hares[i].GetLoc())
+                        {
+                            Hares[i].Run();
+
+                        }
+
+                    }
                 }
             }
             
