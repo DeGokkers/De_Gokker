@@ -35,7 +35,7 @@ namespace De_Gokkers
 
             if (Amount >= 5 & Amount <= 15)
             {
-                string line = Name + " heeft €" + Amount + " gewed op haas: " + hare;
+                string line = Name + " heeft €" + Amount + " gewed op haas: " + Hare;
                 switch (Name)
                 {
                     case "Fer":

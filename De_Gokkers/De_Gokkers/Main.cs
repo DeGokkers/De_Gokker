@@ -79,17 +79,17 @@ namespace De_Gokkers
             AddPlayers();
             if (rdio_Player1.Checked == true)
             {
-                Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
+                Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                 list_Announce.Items.Add(Bet.GetDescription());
             }
             if (rdio_Player2.Checked == true)
             {
-                Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
+                Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                 list_Announce.Items.Add(Bet.GetDescription());
             }
             if (rdio_Player3.Checked == true)
             {
-                Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
+                Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                 list_Announce.Items.Add(Bet.GetDescription());
             }
         }

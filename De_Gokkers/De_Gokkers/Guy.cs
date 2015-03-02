@@ -36,7 +36,7 @@ namespace De_Gokkers
             return update;
         }
 
-        public bool PlaceBet(int amount, int hare)
+        public bool PlaceBet(int amount, string hare)
         {
             //Plaats een nieuwe weddenschap en sla het op in de variable MyBet.
             //Retourneer een true als de gokker genoeg geld heeft om te wedden
@@ -55,7 +55,6 @@ namespace De_Gokkers
         { 
             //Maak de weddenschap leeg
             MyBet.Amount = 0;
-            MyBet.Hare = 0;
         }
 
         public void Collect(int Winner)
