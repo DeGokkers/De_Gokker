@@ -77,7 +77,7 @@ namespace De_Gokkers
         private void btn_Bet_Click(object sender, EventArgs e)
         {
             AddPlayers();
-            Bet Bet = new Bet(Players[0].Name, Convert.ToInt32(numericUpDown1.Value));
+            Bet Bet = new Bet(Players[0].Name, Convert.ToInt32(num_AmountMoney.Value));
             list_Announce.Items.Add(Bet.GetDescription());
         }
     }
