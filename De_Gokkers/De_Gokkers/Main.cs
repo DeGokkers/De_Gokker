@@ -38,7 +38,7 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
-            
+            Lock(true);
             btn_Bet.Text = "Reset!";
             AddHares();
             foreach (Hare hare in Hares)
@@ -51,7 +51,6 @@ namespace De_Gokkers
                     Hares[3].Run();
                 }
             }
-            
         }
         void AddHares()
         {
@@ -68,38 +67,9 @@ namespace De_Gokkers
             Players[2] = new Guy("Lidy", 10); 
         }
 
-        private void resetSpelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hares[0].TakeStartingPosition(91);
-            Hares[1].TakeStartingPosition(176);
-            Hares[2].TakeStartingPosition(261);
-            Hares[3].TakeStartingPosition(346);
-        }
-
-        private void Lock(bool Locked)
-        {
-            if (Locked = true)
-            {
-                num_AmountMoney.Enabled = false;
-                slct_Hare.Enabled = false;
-                rdio_Player1.Enabled = false;
-                rdio_Player2.Enabled = false;
-                rdio_Player3.Enabled = false;
-                btn_Run.Enabled = false;
-            }
-            if (Locked = false)
-            {
-                num_AmountMoney.Enabled = true;
-                slct_Hare.Enabled = true;
-                rdio_Player1.Enabled = true;
-                rdio_Player2.Enabled = true;
-                rdio_Player3.Enabled = true;
-                btn_Run.Enabled = true;
-            }
-        }
-
         private void btn_Bet_Click(object sender, EventArgs e)
         {
+            Lock(false);
             if (btn_Bet.Text == "Reset!")
             {
                 btn_Bet.Text = "Wed!";
@@ -128,6 +98,28 @@ namespace De_Gokkers
                 }
             }
             
+        }
+
+        private void Lock(bool Locked)
+        {
+            if (Locked == true)
+            {
+                num_AmountMoney.Enabled = false;
+                slct_Hare.Enabled = false;
+                rdio_Player1.Enabled = false;
+                rdio_Player2.Enabled = false;
+                rdio_Player3.Enabled = false;
+                btn_Run.Enabled = false;
+            }
+            if (Locked == false)
+            {
+                num_AmountMoney.Enabled = true;
+                slct_Hare.Enabled = true;
+                rdio_Player1.Enabled = true;
+                rdio_Player2.Enabled = true;
+                rdio_Player3.Enabled = true;
+                btn_Run.Enabled = true;
+            }
         }
 
         private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
