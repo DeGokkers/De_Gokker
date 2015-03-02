@@ -38,6 +38,7 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
+            btn_Bet.Text = "Reset";
             AddHares();
             foreach (Hare hare in Hares)
             {
@@ -49,7 +50,7 @@ namespace De_Gokkers
                     Hares[3].Run();
                 }
             }
-
+            
         }
         void AddHares()
         {
@@ -76,22 +77,34 @@ namespace De_Gokkers
 
         private void btn_Bet_Click(object sender, EventArgs e)
         {
-            AddPlayers();
-            if (rdio_Player1.Checked == true)
+            if (btn_Bet.Text == "Reset")
             {
-                Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
-                list_Announce.Items.Add(Bet.GetDescription());
+                btn_Bet.Text = "Wed";
+                Hares[0].TakeStartingPosition(91);
+                Hares[1].TakeStartingPosition(176);
+                Hares[2].TakeStartingPosition(261);
+                Hares[3].TakeStartingPosition(346);
             }
-            if (rdio_Player2.Checked == true)
+            else
             {
-                Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
-                list_Announce.Items.Add(Bet.GetDescription());
+                AddPlayers();
+                if (rdio_Player1.Checked == true)
+                {
+                    Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
+                    list_Announce.Items.Add(Bet.GetDescription());
+                }
+                if (rdio_Player2.Checked == true)
+                {
+                    Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
+                    list_Announce.Items.Add(Bet.GetDescription());
+                }
+                if (rdio_Player3.Checked == true)
+                {
+                    Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
+                    list_Announce.Items.Add(Bet.GetDescription());
+                }
             }
-            if (rdio_Player3.Checked == true)
-            {
-                Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
-                list_Announce.Items.Add(Bet.GetDescription());
-            }
+            
         }
     }
 }
