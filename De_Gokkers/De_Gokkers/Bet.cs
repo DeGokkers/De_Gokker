@@ -10,16 +10,17 @@ namespace De_Gokkers
     class Bet
     {
         public int Amount;
-        public int hare;
+        public string Hare;
         public int Add_Substract = 0;
         public int AmountOfBettors = 3;
         public int[] PlacedBets;
         public string Name;
 
-        public Bet(string name, int amount)
+        public Bet(string name, int amount, string hare)
         {
             Name = name;
             Amount = amount;
+            Hare = hare;
         }
 
 
@@ -32,26 +33,26 @@ namespace De_Gokkers
             //De string die dan geretourneerd wordt is bijv.
             //“Sietse heeft geen weddenschap geplaatst.”)
 
-            if (Amount > 5 & Amount < 15)
+            if (Amount >= 5 & Amount <= 15)
             {
-                string line = Name + "heeft " + Amount + "gewed op haas: " + hare;
+                string line = Name + " heeft €" + Amount + " gewed op haas: " + hare;
                 switch (Name)
                 {
                     case "Fer":
-                        PlaceBet(1);
+                        PlaceBet(0);
                         break;
                     case "Lidy":
-                        PlaceBet(2);
+                        PlaceBet(1);
                         break;
                     case "Sietse":
-                        PlaceBet(3);
+                        PlaceBet(2);
                         break;
                 }
                 return line;
             }
             else
             {
-                string line = Name + "heeft geen geldig bedrag ingevoerd, het bedrag moet tussen 5 en 15 euro liggen";
+                string line = Name + " heeft geen geldig bedrag ingevoerd, het bedrag moet tussen 5 en 15 euro liggen";
                 MessageBox.Show(line);
                 return line;
             }

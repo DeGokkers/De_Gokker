@@ -44,7 +44,7 @@ namespace De_Gokkers
             {
                 cash -= amount;
                 MyBet.Amount = amount;
-                MyBet.hare = hare;
+                MyBet.Hare = hare;
                 return true;
             }
             else
@@ -55,7 +55,7 @@ namespace De_Gokkers
         { 
             //Maak de weddenschap leeg
             MyBet.Amount = 0;
-            MyBet.hare = 0;
+            MyBet.Hare = 0;
         }
 
         public void Collect(int Winner)
