@@ -86,6 +86,14 @@ namespace De_Gokkers
         private void btn_Bet_Click(object sender, EventArgs e)
         {
             int betAmount = Convert.ToInt32(num_AmountMoney.Value);
+            if (list_Announce.Text == "Klik hier om een haas te selecteren")
+            {
+                if (rdio_Player1.Checked == true || rdio_Player2.Checked == true || rdio_Player3.Checked == true)
+                {
+                    
+                }
+            }
+
             if (btn_Bet.Text == "Reset!")
             {
                 Lock(false);
@@ -143,8 +151,8 @@ namespace De_Gokkers
                     {
                         Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
-                        rdio_Player1.Enabled = false;
-                        rdio_Player1.Checked = false;
+                        rdio_Player3.Enabled = false;
+                        rdio_Player3.Checked = false;
                         Players[2].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
                         lbl_Player3Cash.Text = Players[2].UpdateLabels();
                     }
