@@ -14,7 +14,8 @@ namespace De_Gokkers
     {
 
         Hare[] Hares = new Hare[4];
-        Guy[] Players = new Guy[4];
+        Guy[] Players = new Guy[3];
+        int winner;
 
         public Main()
         {
@@ -50,9 +51,22 @@ namespace De_Gokkers
                     Hares[3].Run();
                 }
             }
-            if (Hares[0]. == 0)
-
-
+            if (Hares[0].MyPictureBox.Location.X == 0)
+            {
+                winner = 1;
+            }
+            else if (Hares[1].MyPictureBox.Location.X == 0)
+            {
+                winner = 2;
+            }
+            else if (Hares[2].MyPictureBox.Location.X == 0)
+            {
+                winner = 3;
+            }
+            else if (Hares[3].MyPictureBox.Location.X == 0)
+            {
+                winner = 4;
+            }
         }
         void AddHares()
         {
@@ -115,7 +129,7 @@ namespace De_Gokkers
                         rdio_Player2.Enabled = false;
                         rdio_Player2.Checked = false;
                         Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
-                        lbl_Player1Cash.Text = Players[1].UpdateLabels();
+                        lbl_Player2Cash.Text = Players[1].UpdateLabels();
                     }
                     else
                     {
