@@ -55,6 +55,7 @@ namespace De_Gokkers
                     Hares[2].Run();
                     Hares[3].Run();
                 }
+                btn_Bet.Enabled = true;
             }
             if (Hares[0].MyPictureBox.Location.X == 0)
             {
