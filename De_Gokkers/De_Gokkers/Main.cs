@@ -68,6 +68,7 @@ namespace De_Gokkers
 
         private void btn_Bet_Click(object sender, EventArgs e)
         {
+            int betAmount = Convert.ToInt32(num_AmountMoney.Value);
             if (btn_Bet.Text == "Reset!")
             {
                 Lock(false);
@@ -86,23 +87,54 @@ namespace De_Gokkers
                 AddPlayers();
                 if (rdio_Player1.Checked == true)
                 {
-                    Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
-                    list_Announce.Items.Add(Bet.GetDescription());
-                    rdio_Player1.Enabled = false;
-                    Players[0].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
-                    lbl_Player1Cash.Text = Players[0].UpdateLabels();
+                    int playerCash = Players[0].GetCash();
+                    if (playerCash >= betAmount)
+                    {
+                        Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
+                        list_Announce.Items.Add(Bet.GetDescription());
+                        rdio_Player1.Enabled = false;
+                        rdio_Player1.Checked = false;
+                        Players[0].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
+                        lbl_Player1Cash.Text = Players[0].UpdateLabels();
+                    }
+                    else
+                    {
+                        MessageBox.Show("{0} heeft niet genoeg geld om dit bedrag in te zetten.", rdio_Player1.Text);
+                    }
                 }
                 if (rdio_Player2.Checked == true)
                 {
-                    Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
-                    list_Announce.Items.Add(Bet.GetDescription());
-                    rdio_Player2.Enabled = false;
+                    int playerCash = Players[1].GetCash();
+                    if (playerCash >= betAmount)
+                    {
+                        Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
+                        list_Announce.Items.Add(Bet.GetDescription());
+                        rdio_Player2.Enabled = false;
+                        rdio_Player2.Checked = false;
+                        Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
+                        lbl_Player1Cash.Text = Players[1].UpdateLabels();
+                    }
+                    else
+                    {
+                        MessageBox.Show("{0} heeft niet genoeg geld om dit bedrag in te zetten.", rdio_Player2.Text);
+                    }
                 }
                 if (rdio_Player3.Checked == true)
                 {
-                    Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
-                    list_Announce.Items.Add(Bet.GetDescription());
-                    rdio_Player3.Enabled = false;
+                    int playerCash = Players[2].GetCash();
+                    if (playerCash >= betAmount)
+                    {
+                        Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
+                        list_Announce.Items.Add(Bet.GetDescription());
+                        rdio_Player1.Enabled = false;
+                        rdio_Player1.Checked = false;
+                        Players[2].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
+                        lbl_Player3Cash.Text = Players[2].UpdateLabels();
+                    }
+                    else
+                    {
+                        MessageBox.Show("{0} heeft niet genoeg geld om dit bedrag in te zetten.", rdio_Player3.Text);
+                    }
                 }
             }
             
