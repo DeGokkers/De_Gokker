@@ -89,6 +89,8 @@ namespace De_Gokkers
                     Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                     list_Announce.Items.Add(Bet.GetDescription());
                     rdio_Player1.Enabled = false;
+                    Players[0].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
+                    lbl_Player1Cash.Text = Players[0].UpdateLabels();
                 }
                 if (rdio_Player2.Checked == true)
                 {
