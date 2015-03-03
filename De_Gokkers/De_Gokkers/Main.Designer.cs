@@ -54,6 +54,7 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
+            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.lbl_Bet2 = new System.Windows.Forms.Label();
             this.lbl_Bet = new System.Windows.Forms.Label();
             this.list_Announce = new System.Windows.Forms.ListBox();
@@ -62,7 +63,6 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -218,8 +218,8 @@
             // bestandToolStripMenuItem1
             // 
             this.bestandToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.afsluitenToolStripMenuItem,
-            this.resetAllesToolStripMenuItem});
+            this.resetAllesToolStripMenuItem,
+            this.afsluitenToolStripMenuItem});
             this.bestandToolStripMenuItem1.Name = "bestandToolStripMenuItem1";
             this.bestandToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.bestandToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
@@ -229,7 +229,7 @@
             // 
             this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
             this.afsluitenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.afsluitenToolStripMenuItem.Text = "Afsluiten";
             this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.afsluitenToolStripMenuItem_Click);
             // 
@@ -237,8 +237,8 @@
             // 
             this.resetAllesToolStripMenuItem.Name = "resetAllesToolStripMenuItem";
             this.resetAllesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.resetAllesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.resetAllesToolStripMenuItem.Text = "&Reset Alles";
+            this.resetAllesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.resetAllesToolStripMenuItem.Text = "&Reset alles";
             this.resetAllesToolStripMenuItem.Click += new System.EventHandler(this.resetAllesToolStripMenuItem_Click);
             // 
             // bestandToolStripMenuItem
@@ -377,6 +377,32 @@
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
             // 
+            // num_AmountMoney
+            // 
+            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
+            this.num_AmountMoney.Location = new System.Drawing.Point(99, 94);
+            this.num_AmountMoney.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Name = "num_AmountMoney";
+            this.num_AmountMoney.ReadOnly = true;
+            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
+            this.num_AmountMoney.TabIndex = 0;
+            this.num_AmountMoney.TabStop = false;
+            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.num_AmountMoney.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
@@ -456,32 +482,6 @@
             this.lbl_User.Size = new System.Drawing.Size(53, 13);
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
-            // 
-            // num_AmountMoney
-            // 
-            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
-            this.num_AmountMoney.Location = new System.Drawing.Point(99, 94);
-            this.num_AmountMoney.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Name = "num_AmountMoney";
-            this.num_AmountMoney.ReadOnly = true;
-            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
-            this.num_AmountMoney.TabIndex = 0;
-            this.num_AmountMoney.TabStop = false;
-            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.num_AmountMoney.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             // 
             // Main
             // 

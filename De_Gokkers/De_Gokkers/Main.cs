@@ -120,8 +120,13 @@ namespace De_Gokkers
                     {
                         Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
+                       
                         rdio_Player1.Enabled = false;
                         rdio_Player1.Checked = false;
+                        btn_Bet.Enabled = false;
+                        num_AmountMoney.Enabled = false;
+                        slct_Hare.Enabled = false;
+
                         Players[0].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
                         lbl_Player1Cash.Text = Players[0].UpdateLabels();
                     }
@@ -143,8 +148,13 @@ namespace De_Gokkers
                     {
                         Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
+                        
                         rdio_Player2.Enabled = false;
                         rdio_Player2.Checked = false;
+                        btn_Bet.Enabled = false;
+                        num_AmountMoney.Enabled = false;
+                        slct_Hare.Enabled = false;
+
                         Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
                         lbl_Player2Cash.Text = Players[1].UpdateLabels();
                     }
@@ -166,8 +176,13 @@ namespace De_Gokkers
                     {
                         Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
+                        
                         rdio_Player3.Enabled = false;
                         rdio_Player3.Checked = false;
+                        btn_Bet.Enabled = false;
+                        num_AmountMoney.Enabled = false;
+                        slct_Hare.Enabled = false;
+
                         Players[2].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
                         lbl_Player3Cash.Text = Players[2].UpdateLabels();
                     }
@@ -200,16 +215,6 @@ namespace De_Gokkers
                 rdio_Player3.Enabled = true;
                 btn_Run.Enabled = true;
             }
-        }
-
-        private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void resetAllesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
         }
 
         private void rdio_Player1_CheckedChanged(object sender, EventArgs e)
@@ -249,6 +254,16 @@ namespace De_Gokkers
                 num_AmountMoney.Enabled = true;
                 list_Announce.Enabled = true;
             }
+        }
+
+        private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void resetAllesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
