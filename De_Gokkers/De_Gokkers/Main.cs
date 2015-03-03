@@ -77,6 +77,9 @@ namespace De_Gokkers
                 Hares[2].TakeStartingPosition(261);
                 Hares[3].TakeStartingPosition(346);
                 list_Announce.Items.Clear();
+                rdio_Player1.Enabled = true;
+                rdio_Player1.Enabled = true;
+                rdio_Player1.Enabled = true;
             }
             else
             {
@@ -85,16 +88,19 @@ namespace De_Gokkers
                 {
                     Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                     list_Announce.Items.Add(Bet.GetDescription());
+                    rdio_Player1.Enabled = false;
                 }
                 if (rdio_Player2.Checked == true)
                 {
                     Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                     list_Announce.Items.Add(Bet.GetDescription());
+                    rdio_Player2.Enabled = false;
                 }
                 if (rdio_Player3.Checked == true)
                 {
                     Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                     list_Announce.Items.Add(Bet.GetDescription());
+                    rdio_Player3.Enabled = false;
                 }
             }
             
