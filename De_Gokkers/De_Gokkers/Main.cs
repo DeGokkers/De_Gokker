@@ -16,7 +16,6 @@ namespace De_Gokkers
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[4];
 
-        int racetracklength = 100;
         public Main()
         {
             InitializeComponent();
