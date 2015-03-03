@@ -53,6 +53,7 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
+            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.lbl_Bet2 = new System.Windows.Forms.Label();
             this.lbl_Bet = new System.Windows.Forms.Label();
             this.list_Announce = new System.Windows.Forms.ListBox();
@@ -61,7 +62,6 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -104,36 +104,36 @@
             this.lbl_Player1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player1.AutoSize = true;
             this.lbl_Player1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player1.Location = new System.Drawing.Point(7, 17);
+            this.lbl_Player1.Location = new System.Drawing.Point(28, 17);
             this.lbl_Player1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player1.Name = "lbl_Player1";
-            this.lbl_Player1.Size = new System.Drawing.Size(70, 26);
+            this.lbl_Player1.Size = new System.Drawing.Size(46, 26);
             this.lbl_Player1.TabIndex = 5;
-            this.lbl_Player1.Text = "Sietse:";
+            this.lbl_Player1.Text = "Fer:";
             // 
             // lbl_Player2
             // 
             this.lbl_Player2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player2.AutoSize = true;
             this.lbl_Player2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player2.Location = new System.Drawing.Point(31, 40);
+            this.lbl_Player2.Location = new System.Drawing.Point(21, 40);
             this.lbl_Player2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player2.Name = "lbl_Player2";
-            this.lbl_Player2.Size = new System.Drawing.Size(46, 26);
+            this.lbl_Player2.Size = new System.Drawing.Size(53, 26);
             this.lbl_Player2.TabIndex = 5;
-            this.lbl_Player2.Text = "Fer:";
+            this.lbl_Player2.Text = "Lidy:";
             // 
             // lbl_Player3
             // 
             this.lbl_Player3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player3.AutoSize = true;
             this.lbl_Player3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player3.Location = new System.Drawing.Point(24, 63);
+            this.lbl_Player3.Location = new System.Drawing.Point(4, 64);
             this.lbl_Player3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player3.Name = "lbl_Player3";
-            this.lbl_Player3.Size = new System.Drawing.Size(53, 26);
+            this.lbl_Player3.Size = new System.Drawing.Size(70, 26);
             this.lbl_Player3.TabIndex = 5;
-            this.lbl_Player3.Text = "Lidy:";
+            this.lbl_Player3.Text = "Sietse:";
             // 
             // lbl_Winner
             // 
@@ -172,7 +172,7 @@
             this.lbl_Player3Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player3Cash.AutoSize = true;
             this.lbl_Player3Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 64);
+            this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 66);
             this.lbl_Player3Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player3Cash.Name = "lbl_Player3Cash";
             this.lbl_Player3Cash.Size = new System.Drawing.Size(66, 26);
@@ -184,7 +184,7 @@
             this.lbl_Player2Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player2Cash.AutoSize = true;
             this.lbl_Player2Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player2Cash.Location = new System.Drawing.Point(72, 41);
+            this.lbl_Player2Cash.Location = new System.Drawing.Point(72, 42);
             this.lbl_Player2Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player2Cash.Name = "lbl_Player2Cash";
             this.lbl_Player2Cash.Size = new System.Drawing.Size(66, 26);
@@ -196,7 +196,7 @@
             this.lbl_Player1Cash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Player1Cash.AutoSize = true;
             this.lbl_Player1Cash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player1Cash.Location = new System.Drawing.Point(72, 18);
+            this.lbl_Player1Cash.Location = new System.Drawing.Point(72, 19);
             this.lbl_Player1Cash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Player1Cash.Name = "lbl_Player1Cash";
             this.lbl_Player1Cash.Size = new System.Drawing.Size(66, 26);
@@ -367,6 +367,32 @@
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
             // 
+            // num_AmountMoney
+            // 
+            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
+            this.num_AmountMoney.Location = new System.Drawing.Point(99, 94);
+            this.num_AmountMoney.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Name = "num_AmountMoney";
+            this.num_AmountMoney.ReadOnly = true;
+            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
+            this.num_AmountMoney.TabIndex = 0;
+            this.num_AmountMoney.TabStop = false;
+            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.num_AmountMoney.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
@@ -443,32 +469,6 @@
             this.lbl_User.Size = new System.Drawing.Size(53, 13);
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
-            // 
-            // num_AmountMoney
-            // 
-            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
-            this.num_AmountMoney.Location = new System.Drawing.Point(99, 94);
-            this.num_AmountMoney.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Name = "num_AmountMoney";
-            this.num_AmountMoney.ReadOnly = true;
-            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
-            this.num_AmountMoney.TabIndex = 0;
-            this.num_AmountMoney.TabStop = false;
-            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.num_AmountMoney.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             // 
             // Main
             // 
