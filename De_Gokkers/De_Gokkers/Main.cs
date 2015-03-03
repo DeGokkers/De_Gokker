@@ -50,6 +50,9 @@ namespace De_Gokkers
                     Hares[3].Run();
                 }
             }
+            if (Hares[0]. == 0)
+
+
         }
         void AddHares()
         {
@@ -99,7 +102,7 @@ namespace De_Gokkers
                     }
                     else
                     {
-                        MessageBox.Show("{0} heeft niet genoeg geld om dit bedrag in te zetten.", rdio_Player1.Text);
+                        list_Announce.Items.Add(rdio_Player1.Text + " heeft niet genoeg geld om dit bedrag in te zetten.");
                     }
                 }
                 if (rdio_Player2.Checked == true)
@@ -116,7 +119,7 @@ namespace De_Gokkers
                     }
                     else
                     {
-                        MessageBox.Show("{0} heeft niet genoeg geld om dit bedrag in te zetten.", rdio_Player2.Text);
+                        list_Announce.Items.Add(rdio_Player2.Text + " heeft niet genoeg geld om dit bedrag in te zetten.");
                     }
                 }
                 if (rdio_Player3.Checked == true)
@@ -133,11 +136,10 @@ namespace De_Gokkers
                     }
                     else
                     {
-                        MessageBox.Show("{0} heeft niet genoeg geld om dit bedrag in te zetten.", rdio_Player3.Text);
+                        list_Announce.Items.Add(rdio_Player3.Text + " heeft niet genoeg geld om dit bedrag in te zetten.");
                     }
                 }
             }
-            
         }
 
         private void Lock(bool Locked)
