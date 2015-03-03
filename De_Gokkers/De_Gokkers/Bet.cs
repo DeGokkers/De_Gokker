@@ -12,12 +12,12 @@ namespace De_Gokkers
         public int Amount;
 
         public string Hare;
-        public string hare;
         public Guy Bettor;
 
         public int Add_Substract = 0;
         public int AmountOfBettors = 3;
         public int[] PlacedBets;
+        public string[] OnHare;
         public string Name;
 
         public Bet(string name, int amount, string hare)
@@ -27,7 +27,6 @@ namespace De_Gokkers
             Hare = hare;
         }
 
-        public string[] OnHare;
         public string GetDescription()
         {
             //Retourneer een string die aangeeft wie de weddenschap heeft gedaan,
@@ -39,17 +38,17 @@ namespace De_Gokkers
 
             if (Amount >= 5 & Amount <= 15)
             {
-                string line = Bettor.Name + "Heeft €" + Amount + "gewed op haas: " + hare;
-                switch (Bettor.Name)
+                string line = Name + " heeft €" + Amount + " gewed op haas: " + Hare;
+                switch (Name)
                 {
                     case "Fer":
-                        PlaceBet(1, Hare, Amount);
+                        PlaceBet(0, Hare, Amount);
                         break;
                     case "Lidy":
-                        PlaceBet(2, Hare, Amount);
+                        PlaceBet(1, Hare, Amount);
                         break;
                     case "Sietse":
-                        PlaceBet(3, Hare, Amount);
+                        PlaceBet(2, Hare, Amount);
                         break;
                 }
                 return line;
@@ -71,10 +70,8 @@ namespace De_Gokkers
         {
             PlacedBets = new int[AmountOfBettors];
             PlacedBets[Bettor] = Amount;
+            OnHare = new string[AmountOfBettors];
             OnHare[Bettor] = strngHare;
-
-
         }
-
     }
 }
