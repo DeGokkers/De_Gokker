@@ -76,6 +76,7 @@ namespace De_Gokkers
                 Hares[1].TakeStartingPosition(176);
                 Hares[2].TakeStartingPosition(261);
                 Hares[3].TakeStartingPosition(346);
+                list_Announce.Items.Clear();
             }
             else
             {
