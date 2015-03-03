@@ -56,9 +56,9 @@ namespace De_Gokkers
             MyBet.Hare = null;
         }
 
-        public void Collect(int Winner)
+        public void Collect(int Winner, int amount)
         {
-            cash *= 2;
+            cash += (amount * 2);
         }
 
         public int GetCash()
