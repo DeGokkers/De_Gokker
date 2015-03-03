@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Een gok programma met hazen.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Radius College Groep 7")]
-[assembly: AssemblyProduct("De_Gokkers")]
+[assembly: AssemblyProduct("HazenRace")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("90c55c52-4c3e-4636-bbc9-d0d1ab2e7a40")]
