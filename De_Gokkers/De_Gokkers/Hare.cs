@@ -57,7 +57,6 @@ namespace De_Gokkers
 
             if (MyPictureBox.Location.X > RaceTrackLength)
             {
-                MessageBox.Show("Swag");
                 return true;
             }
             else

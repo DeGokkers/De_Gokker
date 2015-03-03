@@ -42,6 +42,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.bestandToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetAllesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overHazenRaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -217,7 +218,8 @@
             // bestandToolStripMenuItem1
             // 
             this.bestandToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.afsluitenToolStripMenuItem});
+            this.afsluitenToolStripMenuItem,
+            this.resetAllesToolStripMenuItem});
             this.bestandToolStripMenuItem1.Name = "bestandToolStripMenuItem1";
             this.bestandToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.bestandToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
@@ -227,9 +229,17 @@
             // 
             this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
             this.afsluitenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.afsluitenToolStripMenuItem.Text = "Afsluiten";
             this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.afsluitenToolStripMenuItem_Click);
+            // 
+            // resetAllesToolStripMenuItem
+            // 
+            this.resetAllesToolStripMenuItem.Name = "resetAllesToolStripMenuItem";
+            this.resetAllesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.resetAllesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.resetAllesToolStripMenuItem.Text = "&Reset Alles";
+            this.resetAllesToolStripMenuItem.Click += new System.EventHandler(this.resetAllesToolStripMenuItem_Click);
             // 
             // bestandToolStripMenuItem
             // 
@@ -404,6 +414,7 @@
             this.rdio_Player3.TabIndex = 0;
             this.rdio_Player3.Text = "Sietse";
             this.rdio_Player3.UseVisualStyleBackColor = true;
+            this.rdio_Player3.CheckedChanged += new System.EventHandler(this.rdio_Player3_CheckedChanged);
             // 
             // rdio_Player2
             // 
@@ -414,6 +425,7 @@
             this.rdio_Player2.TabIndex = 0;
             this.rdio_Player2.Text = "Lidy";
             this.rdio_Player2.UseVisualStyleBackColor = true;
+            this.rdio_Player2.CheckedChanged += new System.EventHandler(this.rdio_Player2_CheckedChanged);
             // 
             // rdio_Player1
             // 
@@ -424,6 +436,7 @@
             this.rdio_Player1.TabIndex = 0;
             this.rdio_Player1.Text = "Fer";
             this.rdio_Player1.UseVisualStyleBackColor = true;
+            this.rdio_Player1.CheckedChanged += new System.EventHandler(this.rdio_Player1_CheckedChanged);
             // 
             // lbl_BetOn
             // 
@@ -547,5 +560,6 @@
         public System.Windows.Forms.PictureBox img_Hare1;
         public CustomNumericUpDown num_AmountMoney;
         private System.Windows.Forms.ToolStripMenuItem afsluitenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resetAllesToolStripMenuItem;
     }
 }

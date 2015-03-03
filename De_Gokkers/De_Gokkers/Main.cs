@@ -12,7 +12,7 @@ namespace De_Gokkers
 {
     public partial class Main : Form 
     {
-
+        protected string select = "Klik hier om een haas te selecteren";
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
         int winner;
@@ -28,6 +28,11 @@ namespace De_Gokkers
             lbl_Player1Cash.Text = Players[0].UpdateLabels();
             lbl_Player2Cash.Text = Players[1].UpdateLabels();
             lbl_Player3Cash.Text = Players[2].UpdateLabels();
+            slct_Hare.Enabled = false;
+            btn_Run.Enabled = false;
+            btn_Bet.Enabled = false;
+            num_AmountMoney.Enabled = false;
+            list_Announce.Enabled = false;
 
             AddHares();
             for (int i = 0; i < 4; i++)
@@ -86,14 +91,6 @@ namespace De_Gokkers
         private void btn_Bet_Click(object sender, EventArgs e)
         {
             int betAmount = Convert.ToInt32(num_AmountMoney.Value);
-            if (list_Announce.Text == "Klik hier om een haas te selecteren")
-            {
-                if (rdio_Player1.Checked == true || rdio_Player2.Checked == true || rdio_Player3.Checked == true)
-                {
-                    
-                }
-            }
-
             if (btn_Bet.Text == "Reset!")
             {
                 Lock(false);
@@ -110,10 +107,16 @@ namespace De_Gokkers
             else
             {
                 AddPlayers();
+
                 if (rdio_Player1.Checked == true)
                 {
                     int playerCash = Players[0].GetCash();
-                    if (playerCash >= betAmount)
+
+                    if (slct_Hare.Text == select)
+                    {
+                        list_Announce.Items.Add("Selecteer een Haas!");
+                    }
+                    else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
@@ -127,10 +130,16 @@ namespace De_Gokkers
                         list_Announce.Items.Add(rdio_Player1.Text + " heeft niet genoeg geld om dit bedrag in te zetten.");
                     }
                 }
+
                 if (rdio_Player2.Checked == true)
                 {
                     int playerCash = Players[1].GetCash();
-                    if (playerCash >= betAmount)
+
+                    if (slct_Hare.Text == select)
+                    {
+                        list_Announce.Items.Add("Selecteer een Haas!");
+                    }
+                    else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
@@ -144,10 +153,16 @@ namespace De_Gokkers
                         list_Announce.Items.Add(rdio_Player2.Text + " heeft niet genoeg geld om dit bedrag in te zetten.");
                     }
                 }
+
                 if (rdio_Player3.Checked == true)
                 {
                     int playerCash = Players[2].GetCash();
-                    if (playerCash >= betAmount)
+
+                    if (slct_Hare.Text == select)
+                    {
+                        list_Announce.Items.Add("Selecteer een Haas!");
+                    }
+                    else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
@@ -161,6 +176,7 @@ namespace De_Gokkers
                         list_Announce.Items.Add(rdio_Player3.Text + " heeft niet genoeg geld om dit bedrag in te zetten.");
                     }
                 }
+                slct_Hare.Text = select;
             }
         }
 
@@ -189,6 +205,50 @@ namespace De_Gokkers
         private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void resetAllesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void rdio_Player1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdio_Player1.Checked == true)
+            {
+                slct_Hare.Text = select;
+                slct_Hare.Enabled = true;
+                btn_Run.Enabled = true;
+                btn_Bet.Enabled = true;
+                num_AmountMoney.Enabled = true;
+                list_Announce.Enabled = true;
+            }
+        }
+
+        private void rdio_Player2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdio_Player2.Checked == true)
+            {
+                slct_Hare.Text = select;
+                slct_Hare.Enabled = true;
+                btn_Run.Enabled = true;
+                btn_Bet.Enabled = true;
+                num_AmountMoney.Enabled = true;
+                list_Announce.Enabled = true;
+            }
+        }
+
+        private void rdio_Player3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdio_Player3.Checked == true)
+            {
+                slct_Hare.Text = select;
+                slct_Hare.Enabled = true;
+                btn_Run.Enabled = true;
+                btn_Bet.Enabled = true;
+                num_AmountMoney.Enabled = true;
+                list_Announce.Enabled = true;
+            }
         }
     }
 }
