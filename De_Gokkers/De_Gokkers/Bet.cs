@@ -10,21 +10,21 @@ namespace De_Gokkers
     class Bet
     {
         public int Amount;
-
         public string Hare;
         public Guy Bettor;
-
         public int Add_Substract = 0;
         public int AmountOfBettors = 3;
         public int[] PlacedBets;
         public string[] OnHare;
         public string Name;
+        public int Number;
 
-        public Bet(string name, int amount, string hare)
+        public Bet(string name, int amount, string hare, int number)
         {
             Name = name;
             Amount = amount;
             Hare = hare;
+            Number = number;
         }
 
         public string GetDescription()

@@ -18,16 +18,12 @@ namespace De_Gokkers
         public PictureBox MyPictureBox = null;
         public int Number;
 
-        public Hare()
-        {
-            MyPictureBox = null;
-            RaceTrackLength = 1031;
-        }
-        public Hare(PictureBox pictureBox, int raceTrackLength, string name)
+        public Hare(PictureBox pictureBox, int raceTrackLength, string name, int number)
         {
             MyPictureBox = pictureBox;
             RaceTrackLength = raceTrackLength;
             Name = name;
+            Number = number;
         }
         public string GetWinner()
         {
