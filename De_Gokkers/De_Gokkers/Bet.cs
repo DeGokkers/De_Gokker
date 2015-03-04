@@ -17,14 +17,12 @@ namespace De_Gokkers
         public int[] PlacedBets;
         public string[] OnHare;
         public string Name;
-        public int Number;
 
-        public Bet(string name, int amount, string hare, int number)
+        public Bet(string name, int amount, string hare)
         {
             Name = name;
             Amount = amount;
             Hare = hare;
-            Number = number;
         }
 
         public string GetDescription()

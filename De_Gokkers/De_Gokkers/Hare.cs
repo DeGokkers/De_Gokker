@@ -16,14 +16,12 @@ namespace De_Gokkers
         public int distance;
         public string winner;
         public PictureBox MyPictureBox = null;
-        public int Number;
 
-        public Hare(PictureBox pictureBox, int raceTrackLength, string name, int number)
+        public Hare(PictureBox pictureBox, int raceTrackLength, string name)
         {
             MyPictureBox = pictureBox;
             RaceTrackLength = raceTrackLength;
             Name = name;
-            Number = number;
         }
         public string GetWinner()
         {
@@ -35,7 +33,7 @@ namespace De_Gokkers
             //int distance = iets.Next(5, 10);
             Random rand = new Random();
             int MaxRandom = 961;
-            int intRandomNumber = rand.Next(1, MaxRandom); // Grotere getallen range om het meer accurate te laten verlopen. 
+            int intRandomNumber = rand.Next(900, MaxRandom); // Grotere getallen range om het meer accurate te laten verlopen. 
             //  De loop telt tot 5
             for (int i = 0; i < 5; i++)
             {
@@ -45,6 +43,7 @@ namespace De_Gokkers
                     if (Location > 50)
                     {
                         winner = Name;
+                        MessageBox.Show(winner);
                     }
                 }
             }

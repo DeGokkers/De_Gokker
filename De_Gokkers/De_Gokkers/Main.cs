@@ -37,7 +37,7 @@ namespace De_Gokkers
             AddHares();
             for (int i = 0; i < 4; i++)
             {
-                slct_Hare.Items.Add(Hares[i]);
+                slct_Hare.Items.Add(Hares[i].Name);
             }
         }
 
@@ -48,12 +48,19 @@ namespace De_Gokkers
             AddHares();
             foreach (Hare hare in Hares)
             {
-                for (int i = 2; (3 < Hares[0].GetLoc() && 1 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && -1 < Hares[3].GetLoc()); )
+                for (int i = 2; (0 < Hares[0].GetLoc() && 0 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && 0 < Hares[3].GetLoc()); )
                 {
-                    Hares[0].Run();
-                    Hares[1].Run();
-                    Hares[2].Run();
-                    Hares[3].Run();
+                    if (0 < Hares[0].GetLoc() && 0 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && 0 < Hares[3].GetLoc())
+                    {
+                        Hares[0].Run();
+                        Hares[1].Run();
+                        Hares[2].Run();
+                        Hares[3].Run();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Test");
+                    }
                 }
                 btn_Bet.Enabled = true;
             }
@@ -76,10 +83,10 @@ namespace De_Gokkers
         }
         void AddHares()
         {
-            Hares[0] = new Hare(img_Hare1, 1031, "Speedy (Zwart)", 1);
-            Hares[1] = new Hare(img_Hare2, 1031, "Slowy (Rood)", 2);
-            Hares[2] = new Hare(img_Hare3, 1031, "Turtle (Blauw)", 3);
-            Hares[3] = new Hare(img_Hare4, 1031, "Flying (Groen)", 4);
+            Hares[0] = new Hare(img_Hare1, 1031, "Speedy (Zwart)");
+            Hares[1] = new Hare(img_Hare2, 1031, "Slowy (Rood)");
+            Hares[2] = new Hare(img_Hare3, 1031, "Turtle (Blauw)");
+            Hares[3] = new Hare(img_Hare4, 1031, "Flying (Groen)");
         }
 
         void AddPlayers()
@@ -117,7 +124,6 @@ namespace De_Gokkers
 
                 if (rdio_Player1.Checked == true)
                 {
-                    string selectedHare = slct_Hare.SelectedItem.ToString();
                     int playerCash = Players[0].GetCash();
 
                     if (slct_Hare.Text == select)
@@ -126,7 +132,7 @@ namespace De_Gokkers
                     }
                     else if (playerCash >= betAmount)
                     {
-                        Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), selectedHare, slct_Hare.SelectedIndex);
+                        Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
                         list_Announce.Items.Add(Bet.GetDescription());
                        
                         rdio_Player1.Enabled = false;
@@ -154,7 +160,7 @@ namespace De_Gokkers
                     }
                     else if (playerCash >= betAmount)
                     {
-                        Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString(), slct_Hare.SelectedIndex);
+                        Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
                         list_Announce.Items.Add(Bet.GetDescription());
                         
                         rdio_Player2.Enabled = false;
@@ -182,7 +188,7 @@ namespace De_Gokkers
                     }
                     else if (playerCash >= betAmount)
                     {
-                        Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text, slct_Hare.SelectedIndex);
+                        Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
                         list_Announce.Items.Add(Bet.GetDescription());
                         
                         rdio_Player3.Enabled = false;
