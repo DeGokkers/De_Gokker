@@ -33,7 +33,7 @@ namespace De_Gokkers
             //int distance = iets.Next(5, 10);
             Random rand = new Random();
             int MaxRandom = 961;
-            int intRandomNumber = rand.Next(900, MaxRandom); // Grotere getallen range om het meer accurate te laten verlopen. 
+            int intRandomNumber = rand.Next(1, MaxRandom); // Grotere getallen range om het meer accurate te laten verlopen. 
             //  De loop telt tot 5
             for (int i = 0; i < 5; i++)
             {

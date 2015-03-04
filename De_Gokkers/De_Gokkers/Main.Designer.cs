@@ -41,8 +41,8 @@
             this.lbl_Player1Cash = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.bestandToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overHazenRaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +54,7 @@
             this.img_Hare2 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.GroupBox();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
+            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
             this.lbl_Bet2 = new System.Windows.Forms.Label();
             this.lbl_Bet = new System.Windows.Forms.Label();
             this.list_Announce = new System.Windows.Forms.ListBox();
@@ -62,7 +63,10 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.num_AmountMoney = new De_Gokkers.CustomNumericUpDown();
+            this.xHare1 = new System.Windows.Forms.Label();
+            this.xHare4 = new System.Windows.Forms.Label();
+            this.xHare3 = new System.Windows.Forms.Label();
+            this.xHare2 = new System.Windows.Forms.Label();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -225,14 +229,6 @@
             this.bestandToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
             this.bestandToolStripMenuItem1.Text = "&Bestand";
             // 
-            // afsluitenToolStripMenuItem
-            // 
-            this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
-            this.afsluitenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.afsluitenToolStripMenuItem.Text = "Afsluiten";
-            this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.afsluitenToolStripMenuItem_Click);
-            // 
             // resetAllesToolStripMenuItem
             // 
             this.resetAllesToolStripMenuItem.Name = "resetAllesToolStripMenuItem";
@@ -240,6 +236,14 @@
             this.resetAllesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.resetAllesToolStripMenuItem.Text = "&Reset alles";
             this.resetAllesToolStripMenuItem.Click += new System.EventHandler(this.resetAllesToolStripMenuItem_Click);
+            // 
+            // afsluitenToolStripMenuItem
+            // 
+            this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
+            this.afsluitenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.afsluitenToolStripMenuItem.Text = "Afsluiten";
+            this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.afsluitenToolStripMenuItem_Click);
             // 
             // bestandToolStripMenuItem
             // 
@@ -266,6 +270,10 @@
             // 
             // grb_Winner
             // 
+            this.grb_Winner.Controls.Add(this.xHare2);
+            this.grb_Winner.Controls.Add(this.xHare3);
+            this.grb_Winner.Controls.Add(this.xHare4);
+            this.grb_Winner.Controls.Add(this.xHare1);
             this.grb_Winner.Controls.Add(this.lbl_Winner);
             this.grb_Winner.Location = new System.Drawing.Point(142, 0);
             this.grb_Winner.Margin = new System.Windows.Forms.Padding(2);
@@ -377,6 +385,32 @@
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Menu:";
             // 
+            // num_AmountMoney
+            // 
+            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
+            this.num_AmountMoney.Location = new System.Drawing.Point(99, 94);
+            this.num_AmountMoney.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.num_AmountMoney.Name = "num_AmountMoney";
+            this.num_AmountMoney.ReadOnly = true;
+            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
+            this.num_AmountMoney.TabIndex = 0;
+            this.num_AmountMoney.TabStop = false;
+            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.num_AmountMoney.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // lbl_Bet2
             // 
             this.lbl_Bet2.AutoSize = true;
@@ -457,31 +491,41 @@
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
             // 
-            // num_AmountMoney
+            // xHare1
             // 
-            this.num_AmountMoney.BackColor = System.Drawing.SystemColors.Window;
-            this.num_AmountMoney.Location = new System.Drawing.Point(99, 94);
-            this.num_AmountMoney.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.num_AmountMoney.Name = "num_AmountMoney";
-            this.num_AmountMoney.ReadOnly = true;
-            this.num_AmountMoney.Size = new System.Drawing.Size(44, 20);
-            this.num_AmountMoney.TabIndex = 0;
-            this.num_AmountMoney.TabStop = false;
-            this.num_AmountMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.num_AmountMoney.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
+            this.xHare1.AutoSize = true;
+            this.xHare1.Location = new System.Drawing.Point(50, 51);
+            this.xHare1.Name = "xHare1";
+            this.xHare1.Size = new System.Drawing.Size(41, 13);
+            this.xHare1.TabIndex = 7;
+            this.xHare1.Text = "xHare1";
+            // 
+            // xHare4
+            // 
+            this.xHare4.AutoSize = true;
+            this.xHare4.Location = new System.Drawing.Point(50, 88);
+            this.xHare4.Name = "xHare4";
+            this.xHare4.Size = new System.Drawing.Size(41, 13);
+            this.xHare4.TabIndex = 8;
+            this.xHare4.Text = "xHare1";
+            // 
+            // xHare3
+            // 
+            this.xHare3.AutoSize = true;
+            this.xHare3.Location = new System.Drawing.Point(50, 75);
+            this.xHare3.Name = "xHare3";
+            this.xHare3.Size = new System.Drawing.Size(41, 13);
+            this.xHare3.TabIndex = 9;
+            this.xHare3.Text = "xHare1";
+            // 
+            // xHare2
+            // 
+            this.xHare2.AutoSize = true;
+            this.xHare2.Location = new System.Drawing.Point(50, 64);
+            this.xHare2.Name = "xHare2";
+            this.xHare2.Size = new System.Drawing.Size(41, 13);
+            this.xHare2.TabIndex = 10;
+            this.xHare2.Text = "xHare1";
             // 
             // Main
             // 
@@ -561,5 +605,9 @@
         public CustomNumericUpDown num_AmountMoney;
         private System.Windows.Forms.ToolStripMenuItem afsluitenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetAllesToolStripMenuItem;
+        private System.Windows.Forms.Label xHare2;
+        private System.Windows.Forms.Label xHare3;
+        private System.Windows.Forms.Label xHare4;
+        private System.Windows.Forms.Label xHare1;
     }
 }

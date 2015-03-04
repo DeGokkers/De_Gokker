@@ -15,7 +15,14 @@ namespace De_Gokkers
         protected string select = "Klik hier om een haas te selecteren";
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
-        int winner;
+        string winner;
+        string player1Hare;
+        string player2Hare;
+        string player3Hare;
+
+        int player1Bet;
+        int player2Bet;
+        int player3Bet;
 
         public Main()
         {
@@ -39,6 +46,7 @@ namespace De_Gokkers
             {
                 slct_Hare.Items.Add(Hares[i].Name);
             }
+
         }
 
         private void btn_Run_Click(object sender, EventArgs e)
@@ -56,6 +64,10 @@ namespace De_Gokkers
                         Hares[1].Run();
                         Hares[2].Run();
                         Hares[3].Run();
+                        xHare1.Text = Hares[0].MyPictureBox.Location.X.ToString();
+                        xHare2.Text = Hares[1].MyPictureBox.Location.X.ToString();
+                        xHare3.Text = Hares[2].MyPictureBox.Location.X.ToString();
+                        xHare4.Text = Hares[3].MyPictureBox.Location.X.ToString();
                     }
                     else
                     {
@@ -64,22 +76,44 @@ namespace De_Gokkers
                 }
                 btn_Bet.Enabled = true;
             }
-            if (Hares[0].MyPictureBox.Location.X == 0)
+            if (Hares[0].MyPictureBox.Location.X <= 0)
             {
-                winner = 1;
+                winner = "Speedy (Zwart)";
+                MessageBox.Show("1 is de winnaar");
             }
-            else if (Hares[1].MyPictureBox.Location.X == 0)
+            if (Hares[1].MyPictureBox.Location.X <= 0)
             {
-                winner = 2;
+                winner = "Slowy (Rood)";
+                MessageBox.Show("2 is de winnaar");
             }
-            else if (Hares[2].MyPictureBox.Location.X == 0)
+            if (Hares[2].MyPictureBox.Location.X <= 0)
             {
-                winner = 3;
+                winner = "Turtle (Blauw)";
+                MessageBox.Show("3 is de winnaar");
             }
-            else if (Hares[3].MyPictureBox.Location.X == 0)
+            if (Hares[3].MyPictureBox.Location.X <= 0)
             {
-                winner = 4;
+                winner = "Flying (Groen)";
+                MessageBox.Show("4 is de winnaar");
             }
+
+            if (player1Hare == winner)
+            {
+                Players[0].Collect(player1Bet);
+                lbl_Player1Cash.Text = Players[0].UpdateLabels();
+            }
+            if (player2Hare == winner)
+            {
+                Players[1].Collect(player2Bet);
+                lbl_Player2Cash.Text = Players[1].UpdateLabels();
+            }
+            if (player3Hare == winner)
+            {
+                Players[2].Collect(player3Bet);
+                lbl_Player3Cash.Text = Players[2].UpdateLabels();
+            }
+            
+
         }
         void AddHares()
         {
@@ -133,6 +167,8 @@ namespace De_Gokkers
                     else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
+                        player1Hare = slct_Hare.SelectedItem.ToString();
+                        player1Bet = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
                        
                         rdio_Player1.Enabled = false;
@@ -161,6 +197,8 @@ namespace De_Gokkers
                     else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
+                        player2Hare = slct_Hare.SelectedItem.ToString();
+                        player2Bet = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
                         
                         rdio_Player2.Enabled = false;
@@ -189,6 +227,8 @@ namespace De_Gokkers
                     else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
+                        player3Hare = slct_Hare.SelectedItem.ToString();
+                        player3Bet = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
                         
                         rdio_Player3.Enabled = false;
