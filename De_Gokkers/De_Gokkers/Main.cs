@@ -102,8 +102,14 @@ namespace De_Gokkers
                 Hares[3].TakeStartingPosition(346);
                 list_Announce.Items.Clear();
                 rdio_Player1.Enabled = true;
-                rdio_Player1.Enabled = true;
-                rdio_Player1.Enabled = true;
+                slct_Hare.Enabled = false;
+                btn_Run.Enabled = false;
+                btn_Bet.Enabled = false;
+                num_AmountMoney.Enabled = false;
+                list_Announce.Enabled = false;
+                rdio_Player1.Checked = false;
+                rdio_Player2.Checked = false;
+                rdio_Player3.Checked = false;
             }
             else
             {
