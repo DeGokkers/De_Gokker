@@ -127,9 +127,9 @@ namespace De_Gokkers
 
         void AddPlayers()
         {
-            Players[0] = new Guy("Sietse", 10);
-            Players[1] = new Guy("Fer", 10);
-            Players[2] = new Guy("Lidy", 10); 
+            Players[0] = new Guy("Fer", 10);
+            Players[1] = new Guy("Lidy", 10);
+            Players[2] = new Guy("Sietse", 10); 
         }
 
         private void btn_Bet_Click(object sender, EventArgs e)
