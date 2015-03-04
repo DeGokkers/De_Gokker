@@ -24,6 +24,8 @@ namespace De_Gokkers
         int player2Bet;
         int player3Bet;
 
+        int playerCash;
+
         public Main()
         {
             InitializeComponent();
@@ -158,7 +160,7 @@ namespace De_Gokkers
 
                 if (rdio_Player1.Checked == true)
                 {
-                    int playerCash = Players[0].GetCash();
+                    playerCash = Players[0].GetCash();
 
                     if (slct_Hare.Text == select)
                     {
@@ -188,7 +190,7 @@ namespace De_Gokkers
 
                 if (rdio_Player2.Checked == true)
                 {
-                    int playerCash = Players[1].GetCash();
+                    playerCash = Players[1].GetCash();
 
                     if (slct_Hare.Text == select)
                     {
@@ -218,7 +220,7 @@ namespace De_Gokkers
 
                 if (rdio_Player3.Checked == true)
                 {
-                    int playerCash = Players[2].GetCash();
+                    playerCash = Players[2].GetCash();
 
                     if (slct_Hare.Text == select)
                     {
