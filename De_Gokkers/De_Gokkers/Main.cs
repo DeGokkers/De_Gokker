@@ -18,6 +18,7 @@ namespace De_Gokkers
         string winner;
         string[] playerHare = new string[3];
         int[] playerBet = new int[3];
+        bool runLock = false;
 
         int playerCash;
         private void UpdateWinner()
@@ -47,6 +48,8 @@ namespace De_Gokkers
             {
                 slct_Hare.Items.Add(Hares[i].Name);
             }
+
+
 
         }
 
@@ -79,7 +82,6 @@ namespace De_Gokkers
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare1.Image = Properties.Resources.Hare_1_Flip;
                 
-                img_Hare1.Image = Properties.Resources.Hare_1;
             }
             if (Hares[1].MyPictureBox.Location.X <= 0)
             {
@@ -87,15 +89,14 @@ namespace De_Gokkers
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare2.Image = Properties.Resources.Hare_2_Flip;
                 
-                img_Hare2.Image = Properties.Resources.Hare_2;
             }
             if (Hares[2].MyPictureBox.Location.X <= 0)
             {
                 winner = "Turtle (Blauw)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                
                 img_Hare3.Image = Properties.Resources.Hare_3_Flip;
                 
-                img_Hare3.Image = Properties.Resources.Hare_3;
             }
             if (Hares[3].MyPictureBox.Location.X <= 0)
             {
@@ -103,7 +104,6 @@ namespace De_Gokkers
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare4.Image = Properties.Resources.Hare_4_Flip;
                 
-                img_Hare4.Image = Properties.Resources.Hare_4;
             }
 
             if (playerHare[0] == winner)
@@ -148,11 +148,14 @@ namespace De_Gokkers
                 btn_Bet.Text = "Wed!";
                 lbl_Winner.Text = winner + ": Heeft de vorige ronde \ngewonnen!";
                 Hares[0].TakeStartingPosition(91);
+                img_Hare1.Image = Properties.Resources.Hare_1;
                 Hares[1].TakeStartingPosition(176);
+                img_Hare2.Image = Properties.Resources.Hare_2;
                 Hares[2].TakeStartingPosition(261);
+                img_Hare3.Image = Properties.Resources.Hare_3;
                 Hares[3].TakeStartingPosition(346);
+                img_Hare4.Image = Properties.Resources.Hare_4;
                 list_Announce.Items.Clear();
-                rdio_Player1.Enabled = true;
                 slct_Hare.Enabled = false;
                 btn_Run.Enabled = false;
                 btn_Bet.Enabled = false;
@@ -182,6 +185,7 @@ namespace De_Gokkers
                         rdio_Player1.Enabled = false;
                         rdio_Player1.Checked = false;
                         btn_Bet.Enabled = false;
+                        btn_Run.Enabled = true;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
 
@@ -212,6 +216,7 @@ namespace De_Gokkers
                         rdio_Player2.Enabled = false;
                         rdio_Player2.Checked = false;
                         btn_Bet.Enabled = false;
+                        btn_Run.Enabled = true;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
                         Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
@@ -241,6 +246,7 @@ namespace De_Gokkers
                         rdio_Player3.Enabled = false;
                         rdio_Player3.Checked = false;
                         btn_Bet.Enabled = false;
+                        btn_Run.Enabled = true;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
 
@@ -271,9 +277,19 @@ namespace De_Gokkers
             {
                 num_AmountMoney.Enabled = true;
                 slct_Hare.Enabled = true;
-                rdio_Player1.Enabled = true;
-                rdio_Player2.Enabled = true;
-                rdio_Player3.Enabled = true;
+                if (Players[0].GetCash() == 0)
+                    rdio_Player1.Enabled = false;
+                else
+                    rdio_Player1.Enabled = true;
+                if (Players[1].GetCash() == 0)
+                    rdio_Player2.Enabled = false;
+                else
+                    rdio_Player2.Enabled = true;
+                if (Players[2].GetCash() == 0)
+                    rdio_Player3.Enabled = false;
+                else
+                    rdio_Player3.Enabled = true;
+                
                 btn_Run.Enabled = true;
             }
         }
@@ -284,7 +300,6 @@ namespace De_Gokkers
             {
                 slct_Hare.Text = select;
                 slct_Hare.Enabled = true;
-                btn_Run.Enabled = true;
                 btn_Bet.Enabled = true;
                 num_AmountMoney.Enabled = true;
                 list_Announce.Enabled = true;
@@ -297,7 +312,6 @@ namespace De_Gokkers
             {
                 slct_Hare.Text = select;
                 slct_Hare.Enabled = true;
-                btn_Run.Enabled = true;
                 btn_Bet.Enabled = true;
                 num_AmountMoney.Enabled = true;
                 list_Announce.Enabled = true;
@@ -310,7 +324,6 @@ namespace De_Gokkers
             {
                 slct_Hare.Text = select;
                 slct_Hare.Enabled = true;
-                btn_Run.Enabled = true;
                 btn_Bet.Enabled = true;
                 num_AmountMoney.Enabled = true;
                 list_Announce.Enabled = true;
