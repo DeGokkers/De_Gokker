@@ -42,7 +42,7 @@ namespace De_Gokkers
             //Retourneer een true als de gokker genoeg geld heeft om te wedden
             if (amount <= cash)
             {
-                cash -= amount;
+                this.cash -= amount;
                 return true;
             }
             else
@@ -64,6 +64,11 @@ namespace De_Gokkers
         public int GetCash()
         {
             return cash;
+        }
+
+        public void SetCash(int amount)
+        {
+            this.cash = -amount;
         }
 
         public string GetName()
