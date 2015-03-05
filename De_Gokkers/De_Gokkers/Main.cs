@@ -16,13 +16,8 @@ namespace De_Gokkers
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
         string winner;
-        string player1Hare;
-        string player2Hare;
-        string player3Hare;
-
-        int player1Bet;
-        int player2Bet;
-        int player3Bet;
+        string[] playerHare = new string[3];
+        int[] playerBet = new int[3];
 
         int playerCash;
 
@@ -99,23 +94,23 @@ namespace De_Gokkers
                 MessageBox.Show("4 is de winnaar");
             }
 
-            if (player1Hare == winner)
+            if (playerHare[0] == winner)
             {
-                Players[0].Collect(player1Bet);
+                Players[0].Collect(playerBet[0]);
                 lbl_Player1Cash.Text = Players[0].UpdateLabels();
             }
-            if (player2Hare == winner)
+
+            if (playerHare[1] == winner)
             {
-                Players[1].Collect(player2Bet);
+                Players[1].Collect(playerBet[1]);
                 lbl_Player2Cash.Text = Players[1].UpdateLabels();
             }
-            if (player3Hare == winner)
+
+            if (playerHare[2] == winner)
             {
-                Players[2].Collect(player3Bet);
+                Players[2].Collect(playerBet[2]);
                 lbl_Player3Cash.Text = Players[2].UpdateLabels();
             }
-            
-
         }
         void AddHares()
         {
@@ -156,21 +151,22 @@ namespace De_Gokkers
             }
             else
             {
-                AddPlayers();
-
                 if (rdio_Player1.Checked == true)
                 {
                     playerCash = Players[0].GetCash();
 
                     if (slct_Hare.Text == select)
                     {
+                        if (list_Announce.Items.Contains("Selecteer een Haas!"))
+                            list_Announce.Items.Clear();
+                        list_Announce.Items.Add("Selecteer een Haas!");
                         list_Announce.Items.Add("Selecteer een Haas!");
                     }
                     else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player1.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
-                        player1Hare = slct_Hare.SelectedItem.ToString();
-                        player1Bet = Convert.ToInt32(num_AmountMoney.Value);
+                        playerHare[0] = slct_Hare.SelectedItem.ToString();
+                        playerBet[0] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
                        
                         rdio_Player1.Enabled = false;
@@ -194,13 +190,15 @@ namespace De_Gokkers
 
                     if (slct_Hare.Text == select)
                     {
+                        if (list_Announce.Items.Contains("Selecteer een Haas!"))
+                            list_Announce.Items.Clear();
                         list_Announce.Items.Add("Selecteer een Haas!");
                     }
                     else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player2.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.SelectedItem.ToString());
-                        player2Hare = slct_Hare.SelectedItem.ToString();
-                        player2Bet = Convert.ToInt32(num_AmountMoney.Value);
+                        playerHare[1] = slct_Hare.SelectedItem.ToString();
+                        playerBet[1] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
                         
                         rdio_Player2.Enabled = false;
@@ -229,8 +227,8 @@ namespace De_Gokkers
                     else if (playerCash >= betAmount)
                     {
                         Bet Bet = new Bet(rdio_Player3.Text, Convert.ToInt32(num_AmountMoney.Value), slct_Hare.Text);
-                        player3Hare = slct_Hare.SelectedItem.ToString();
-                        player3Bet = Convert.ToInt32(num_AmountMoney.Value);
+                        playerHare[2] = slct_Hare.SelectedItem.ToString();
+                        playerBet[2] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
                         
                         rdio_Player3.Enabled = false;
