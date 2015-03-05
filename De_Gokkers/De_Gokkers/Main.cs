@@ -20,6 +20,10 @@ namespace De_Gokkers
         int[] playerBet = new int[3];
 
         int playerCash;
+        private void UpdateWinner()
+        {
+            lbl_Winner.Text = winner + " heeft deze ronde gewonnen";
+        }
 
         public Main()
         {
@@ -77,21 +81,25 @@ namespace De_Gokkers
             {
                 winner = "Speedy (Zwart)";
                 MessageBox.Show("1 is de winnaar");
+                UpdateWinner();
             }
             if (Hares[1].MyPictureBox.Location.X <= 0)
             {
                 winner = "Slowy (Rood)";
                 MessageBox.Show("2 is de winnaar");
+                UpdateWinner();
             }
             if (Hares[2].MyPictureBox.Location.X <= 0)
             {
                 winner = "Turtle (Blauw)";
                 MessageBox.Show("3 is de winnaar");
+                UpdateWinner();
             }
             if (Hares[3].MyPictureBox.Location.X <= 0)
             {
                 winner = "Flying (Groen)";
                 MessageBox.Show("4 is de winnaar");
+                UpdateWinner();
             }
 
             if (playerHare[0] == winner)
@@ -201,7 +209,6 @@ namespace De_Gokkers
                         btn_Bet.Enabled = false;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
-
                         Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
                         lbl_Player2Cash.Text = Players[1].UpdateLabels();
                     }

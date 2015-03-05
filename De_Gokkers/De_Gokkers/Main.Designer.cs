@@ -47,6 +47,10 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overHazenRaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grb_Winner = new System.Windows.Forms.GroupBox();
+            this.xHare2 = new System.Windows.Forms.Label();
+            this.xHare3 = new System.Windows.Forms.Label();
+            this.xHare4 = new System.Windows.Forms.Label();
+            this.xHare1 = new System.Windows.Forms.Label();
             this.btn_Run = new System.Windows.Forms.Button();
             this.img_Hare4 = new System.Windows.Forms.PictureBox();
             this.img_Hare1 = new System.Windows.Forms.PictureBox();
@@ -63,10 +67,6 @@
             this.rdio_Player1 = new System.Windows.Forms.RadioButton();
             this.lbl_BetOn = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.xHare1 = new System.Windows.Forms.Label();
-            this.xHare4 = new System.Windows.Forms.Label();
-            this.xHare3 = new System.Windows.Forms.Label();
-            this.xHare2 = new System.Windows.Forms.Label();
             this.grb_Players.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.grb_Winner.SuspendLayout();
@@ -149,9 +149,9 @@
             this.lbl_Winner.Location = new System.Drawing.Point(49, 21);
             this.lbl_Winner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Winner.Name = "lbl_Winner";
-            this.lbl_Winner.Size = new System.Drawing.Size(266, 23);
+            this.lbl_Winner.Size = new System.Drawing.Size(242, 23);
             this.lbl_Winner.TabIndex = 6;
-            this.lbl_Winner.Text = "ID: Heeft deze ronde gewonnen!";
+            this.lbl_Winner.Text = "Er is nog geen winnende haas";
             // 
             // grb_Players
             // 
@@ -284,11 +284,47 @@
             this.grb_Winner.TabStop = false;
             this.grb_Winner.Text = "Winnaar:";
             // 
+            // xHare2
+            // 
+            this.xHare2.AutoSize = true;
+            this.xHare2.Location = new System.Drawing.Point(50, 64);
+            this.xHare2.Name = "xHare2";
+            this.xHare2.Size = new System.Drawing.Size(41, 13);
+            this.xHare2.TabIndex = 10;
+            this.xHare2.Text = "xHare1";
+            // 
+            // xHare3
+            // 
+            this.xHare3.AutoSize = true;
+            this.xHare3.Location = new System.Drawing.Point(50, 75);
+            this.xHare3.Name = "xHare3";
+            this.xHare3.Size = new System.Drawing.Size(41, 13);
+            this.xHare3.TabIndex = 9;
+            this.xHare3.Text = "xHare1";
+            // 
+            // xHare4
+            // 
+            this.xHare4.AutoSize = true;
+            this.xHare4.Location = new System.Drawing.Point(50, 88);
+            this.xHare4.Name = "xHare4";
+            this.xHare4.Size = new System.Drawing.Size(41, 13);
+            this.xHare4.TabIndex = 8;
+            this.xHare4.Text = "xHare1";
+            // 
+            // xHare1
+            // 
+            this.xHare1.AutoSize = true;
+            this.xHare1.Location = new System.Drawing.Point(50, 51);
+            this.xHare1.Name = "xHare1";
+            this.xHare1.Size = new System.Drawing.Size(41, 13);
+            this.xHare1.TabIndex = 7;
+            this.xHare1.Text = "xHare1";
+            // 
             // btn_Run
             // 
             this.btn_Run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Run.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Run.Image = global::De_Gokkers.Properties.Resources.Ren;
+            this.btn_Run.Image = ((System.Drawing.Image)(resources.GetObject("btn_Run.Image")));
             this.btn_Run.Location = new System.Drawing.Point(457, 16);
             this.btn_Run.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Run.Name = "btn_Run";
@@ -302,7 +338,7 @@
             // 
             this.img_Hare4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare4.BackColor = System.Drawing.Color.Transparent;
-            this.img_Hare4.Image = global::De_Gokkers.Properties.Resources.Hare_4;
+            this.img_Hare4.Image = ((System.Drawing.Image)(resources.GetObject("img_Hare4.Image")));
             this.img_Hare4.Location = new System.Drawing.Point(931, 346);
             this.img_Hare4.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare4.Name = "img_Hare4";
@@ -315,7 +351,7 @@
             // 
             this.img_Hare1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.img_Hare1.BackColor = System.Drawing.Color.Transparent;
-            this.img_Hare1.Image = global::De_Gokkers.Properties.Resources.Hare_1;
+            this.img_Hare1.Image = ((System.Drawing.Image)(resources.GetObject("img_Hare1.Image")));
             this.img_Hare1.Location = new System.Drawing.Point(931, 91);
             this.img_Hare1.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare1.Name = "img_Hare1";
@@ -328,7 +364,7 @@
             // 
             this.img_Hare3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare3.BackColor = System.Drawing.Color.Transparent;
-            this.img_Hare3.Image = global::De_Gokkers.Properties.Resources.Hare_3;
+            this.img_Hare3.Image = ((System.Drawing.Image)(resources.GetObject("img_Hare3.Image")));
             this.img_Hare3.Location = new System.Drawing.Point(931, 261);
             this.img_Hare3.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare3.Name = "img_Hare3";
@@ -341,7 +377,7 @@
             // 
             this.img_Hare2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.img_Hare2.BackColor = System.Drawing.Color.Transparent;
-            this.img_Hare2.Image = global::De_Gokkers.Properties.Resources.Hare_2;
+            this.img_Hare2.Image = ((System.Drawing.Image)(resources.GetObject("img_Hare2.Image")));
             this.img_Hare2.Location = new System.Drawing.Point(931, 176);
             this.img_Hare2.Margin = new System.Windows.Forms.Padding(2);
             this.img_Hare2.Name = "img_Hare2";
@@ -491,47 +527,11 @@
             this.lbl_User.TabIndex = 4;
             this.lbl_User.Text = "Gebruiker";
             // 
-            // xHare1
-            // 
-            this.xHare1.AutoSize = true;
-            this.xHare1.Location = new System.Drawing.Point(50, 51);
-            this.xHare1.Name = "xHare1";
-            this.xHare1.Size = new System.Drawing.Size(41, 13);
-            this.xHare1.TabIndex = 7;
-            this.xHare1.Text = "xHare1";
-            // 
-            // xHare4
-            // 
-            this.xHare4.AutoSize = true;
-            this.xHare4.Location = new System.Drawing.Point(50, 88);
-            this.xHare4.Name = "xHare4";
-            this.xHare4.Size = new System.Drawing.Size(41, 13);
-            this.xHare4.TabIndex = 8;
-            this.xHare4.Text = "xHare1";
-            // 
-            // xHare3
-            // 
-            this.xHare3.AutoSize = true;
-            this.xHare3.Location = new System.Drawing.Point(50, 75);
-            this.xHare3.Name = "xHare3";
-            this.xHare3.Size = new System.Drawing.Size(41, 13);
-            this.xHare3.TabIndex = 9;
-            this.xHare3.Text = "xHare1";
-            // 
-            // xHare2
-            // 
-            this.xHare2.AutoSize = true;
-            this.xHare2.Location = new System.Drawing.Point(50, 64);
-            this.xHare2.Name = "xHare2";
-            this.xHare2.Size = new System.Drawing.Size(41, 13);
-            this.xHare2.TabIndex = 10;
-            this.xHare2.Text = "xHare1";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::De_Gokkers.Properties.Resources.Renbaan;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1002, 617);
             this.Controls.Add(this.img_Hare4);
             this.Controls.Add(this.img_Hare1);
