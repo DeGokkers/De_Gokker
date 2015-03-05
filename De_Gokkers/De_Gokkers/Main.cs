@@ -66,10 +66,6 @@ namespace De_Gokkers
                         Hares[2].Run();
                         Hares[3].Run();
                     }
-                    else
-                    {
-                        MessageBox.Show("Test");
-                    }
                 }
                 btn_Bet.Enabled = true;
             }
@@ -78,20 +74,17 @@ namespace De_Gokkers
                 winner = "Speedy (Zwart)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare1.Image = Properties.Resources.Hare_1_Flip;
-                
             }
             if (Hares[1].MyPictureBox.Location.X <= 0)
             {
                 winner = "Slowy (Rood)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare2.Image = Properties.Resources.Hare_2_Flip;
-                
             }
             if (Hares[2].MyPictureBox.Location.X <= 0)
             {
                 winner = "Turtle (Blauw)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                
                 img_Hare3.Image = Properties.Resources.Hare_3_Flip;
                 
             }
@@ -99,8 +92,7 @@ namespace De_Gokkers
             {
                 winner = "Flying (Groen)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                img_Hare4.Image = Properties.Resources.Hare_4_Flip;
-                
+                img_Hare4.Image = Properties.Resources.Hare_4_Flip; 
             }
 
             if (playerHare[0] == winner)
