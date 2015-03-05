@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace De_Gokkers
 {
-    public partial class Main : Form 
+    public partial class Main : Form
     {
         protected string select = "Klik hier om een haas te selecteren";
         Hare[] Hares = new Hare[4];
@@ -20,6 +20,10 @@ namespace De_Gokkers
         int[] playerBet = new int[3];
 
         int playerCash;
+        private void UpdateWinner()
+        {
+            lbl_Winner.Text = winner + " heeft deze ronde \ngewonnen!";
+        }
 
         public Main()
         {
@@ -61,10 +65,6 @@ namespace De_Gokkers
                         Hares[1].Run();
                         Hares[2].Run();
                         Hares[3].Run();
-                        xHare1.Text = Hares[0].MyPictureBox.Location.X.ToString();
-                        xHare2.Text = Hares[1].MyPictureBox.Location.X.ToString();
-                        xHare3.Text = Hares[2].MyPictureBox.Location.X.ToString();
-                        xHare4.Text = Hares[3].MyPictureBox.Location.X.ToString();
                     }
                     else
                     {
@@ -76,22 +76,34 @@ namespace De_Gokkers
             if (Hares[0].MyPictureBox.Location.X <= 0)
             {
                 winner = "Speedy (Zwart)";
-                MessageBox.Show("1 is de winnaar");
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                img_Hare1.Image = Properties.Resources.Hare_1_Flip;
+                
+                img_Hare1.Image = Properties.Resources.Hare_1;
             }
             if (Hares[1].MyPictureBox.Location.X <= 0)
             {
                 winner = "Slowy (Rood)";
-                MessageBox.Show("2 is de winnaar");
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                img_Hare2.Image = Properties.Resources.Hare_2_Flip;
+                
+                img_Hare2.Image = Properties.Resources.Hare_2;
             }
             if (Hares[2].MyPictureBox.Location.X <= 0)
             {
                 winner = "Turtle (Blauw)";
-                MessageBox.Show("3 is de winnaar");
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                img_Hare3.Image = Properties.Resources.Hare_3_Flip;
+                
+                img_Hare3.Image = Properties.Resources.Hare_3;
             }
             if (Hares[3].MyPictureBox.Location.X <= 0)
             {
                 winner = "Flying (Groen)";
-                MessageBox.Show("4 is de winnaar");
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                img_Hare4.Image = Properties.Resources.Hare_4_Flip;
+                
+                img_Hare4.Image = Properties.Resources.Hare_4;
             }
 
             if (playerHare[0] == winner)
@@ -124,7 +136,7 @@ namespace De_Gokkers
         {
             Players[0] = new Guy("Fer", 10);
             Players[1] = new Guy("Lidy", 10);
-            Players[2] = new Guy("Sietse", 10); 
+            Players[2] = new Guy("Sietse", 10);
         }
 
         private void btn_Bet_Click(object sender, EventArgs e)
@@ -134,6 +146,7 @@ namespace De_Gokkers
             {
                 Lock(false);
                 btn_Bet.Text = "Wed!";
+                lbl_Winner.Text = winner + ": Heeft de vorige ronde \ngewonnen!";
                 Hares[0].TakeStartingPosition(91);
                 Hares[1].TakeStartingPosition(176);
                 Hares[2].TakeStartingPosition(261);
@@ -157,10 +170,7 @@ namespace De_Gokkers
 
                     if (slct_Hare.Text == select)
                     {
-                        if (list_Announce.Items.Contains("Selecteer een Haas!"))
-                            list_Announce.Items.Clear();
-                        list_Announce.Items.Add("Selecteer een Haas!");
-                        list_Announce.Items.Add("Selecteer een Haas!");
+                        NoHareSelected();
                     }
                     else if (playerCash >= betAmount)
                     {
@@ -168,7 +178,7 @@ namespace De_Gokkers
                         playerHare[0] = slct_Hare.SelectedItem.ToString();
                         playerBet[0] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
-                       
+
                         rdio_Player1.Enabled = false;
                         rdio_Player1.Checked = false;
                         btn_Bet.Enabled = false;
@@ -190,9 +200,7 @@ namespace De_Gokkers
 
                     if (slct_Hare.Text == select)
                     {
-                        if (list_Announce.Items.Contains("Selecteer een Haas!"))
-                            list_Announce.Items.Clear();
-                        list_Announce.Items.Add("Selecteer een Haas!");
+                        NoHareSelected();
                     }
                     else if (playerCash >= betAmount)
                     {
@@ -200,13 +208,12 @@ namespace De_Gokkers
                         playerHare[1] = slct_Hare.SelectedItem.ToString();
                         playerBet[1] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
-                        
+
                         rdio_Player2.Enabled = false;
                         rdio_Player2.Checked = false;
                         btn_Bet.Enabled = false;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
-
                         Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
                         lbl_Player2Cash.Text = Players[1].UpdateLabels();
                     }
@@ -222,7 +229,7 @@ namespace De_Gokkers
 
                     if (slct_Hare.Text == select)
                     {
-                        list_Announce.Items.Add("Selecteer een Haas!");
+                        NoHareSelected();
                     }
                     else if (playerCash >= betAmount)
                     {
@@ -230,7 +237,7 @@ namespace De_Gokkers
                         playerHare[2] = slct_Hare.SelectedItem.ToString();
                         playerBet[2] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
-                        
+
                         rdio_Player3.Enabled = false;
                         rdio_Player3.Checked = false;
                         btn_Bet.Enabled = false;
@@ -308,6 +315,7 @@ namespace De_Gokkers
                 num_AmountMoney.Enabled = true;
                 list_Announce.Enabled = true;
             }
+
         }
 
         private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -318,6 +326,21 @@ namespace De_Gokkers
         private void resetAllesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+        private void NoHareSelected()
+        {
+            for (int i = list_Announce.Items.Count - 1; i >= 0; i--)
+            {
+                string item = (string)list_Announce.Items[i];
+                if (item.StartsWith("Selecteer een Haas!"))
+                    list_Announce.Items.RemoveAt(i);
+            }
+            list_Announce.Items.Add("Selecteer een Haas!");
+        }
+
+        private void lbl_Winner_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

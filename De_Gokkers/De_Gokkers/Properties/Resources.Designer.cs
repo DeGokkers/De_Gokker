@@ -73,9 +73,29 @@ namespace De_Gokkers.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hare_1_Flip {
+            get {
+                object obj = ResourceManager.GetObject("Hare_1_Flip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hare_2 {
             get {
                 object obj = ResourceManager.GetObject("Hare_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hare_2_Flip {
+            get {
+                object obj = ResourceManager.GetObject("Hare_2_Flip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,29 @@ namespace De_Gokkers.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hare_3_Flip {
+            get {
+                object obj = ResourceManager.GetObject("Hare_3_Flip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hare_4 {
             get {
                 object obj = ResourceManager.GetObject("Hare_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hare_4_Flip {
+            get {
+                object obj = ResourceManager.GetObject("Hare_4_Flip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

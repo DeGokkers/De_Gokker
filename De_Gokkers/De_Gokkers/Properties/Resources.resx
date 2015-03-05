@@ -121,14 +121,26 @@
   <data name="Hare_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hare_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hare_1_Flip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hare_1_Flip.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hare_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hare_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hare_2_Flip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hare_2_Flip.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hare_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hare_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hare_3_Flip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hare_3_Flip.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hare_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hare_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hare_4_Flip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hare_4_Flip.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ren" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ren.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
