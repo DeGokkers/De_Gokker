@@ -258,7 +258,7 @@ namespace De_Gokkers
                 img_Hare4.Image = Properties.Resources.Hare4_13;
                 img_Hare4.Refresh();
                 Thread.Sleep(100);
-               
+
                 img_Hare4.Image = Properties.Resources.Hare_4;
             }
 
@@ -321,7 +321,7 @@ namespace De_Gokkers
                 rdio_Player2.Checked = false;
                 rdio_Player3.Checked = false;
 
-                if (Players[0].GetCash() == 0 && Players[1].GetCash() == 0 && Players[2].GetCash() == 0)
+                if (Players[0].GetCash() < 5 && Players[1].GetCash() < 5 && Players[2].GetCash() < 5)
                 {
                     string message = "Geen één speler heeft nog genoeg geld om te spelen wil je het spel resetten?";
                     string caption = "Einde spel";
