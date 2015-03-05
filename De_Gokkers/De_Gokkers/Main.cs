@@ -61,6 +61,10 @@ namespace De_Gokkers
                         Hares[1].Run();
                         Hares[2].Run();
                         Hares[3].Run();
+                        xHare1.Text = Hares[0].MyPictureBox.Location.X.ToString();
+                        xHare2.Text = Hares[1].MyPictureBox.Location.X.ToString();
+                        xHare3.Text = Hares[2].MyPictureBox.Location.X.ToString();
+                        xHare4.Text = Hares[3].MyPictureBox.Location.X.ToString();
                     }
                     else
                     {
@@ -72,22 +76,22 @@ namespace De_Gokkers
             if (Hares[0].MyPictureBox.Location.X <= 0)
             {
                 winner = "Speedy (Zwart)";
-                lbl_Winner.Text = winner + ": Heeft deze ronde gewonnen!";
+                MessageBox.Show("1 is de winnaar");
             }
             if (Hares[1].MyPictureBox.Location.X <= 0)
             {
                 winner = "Slowy (Rood)";
-                lbl_Winner.Text = winner + ": Heeft deze ronde gewonnen!";
+                MessageBox.Show("2 is de winnaar");
             }
             if (Hares[2].MyPictureBox.Location.X <= 0)
             {
                 winner = "Turtle (Blauw)";
-                lbl_Winner.Text = winner + ": Heeft deze ronde gewonnen!";
+                MessageBox.Show("3 is de winnaar");
             }
             if (Hares[3].MyPictureBox.Location.X <= 0)
             {
                 winner = "Flying (Groen)";
-                lbl_Winner.Text = winner + ": Heeft deze ronde gewonnen!";
+                MessageBox.Show("4 is de winnaar");
             }
 
             if (playerHare[0] == winner)
@@ -130,7 +134,6 @@ namespace De_Gokkers
             {
                 Lock(false);
                 btn_Bet.Text = "Wed!";
-                lbl_Winner.Text = winner + ": Heeft de vorige ronde \ngewonnen!";
                 Hares[0].TakeStartingPosition(91);
                 Hares[1].TakeStartingPosition(176);
                 Hares[2].TakeStartingPosition(261);
