@@ -148,7 +148,6 @@
             this.lbl_Winner.Size = new System.Drawing.Size(306, 19);
             this.lbl_Winner.TabIndex = 6;
             this.lbl_Winner.Text = "Nog niemand: Heeft deze ronde gewonnen!";
-            this.lbl_Winner.Click += new System.EventHandler(this.lbl_Winner_Click);
             // 
             // grb_Players
             // 

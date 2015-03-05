@@ -69,30 +69,33 @@ namespace De_Gokkers
                 }
                 btn_Bet.Enabled = true;
             }
-            if (Hares[0].MyPictureBox.Location.X <= 0)
+            if (Hares[0].MyPictureBox.Location.X < 0)
             {
                 winner = "Speedy (Zwart)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare1.Image = Properties.Resources.Hare_1_Flip;
+                img_Hare1.Image = Properties.Resources.Hare_1;
             }
-            if (Hares[1].MyPictureBox.Location.X <= 0)
+            if (Hares[1].MyPictureBox.Location.X < 0)
             {
                 winner = "Slowy (Rood)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare2.Image = Properties.Resources.Hare_2_Flip;
+                img_Hare2.Image = Properties.Resources.Hare_2; 
             }
-            if (Hares[2].MyPictureBox.Location.X <= 0)
+            if (Hares[2].MyPictureBox.Location.X < 0)
             {
                 winner = "Turtle (Blauw)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                 img_Hare3.Image = Properties.Resources.Hare_3_Flip;
-                
+                img_Hare3.Image = Properties.Resources.Hare_3;
             }
-            if (Hares[3].MyPictureBox.Location.X <= 0)
+            if (Hares[3].MyPictureBox.Location.X < 0)
             {
                 winner = "Flying (Groen)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                img_Hare4.Image = Properties.Resources.Hare_4_Flip; 
+                img_Hare4.Image = Properties.Resources.Hare_4_Flip;
+                img_Hare4.Image = Properties.Resources.Hare_4;
             }
 
             if (playerHare[0] == winner)
@@ -350,11 +353,6 @@ namespace De_Gokkers
                     list_Announce.Items.RemoveAt(i);
             }
             list_Announce.Items.Add("Selecteer een Haas!");
-        }
-
-        private void lbl_Winner_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
