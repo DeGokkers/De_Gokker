@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace De_Gokkers
 {
@@ -73,28 +74,191 @@ namespace De_Gokkers
             {
                 winner = "Speedy (Zwart)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                img_Hare1.Image = Properties.Resources.Hare_1_Flip;
+
+                img_Hare1.Image = Properties.Resources.Hare1_1;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_2;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_3;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_4;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_5;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_6;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_7;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_8;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_9;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_10;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_11;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_12;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+                img_Hare1.Image = Properties.Resources.Hare1_13;
+                img_Hare1.Refresh();
+                Thread.Sleep(100);
+
                 img_Hare1.Image = Properties.Resources.Hare_1;
             }
-            if (Hares[1].MyPictureBox.Location.X < 0)
+            if (Hares[1].MyPictureBox.Location.X <= 0)
             {
                 winner = "Slowy (Rood)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                img_Hare2.Image = Properties.Resources.Hare_2_Flip;
+
+                img_Hare2.Image = Properties.Resources.Hare2_1;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_2;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_3;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_4;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_5;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_6;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_7;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_8;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_9;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_10;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_11;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_12;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+                img_Hare2.Image = Properties.Resources.Hare2_13;
+                img_Hare2.Refresh();
+                Thread.Sleep(100);
+
                 img_Hare2.Image = Properties.Resources.Hare_2; 
             }
-            if (Hares[2].MyPictureBox.Location.X < 0)
+            if (Hares[2].MyPictureBox.Location.X <= 0)
             {
                 winner = "Turtle (Blauw)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                img_Hare3.Image = Properties.Resources.Hare_3_Flip;
+
+                img_Hare3.Image = Properties.Resources.Hare3_1;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_2;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_3;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_3;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_4;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_5;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_6;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_7;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_8;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_9;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_10;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_11;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_12;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+                img_Hare3.Image = Properties.Resources.Hare3_13;
+                img_Hare3.Refresh();
+                Thread.Sleep(100);
+
                 img_Hare3.Image = Properties.Resources.Hare_3;
             }
-            if (Hares[3].MyPictureBox.Location.X < 0)
+            if (Hares[3].MyPictureBox.Location.X <= 0)
             {
                 winner = "Flying (Groen)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                img_Hare4.Image = Properties.Resources.Hare_4_Flip;
+
+                img_Hare4.Image = Properties.Resources.Hare4_1;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_2;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_3;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_4;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_5;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_6;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_7;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_8;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_9;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_10;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_11;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_12;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+                img_Hare4.Image = Properties.Resources.Hare4_13;
+                img_Hare4.Refresh();
+                Thread.Sleep(100);
+               
                 img_Hare4.Image = Properties.Resources.Hare_4;
             }
 
