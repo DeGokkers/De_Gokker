@@ -164,7 +164,7 @@ namespace De_Gokkers
 
                     if (slct_Hare.Text == select)
                     {
-                        list_Announce.Items.Add("Selecteer een Haas!");
+                        NoHareSelected();
                     }
                     else if (playerCash >= betAmount)
                     {
@@ -194,7 +194,7 @@ namespace De_Gokkers
 
                     if (slct_Hare.Text == select)
                     {
-                        list_Announce.Items.Add("Selecteer een Haas!");
+                        NoHareSelected();
                     }
                     else if (playerCash >= betAmount)
                     {
@@ -224,7 +224,7 @@ namespace De_Gokkers
 
                     if (slct_Hare.Text == select)
                     {
-                        list_Announce.Items.Add("Selecteer een Haas!");
+                        NoHareSelected();
                     }
                     else if (playerCash >= betAmount)
                     {
@@ -310,6 +310,7 @@ namespace De_Gokkers
                 num_AmountMoney.Enabled = true;
                 list_Announce.Enabled = true;
             }
+           
         }
 
         private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -320,6 +321,16 @@ namespace De_Gokkers
         private void resetAllesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+        private void NoHareSelected()
+        {
+            for (int i = list_Announce.Items.Count - 1; i >= 0; i--)
+            {
+                string item = (string)list_Announce.Items[i];
+                if (item.StartsWith("Selecteer een Haas!"))
+                    list_Announce.Items.RemoveAt(i);
+            }
+            list_Announce.Items.Add("Selecteer een Haas!");
         }
     }
 }
