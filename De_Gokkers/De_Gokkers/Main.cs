@@ -48,9 +48,6 @@ namespace De_Gokkers
             {
                 slct_Hare.Items.Add(Hares[i].Name);
             }
-
-
-
         }
 
         private void btn_Run_Click(object sender, EventArgs e)
@@ -164,6 +161,18 @@ namespace De_Gokkers
                 rdio_Player1.Checked = false;
                 rdio_Player2.Checked = false;
                 rdio_Player3.Checked = false;
+
+                if (Players[0].GetCash() == 0 && Players[1].GetCash() == 0 && Players[2].GetCash() == 0)
+                {
+                    string message = "Geen één speler heeft nog genoeg geld om te spelen wil je het spel resetten?";
+                    string caption = "Einde spel";
+                    var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        Application.Restart();
+                    }
+                }
             }
             else
             {
