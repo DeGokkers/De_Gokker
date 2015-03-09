@@ -78,11 +78,6 @@ namespace De_Gokkers
                 btn_Bet.Enabled = true;
             }
 
-            label1.Text = Hares[0].MyPictureBox.Location.X.ToString();
-            label2.Text = Hares[1].MyPictureBox.Location.X.ToString();
-            label3.Text = Hares[2].MyPictureBox.Location.X.ToString();
-            label4.Text = Hares[3].MyPictureBox.Location.X.ToString();
-
             if (Hares[0].MyPictureBox.Location.X <= 0)
             {
                 winner = "Speedy (Zwart)";
