@@ -50,6 +50,7 @@ namespace De_Gokkers
             num_AmountMoney.Enabled = false;
             list_Announce.Enabled = false;
 
+
             AddHares();
             for (int i = 0; i < 4; i++)
             {
@@ -66,7 +67,7 @@ namespace De_Gokkers
             {
                 for (int i = 2; (0 < Hares[0].GetLoc() && 0 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && 0 < Hares[3].GetLoc()); )
                 {
-                    if (0 < Hares[0].GetLoc() && 0 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && 0 < Hares[3].GetLoc())
+                    if (-1 < Hares[0].GetLoc() && -1 < Hares[1].GetLoc() && -1 < Hares[2].GetLoc() && -1 < Hares[3].GetLoc())
                     {
                         Hares[0].Run();
                         Hares[1].Run();
@@ -77,7 +78,12 @@ namespace De_Gokkers
                 btn_Bet.Enabled = true;
             }
 
-            if (Hares[0].MyPictureBox.Location.X < 0)
+            label1.Text = Hares[0].MyPictureBox.Location.X.ToString();
+            label2.Text = Hares[1].MyPictureBox.Location.X.ToString();
+            label3.Text = Hares[2].MyPictureBox.Location.X.ToString();
+            label4.Text = Hares[3].MyPictureBox.Location.X.ToString();
+
+            if (Hares[0].MyPictureBox.Location.X <= 0)
             {
                 winner = "Speedy (Zwart)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
@@ -91,7 +97,7 @@ namespace De_Gokkers
 
                 img_Hare1.Image = Properties.Resources.Hare_1;
             }
-            if (Hares[1].MyPictureBox.Location.X < 0)
+            if (Hares[1].MyPictureBox.Location.X <= 0)
             {
                 winner = "Slowy (Rood)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
@@ -105,7 +111,7 @@ namespace De_Gokkers
 
                 img_Hare2.Image = Properties.Resources.Hare_2; 
             }
-            if (Hares[2].MyPictureBox.Location.X < 0)
+            if (Hares[2].MyPictureBox.Location.X <= 0)
             {
                 winner = "Turtle (Blauw)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
@@ -119,7 +125,7 @@ namespace De_Gokkers
 
                 img_Hare3.Image = Properties.Resources.Hare_3;
             }
-            if (Hares[3].MyPictureBox.Location.X < 0)
+            if (Hares[3].MyPictureBox.Location.X <= 0)
             {
                 winner = "Flying (Groen)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
@@ -138,18 +144,33 @@ namespace De_Gokkers
             {
                 Players[0].Collect(playerBet[0]);
                 lbl_Player1Cash.Text = Players[0].UpdateLabels();
+
+                for (int i = 0; i < playerHare.Length; i++)
+                {
+                    playerHare[i] = null;
+                }
             }
 
             if (playerHare[1] == winner)
             {
                 Players[1].Collect(playerBet[1]);
                 lbl_Player2Cash.Text = Players[1].UpdateLabels();
+
+                for (int i = 0; i < playerHare.Length; i++)
+                {
+                    playerHare[i] = null;
+                }
             }
 
             if (playerHare[2] == winner)
             {
                 Players[2].Collect(playerBet[2]);
                 lbl_Player3Cash.Text = Players[2].UpdateLabels();
+
+                for (int i = 0; i < playerHare.Length; i++)
+                {
+                    playerHare[i] = null;
+                }
             }
         }
         void AddHares()
