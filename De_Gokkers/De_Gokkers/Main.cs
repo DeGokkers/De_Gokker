@@ -145,10 +145,9 @@ namespace De_Gokkers
                 Players[0].Collect(playerBet[0]);
                 lbl_Player1Cash.Text = Players[0].UpdateLabels();
 
-                for (int i = 0; i < playerHare.Length; i++)
-                {
-                    playerHare[i] = null;
-                }
+                playerHare[0] = null;
+                playerHare[1] = null;
+                playerHare[2] = null;
             }
 
             if (playerHare[1] == winner)
@@ -156,10 +155,9 @@ namespace De_Gokkers
                 Players[1].Collect(playerBet[1]);
                 lbl_Player2Cash.Text = Players[1].UpdateLabels();
 
-                for (int i = 0; i < playerHare.Length; i++)
-                {
-                    playerHare[i] = null;
-                }
+                playerHare[0] = null;
+                playerHare[1] = null;
+                playerHare[2] = null;
             }
 
             if (playerHare[2] == winner)
@@ -167,10 +165,9 @@ namespace De_Gokkers
                 Players[2].Collect(playerBet[2]);
                 lbl_Player3Cash.Text = Players[2].UpdateLabels();
 
-                for (int i = 0; i < playerHare.Length; i++)
-                {
-                    playerHare[i] = null;
-                }
+                playerHare[0] = null;
+                playerHare[1] = null;
+                playerHare[2] = null;
             }
         }
         void AddHares()
