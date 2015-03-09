@@ -151,6 +151,10 @@
     <Content Include="Resources\Hare4_Flip\Hare4_7.png" />
     <Content Include="Resources\Hare4_Flip\Hare4_8.png" />
     <Content Include="Resources\Hare4_Flip\Hare4_9.png" />
+    <None Include="Resources\Hare_4_2.png" />
+    <None Include="Resources\Hare_3_2.png" />
+    <None Include="Resources\Hare_2_2.png" />
+    <None Include="Resources\Hare_1_2.png" />
     <None Include="Resources\Renbaan.png" />
     <None Include="Resources\Ren.png" />
     <None Include="Resources\Hare_4.png" />

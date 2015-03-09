@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Threading;
 
 namespace De_Gokkers
 {
@@ -39,6 +40,16 @@ namespace De_Gokkers
             {
                 if (intRandomNumber > ((MaxRandom / 5) * i)) // De if checkt of random number groter is dan een (nummer/5)
                 {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        MyPictureBox.Image = Properties.Resources.Hare_1_2;
+                        img_Hare3.Refresh();
+                        Thread.Sleep(100);
+                        MyPictureBox.Image = Properties.Resources.Hare_1;
+                        img_Hare3.Refresh();
+                        Thread.Sleep(100);
+                    }
+                    
                     distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
                     if (Location > 50)
                     {
