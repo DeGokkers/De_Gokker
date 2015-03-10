@@ -60,6 +60,10 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            player.Stream = Properties.Resources.Benny_Hill_Theme;
+            player.Play();
+
             btn_Bet.Text = "Reset!";
             Lock(true);
             AddHares();

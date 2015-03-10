@@ -61,21 +61,20 @@ namespace De_Gokkers.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap Hare_1 {
+        internal static System.IO.UnmanagedMemoryStream Benny_Hill_Theme {
             get {
-                object obj = ResourceManager.GetObject("Hare_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("Benny_Hill_Theme", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hare_1_2 {
+        internal static System.Drawing.Bitmap Hare_1 {
             get {
-                object obj = ResourceManager.GetObject("Hare_1_2", resourceCulture);
+                object obj = ResourceManager.GetObject("Hare_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,16 +92,6 @@ namespace De_Gokkers.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hare_2_2 {
-            get {
-                object obj = ResourceManager.GetObject("Hare_2_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Hare_3 {
             get {
                 object obj = ResourceManager.GetObject("Hare_3", resourceCulture);
@@ -113,29 +102,9 @@ namespace De_Gokkers.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hare_3_2 {
-            get {
-                object obj = ResourceManager.GetObject("Hare_3_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Hare_4 {
             get {
                 object obj = ResourceManager.GetObject("Hare_4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Hare_4_2 {
-            get {
-                object obj = ResourceManager.GetObject("Hare_4_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
