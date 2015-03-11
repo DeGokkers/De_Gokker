@@ -648,5 +648,7 @@ namespace De_Gokkers.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        public static System.Drawing.Image Hare_1_Frame2 { get; set; }
     }
 }

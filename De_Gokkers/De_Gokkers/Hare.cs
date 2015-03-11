@@ -42,7 +42,7 @@ namespace De_Gokkers
                 if (intRandomNumber > ((MaxRandom / 5) * i)) // De if checkt of random number groter is dan een (nummer/5)
                 {
                     distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
-
+                    
                     if (Location > 50)
                     {
                         winner = Name;
@@ -63,7 +63,19 @@ namespace De_Gokkers
                 //Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
                 //MyPictureBox.Location = NewPos;
                 MyPictureBox.Left -= distance;
+                Switch = !Switch;
+                if (Switch)
+                {
+                    MyPictureBox.Image = Properties.Resources.Hare_1;
+                    MyPictureBox.Refresh();
+                }
+                if (!Switch)
+                {
+                    MyPictureBox.Image = Properties.Resources.Hare_2;
+                    MyPictureBox.Refresh();
+                }
                 MyPictureBox.Refresh();
+                
                 return false;
             }
         }
