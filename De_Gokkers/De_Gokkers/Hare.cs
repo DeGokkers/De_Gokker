@@ -40,16 +40,6 @@ namespace De_Gokkers
             {
                 if (intRandomNumber > ((MaxRandom / 5) * i)) // De if checkt of random number groter is dan een (nummer/5)
                 {
-                    for (int j = 0; j < 2; j++)
-                    {
-                        MyPictureBox.Image = Properties.Resources.Hare_1_2;
-                        img_Hare3.Refresh();
-                        Thread.Sleep(100);
-                        MyPictureBox.Image = Properties.Resources.Hare_1;
-                        img_Hare3.Refresh();
-                        Thread.Sleep(100);
-                    }
-                    
                     distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
                     if (Location > 50)
                     {
@@ -68,8 +58,9 @@ namespace De_Gokkers
             else
             {
                 //  Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
-                Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
-                MyPictureBox.Location = NewPos;
+                //Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
+                //MyPictureBox.Location = NewPos;
+                MyPictureBox.Left -= distance;
                 MyPictureBox.Refresh();
                 return false;
             }
