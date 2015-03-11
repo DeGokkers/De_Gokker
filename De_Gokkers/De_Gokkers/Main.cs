@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using System.Media;
+
 
 namespace De_Gokkers
 {
     public partial class Main : Form
     {
         protected string select = "Klik hier om een haas te selecteren";
-        SoundPlayer Player = new SoundPlayer();
+        private System.MediaControl.AudioPlayer Player = new MediaControl.AudioPlayer();
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
         string winner;
@@ -214,6 +214,7 @@ namespace De_Gokkers
                 rdio_Player1.Checked = false;
                 rdio_Player2.Checked = false;
                 rdio_Player3.Checked = false;
+                Player.Close();
 
                 if (Players[0].GetCash() < 5 && Players[1].GetCash() < 5 && Players[2].GetCash() < 5)
                 {
