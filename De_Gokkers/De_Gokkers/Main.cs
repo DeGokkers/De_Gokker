@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace De_Gokkers
 {
     public partial class Main : Form
     {
         protected string select = "Klik hier om een haas te selecteren";
+        SoundPlayer Player = new SoundPlayer();
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
         string winner;
@@ -60,9 +62,9 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-            player.Stream = Properties.Resources.Benny_Hill_Theme;
-            player.Play();
+            
+            Player.Stream = Properties.Resources.Benny_Hill_Theme;
+            Player.Play();
 
             btn_Bet.Text = "Reset!";
             Lock(true);
@@ -81,11 +83,6 @@ namespace De_Gokkers
                 }
                 btn_Bet.Enabled = true;
             }
-
-            label1.Text = Hares[0].MyPictureBox.Location.X.ToString();
-            label2.Text = Hares[1].MyPictureBox.Location.X.ToString();
-            label3.Text = Hares[2].MyPictureBox.Location.X.ToString();
-            label4.Text = Hares[3].MyPictureBox.Location.X.ToString();
 
             if (Hares[0].MyPictureBox.Location.X <= 0)
             {
@@ -148,6 +145,7 @@ namespace De_Gokkers
             {
                 Players[0].Collect(playerBet[0]);
                 lbl_Player1Cash.Text = Players[0].UpdateLabels();
+                Player.Dispose();
 
                 playerHare[0] = null;
                 playerHare[1] = null;
@@ -158,6 +156,7 @@ namespace De_Gokkers
             {
                 Players[1].Collect(playerBet[1]);
                 lbl_Player2Cash.Text = Players[1].UpdateLabels();
+                Player.Dispose();
 
                 playerHare[0] = null;
                 playerHare[1] = null;
@@ -168,6 +167,7 @@ namespace De_Gokkers
             {
                 Players[2].Collect(playerBet[2]);
                 lbl_Player3Cash.Text = Players[2].UpdateLabels();
+                Player.Dispose();
 
                 playerHare[0] = null;
                 playerHare[1] = null;
@@ -217,7 +217,7 @@ namespace De_Gokkers
 
                 if (Players[0].GetCash() < 5 && Players[1].GetCash() < 5 && Players[2].GetCash() < 5)
                 {
-                    string message = "Geen één speler heeft nog genoeg geld om te spelen wil je het spel resetten?";
+                    string message = "Geen één speler heeft nog genoeg geld om te spelen, wil je het spel resetten?";
                     string caption = "Einde spel";
                     var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -243,11 +243,10 @@ namespace De_Gokkers
                         playerHare[0] = slct_Hare.SelectedItem.ToString();
                         playerBet[0] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
-
+                        btn_Run.Enabled = true;
                         rdio_Player1.Enabled = false;
                         rdio_Player1.Checked = false;
                         btn_Bet.Enabled = false;
-                        btn_Run.Enabled = true;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
 
@@ -322,6 +321,11 @@ namespace De_Gokkers
                 }
                 slct_Hare.Text = select;
             }
+
+            //if (Players[0].PlaceBet(Convert.ToInt32(num_AmountMoney.Value)) && Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value)) && Players[2].PlaceBet(Convert.ToInt32(num_AmountMoney.Value)))
+            //{
+            //    btn_Run.Enabled = true;
+            //}
         }
 
         private void Lock(bool Locked)
