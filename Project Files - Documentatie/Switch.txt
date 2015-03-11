@@ -1,0 +1,16 @@
+Switch = !Switch;
+            LoopCount++;
+            if (LoopCount == ChangeAnimationEveryXMoves)
+            {
+                LoopCount = 0;
+
+                if (Switch)
+                {
+                    MyPictureBox.Image = Properties.Resources.Hare_1;
+                }
+                if (!Switch)
+                {
+                    MyPictureBox.Image = Properties.Resources.Hare_1_2;
+                }
+                MyPictureBox.Refresh();
+            }
