@@ -64,7 +64,6 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
-            
             Player.Stream = Properties.Resources.Benny_Hill_Theme;
             Player.Play();
 
@@ -90,6 +89,7 @@ namespace De_Gokkers
             {
                 winner = "Speedy (Zwart)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                Player.Stop();
 
                 for (int i = 0; i < Flip1.Length; i++)
                 {
@@ -104,6 +104,7 @@ namespace De_Gokkers
             {
                 winner = "Slowy (Rood)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                Player.Stop();
 
                 for (int i = 0; i < Flip2.Length; i++)
                 {
@@ -118,6 +119,7 @@ namespace De_Gokkers
             {
                 winner = "Turtle (Blauw)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                Player.Stop();
 
                 for (int i = 0; i < Flip3.Length; i++)
                 {
@@ -132,6 +134,7 @@ namespace De_Gokkers
             {
                 winner = "Flying (Groen)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                Player.Stop();
 
                 for (int i = 0; i < Flip4.Length; i++)
                 {
@@ -184,6 +187,12 @@ namespace De_Gokkers
         private void btn_Bet_Click(object sender, EventArgs e)
         {
             int betAmount = Convert.ToInt32(num_AmountMoney.Value);
+
+            //if (btn_Run.Enabled == false && btn_Run.MouseClick == MouseButtons.Right)
+            //{
+            //    list_Announce.Items.Add("Alle spelers moeten gewed hebben om het spel te kunnen starten.");
+            //}
+
             if (btn_Bet.Text == "Reset!")
             {
                 Lock(false);
@@ -236,7 +245,6 @@ namespace De_Gokkers
                         playerHare[0] = slct_Hare.SelectedItem.ToString();
                         playerBet[0] = Convert.ToInt32(num_AmountMoney.Value);
                         list_Announce.Items.Add(Bet.GetDescription());
-                        btn_Run.Enabled = true;
                         rdio_Player1.Enabled = false;
                         rdio_Player1.Checked = false;
                         btn_Bet.Enabled = false;
@@ -270,7 +278,6 @@ namespace De_Gokkers
                         rdio_Player2.Enabled = false;
                         rdio_Player2.Checked = false;
                         btn_Bet.Enabled = false;
-                        btn_Run.Enabled = true;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
                         Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
@@ -300,7 +307,6 @@ namespace De_Gokkers
                         rdio_Player3.Enabled = false;
                         rdio_Player3.Checked = false;
                         btn_Bet.Enabled = false;
-                        btn_Run.Enabled = true;
                         num_AmountMoney.Enabled = false;
                         slct_Hare.Enabled = false;
 
@@ -313,12 +319,12 @@ namespace De_Gokkers
                     }
                 }
                 slct_Hare.Text = select;
-            }
 
-            //if (Players[0].PlaceBet(Convert.ToInt32(num_AmountMoney.Value)) && Players[1].PlaceBet(Convert.ToInt32(num_AmountMoney.Value)) && Players[2].PlaceBet(Convert.ToInt32(num_AmountMoney.Value)))
-            //{
-            //    btn_Run.Enabled = true;
-            //}
+                if (rdio_Player1.Enabled == false && rdio_Player2.Enabled == false && rdio_Player3.Enabled == false)
+                {
+                    btn_Run.Enabled = true;
+                }
+            }
         }
 
         private void Lock(bool Locked)
