@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 
 namespace De_Gokkers
@@ -15,13 +16,14 @@ namespace De_Gokkers
     public partial class Main : Form
     {
         protected string select = "Klik hier om een haas te selecteren";
-        private System.MediaControl.AudioPlayer Player = new MediaControl.AudioPlayer();
+        SoundPlayer Player = new SoundPlayer();
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
         string winner;
         string[] playerHare = new string[3];
         int[] playerBet = new int[3];
         bool runLock = false;
+        Label[] lbl_PlayerCash = new Label[3];
 
         Image[] Flip1 = new Image[13] { Properties.Resources.Hare1_1, Properties.Resources.Hare1_2, Properties.Resources.Hare1_3, Properties.Resources.Hare1_4, Properties.Resources.Hare1_5, Properties.Resources.Hare1_6, Properties.Resources.Hare1_7, Properties.Resources.Hare1_8, Properties.Resources.Hare1_9, Properties.Resources.Hare1_10, Properties.Resources.Hare1_11, Properties.Resources.Hare1_12, Properties.Resources.Hare1_13};
         Image[] Flip2 = new Image[13] { Properties.Resources.Hare2_1, Properties.Resources.Hare2_2, Properties.Resources.Hare2_3, Properties.Resources.Hare2_4, Properties.Resources.Hare2_5, Properties.Resources.Hare2_6, Properties.Resources.Hare2_7, Properties.Resources.Hare2_8, Properties.Resources.Hare2_9, Properties.Resources.Hare2_10, Properties.Resources.Hare2_11, Properties.Resources.Hare2_12, Properties.Resources.Hare2_13, };
@@ -141,39 +143,22 @@ namespace De_Gokkers
                 img_Hare4.Image = Properties.Resources.Hare_4;
             }
 
-            if (playerHare[0] == winner)
+            for (int i = 0; i < playerHare.Length; i++)
             {
-                Players[0].Collect(playerBet[0]);
-                lbl_Player1Cash.Text = Players[0].UpdateLabels();
-                Player.Dispose();
+                AddPlayerCashLabel();
+                if (playerHare[i] == winner)
+                {
+                    Players[i].Collect(playerBet[i]);
+                    lbl_PlayerCash[i].Text = Players[i].UpdateLabels();
+                    Player.Dispose();
 
-                playerHare[0] = null;
-                playerHare[1] = null;
-                playerHare[2] = null;
-            }
-
-            if (playerHare[1] == winner)
-            {
-                Players[1].Collect(playerBet[1]);
-                lbl_Player2Cash.Text = Players[1].UpdateLabels();
-                Player.Dispose();
-
-                playerHare[0] = null;
-                playerHare[1] = null;
-                playerHare[2] = null;
-            }
-
-            if (playerHare[2] == winner)
-            {
-                Players[2].Collect(playerBet[2]);
-                lbl_Player3Cash.Text = Players[2].UpdateLabels();
-                Player.Dispose();
-
-                playerHare[0] = null;
-                playerHare[1] = null;
-                playerHare[2] = null;
+                    playerHare[0] = null;
+                    playerHare[1] = null;
+                    playerHare[2] = null;  
+                }
             }
         }
+
         void AddHares()
         {
             Hares[0] = new Hare(img_Hare1, 1031, "Speedy (Zwart)");
@@ -187,6 +172,13 @@ namespace De_Gokkers
             Players[0] = new Guy("Fer", 10);
             Players[1] = new Guy("Lidy", 10);
             Players[2] = new Guy("Sietse", 10);
+        }
+
+        void AddPlayerCashLabel()
+        {
+            lbl_PlayerCash[0] = lbl_Player1Cash;
+            lbl_PlayerCash[1] = lbl_Player2Cash;
+            lbl_PlayerCash[2] = lbl_Player3Cash;
         }
 
         private void btn_Bet_Click(object sender, EventArgs e)
@@ -214,7 +206,7 @@ namespace De_Gokkers
                 rdio_Player1.Checked = false;
                 rdio_Player2.Checked = false;
                 rdio_Player3.Checked = false;
-                Player.Close();
+                Player.Stop();
 
                 if (Players[0].GetCash() < 5 && Players[1].GetCash() < 5 && Players[2].GetCash() < 5)
                 {
