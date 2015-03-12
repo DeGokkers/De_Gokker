@@ -416,5 +416,13 @@ namespace De_Gokkers
             }
             list_Announce.Items.Add("Selecteer een Haas!");
         }
+
+        private void slct_Hare_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            slct_Hare.DroppedDown = true;
+        }
+
+        
     }
 }

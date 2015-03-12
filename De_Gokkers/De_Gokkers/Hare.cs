@@ -17,7 +17,7 @@ namespace De_Gokkers
         public int distance;
         public string winner;
         public PictureBox MyPictureBox = null;
-
+            
 
         public Hare(PictureBox pictureBox, int raceTrackLength, string name)
         {
