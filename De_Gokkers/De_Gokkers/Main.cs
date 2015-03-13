@@ -187,12 +187,6 @@ namespace De_Gokkers
         private void btn_Bet_Click(object sender, EventArgs e)
         {
             int betAmount = Convert.ToInt32(num_AmountMoney.Value);
-
-            //if (btn_Run.Enabled == false && btn_Run.MouseClick == MouseButtons.Right)
-            //{
-            //    list_Announce.Items.Add("Alle spelers moeten gewed hebben om het spel te kunnen starten.");
-            //}
-
             if (btn_Bet.Text == "Reset!")
             {
                 Lock(false);
@@ -327,6 +321,11 @@ namespace De_Gokkers
             }
         }
 
+        private void slct_Hare_MouseClick(object sender, MouseEventArgs e)
+        {
+            slct_Hare.DroppedDown = true;
+        }
+
         private void Lock(bool Locked)
         {
             if (Locked == true)
@@ -413,11 +412,6 @@ namespace De_Gokkers
                     list_Announce.Items.RemoveAt(i);
             }
             list_Announce.Items.Add("Selecteer een Haas!");
-        }
-
-        private void slct_Hare_MouseClick(object sender, MouseEventArgs e)
-        {
-            slct_Hare.DroppedDown = true;
         }
     }
 }
