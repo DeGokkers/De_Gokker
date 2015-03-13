@@ -99,6 +99,7 @@
             this.slct_Hare.TabIndex = 0;
             this.slct_Hare.TabStop = false;
             this.slct_Hare.Text = "Klik hier om een haas te selecteren";
+            this.slct_Hare.MouseClick += new System.Windows.Forms.MouseEventHandler(this.slct_Hare_MouseClick);
             // 
             // lbl_Player1
             // 
