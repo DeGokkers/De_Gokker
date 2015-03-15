@@ -99,10 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\Start.wav" />
     <None Include="Resources\Hare_4_2.png" />
     <None Include="Resources\Hare_3_2.png" />
     <None Include="Resources\Hare_2_2.png" />
     <None Include="Resources\Hare_1_2.png" />
+    <None Include="Resources\Finish.wav" />
     <Content Include="Resources\Hare_1_Frame2.png" />
     <None Include="Resources\Benny Hill Theme.mp3" />
     <None Include="Resources\Benny_Hill_Theme.wav" />

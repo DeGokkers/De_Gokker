@@ -16,7 +16,9 @@ namespace De_Gokkers
     public partial class Main : Form
     {
         protected string select = "Klik hier om een haas te selecteren";
-        SoundPlayer Player = new SoundPlayer();
+        SoundPlayer Player1 = new SoundPlayer();
+        SoundPlayer Player2 = new SoundPlayer();
+        SoundPlayer Player3 = new SoundPlayer();
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
         string winner;
@@ -64,8 +66,12 @@ namespace De_Gokkers
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
-            Player.Stream = Properties.Resources.Benny_Hill_Theme;
-            Player.Play();
+            Player1.Stream = Properties.Resources.Benny_Hill_Theme;
+            Player2.Stream = Properties.Resources.Finish;
+            Player3.Stream = Properties.Resources.Start;
+            Player3.Play();
+            Thread.Sleep(600);
+            Player1.Play();
 
             btn_Bet.Text = "Reset!";
             Lock(true);
@@ -89,7 +95,8 @@ namespace De_Gokkers
             {
                 winner = "Speedy (Zwart)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                Player.Stop();
+                Player1.Stop();
+                Player2.Play();
 
                 for (int i = 0; i < Flip1.Length; i++)
                 {
@@ -104,7 +111,8 @@ namespace De_Gokkers
             {
                 winner = "Slowy (Rood)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                Player.Stop();
+                Player1.Stop();
+                Player2.Play();
 
                 for (int i = 0; i < Flip2.Length; i++)
                 {
@@ -119,7 +127,8 @@ namespace De_Gokkers
             {
                 winner = "Turtle (Blauw)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                Player.Stop();
+                Player1.Stop();
+                Player2.Play();
 
                 for (int i = 0; i < Flip3.Length; i++)
                 {
@@ -134,7 +143,8 @@ namespace De_Gokkers
             {
                 winner = "Flying (Groen)";
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                Player.Stop();
+                Player1.Stop();
+                Player2.Play();
 
                 for (int i = 0; i < Flip4.Length; i++)
                 {
@@ -153,7 +163,6 @@ namespace De_Gokkers
                 {
                     Players[i].Collect(playerBet[i]);
                     lbl_PlayerCash[i].Text = Players[i].UpdateLabels();
-                    Player.Dispose();
 
                     playerHare[0] = null;
                     playerHare[1] = null;
@@ -209,7 +218,6 @@ namespace De_Gokkers
                 rdio_Player1.Checked = false;
                 rdio_Player2.Checked = false;
                 rdio_Player3.Checked = false;
-                Player.Stop();
 
                 if (Players[0].GetCash() < 5 && Players[1].GetCash() < 5 && Players[2].GetCash() < 5)
                 {
