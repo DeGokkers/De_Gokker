@@ -215,17 +215,55 @@ namespace De_Gokkers
             {
                 if (Hares[i].MyPictureBox.Location.X <= 0)
                 {
+                    AmountOfHases++;
                     switch(i)
                     {
+                    case 0:
+                            winner = "Speedy (Zwart)";
+                    for (int e = 0; e < Flip1.Length; e++)
+                    {
+                        img_Hare1.Image = Properties.Resources.Hare_1;
+                        img_Hare1.Image = Flip1[e];
+                        img_Hare1.Refresh();
+                        
+                    }
+                    Thread.Sleep(100);
+                        break;
                     case 1:
-                            winner = "Slowy(Rood)";
+                            winner = "Slowy (Rood)";
+
+                    for (int e = 0; e < Flip2.Length; e++)
+                    {
+                        img_Hare2.Image = Properties.Resources.Hare_2;
+                        img_Hare2.Image = Flip2[e];
+                        img_Hare2.Refresh();
+                        
+                    }
+                    Thread.Sleep(100);
                         break;
                     case 2:
                         winner = "Turtle (Blauw)";
+                            for (int e = 0; e < Flip3.Length; e++)
+{
+img_Hare3.Image = Properties.Resources.Hare_3;
+img_Hare3.Image = Flip3[e];
+img_Hare3.Refresh();
+}
+Thread.Sleep(300);
                         break;
                     case 3:
+                        winner = "Flying (Groen)";
+
+                        for (int e = 0; e < Flip4.Length; e++)
+{
+img_Hare4.Image = Properties.Resources.Hare_4;
+img_Hare4.Image = Flip4[e];
+img_Hare4.Refresh();
+}
+Thread.Sleep(400);
                         break;
                     }
+
                 }
             }
         }
