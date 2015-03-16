@@ -237,33 +237,31 @@ namespace De_Gokkers
                         img_Hare2.Image = Properties.Resources.Hare_2;
                         img_Hare2.Image = Flip2[e];
                         img_Hare2.Refresh();
-                        
                     }
                     Thread.Sleep(100);
                         break;
                     case 2:
                         winner = "Turtle (Blauw)";
                             for (int e = 0; e < Flip3.Length; e++)
-{
-img_Hare3.Image = Properties.Resources.Hare_3;
-img_Hare3.Image = Flip3[e];
-img_Hare3.Refresh();
-}
-Thread.Sleep(300);
+                        {
+                        img_Hare3.Image = Properties.Resources.Hare_3;
+                        img_Hare3.Image = Flip3[e];
+                        img_Hare3.Refresh();
+                        }
+                        Thread.Sleep(300);
                         break;
                     case 3:
                         winner = "Flying (Groen)";
 
                         for (int e = 0; e < Flip4.Length; e++)
-{
-img_Hare4.Image = Properties.Resources.Hare_4;
-img_Hare4.Image = Flip4[e];
-img_Hare4.Refresh();
-}
-Thread.Sleep(400);
+                        {
+                        img_Hare4.Image = Properties.Resources.Hare_4;
+                        img_Hare4.Image = Flip4[e];
+                        img_Hare4.Refresh();
+                        }
+                        Thread.Sleep(400);
                         break;
                     }
-
                 }
             }
         }
