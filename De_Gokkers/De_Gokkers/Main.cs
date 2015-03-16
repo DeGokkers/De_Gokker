@@ -15,6 +15,8 @@ namespace De_Gokkers
 {
     public partial class Main : Form
     {
+
+        public int AmountOfWinners = 0;
         protected string select = "Klik hier om een haas te selecteren";
         SoundPlayer Player1 = new SoundPlayer();
         SoundPlayer Player2 = new SoundPlayer();
@@ -36,7 +38,25 @@ namespace De_Gokkers
         int playerCash;
         private void UpdateWinner()
         {
-            lbl_Winner.Text = winner + " heeft deze ronde \ngewonnen!";
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (Hares[i].AmountOfWinners == 1)
+                {
+                    lbl_Winner.Text = winner + " heeft deze ronde \ngewonnen!";
+                }
+                else
+                {
+                    lbl_Winner.Text = lbl_Winner.Text + "\nNet als " + winner;
+                    if (Hares[i].AmountOfWinners > 2)
+                    {
+                        lbl_Winner.Text = lbl_Winner.Text + "\nen " + winner;
+                    }
+                }
+
+            }
+            
+            
         }
 
         public Main()
@@ -96,11 +116,15 @@ namespace De_Gokkers
                 }
                 btn_Bet.Enabled = true;
             }
-
+            //OPTIMALISATIEw
             if (Hares[0].MyPictureBox.Location.X <= 0)
             {
+                AmountOfWinners++;
                 winner = "Speedy (Zwart)";
+                
                 lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                
+
                 Player1.Stop();
                 Player2.Play();
 
@@ -184,7 +208,27 @@ namespace De_Gokkers
             Hares[2] = new Hare(img_Hare3, 1031, "Turtle (Blauw)");
             Hares[3] = new Hare(img_Hare4, 1031, "Flying (Groen)");
         }
-
+        void CheckHaseLocations()
+        {
+            int AmountOfHases = Hares.Length;
+            for (int i = 0; i < AmountOfHases; i++)
+            {
+                if (Hares[i].MyPictureBox.Location.X <= 0)
+                {
+                    switch(i)
+                    {
+                    case 1:
+                            winner = "Slowy(Rood)";
+                        break;
+                    case 2:
+                        winner = "Turtle (Blauw)";
+                        break;
+                    case 3:
+                        break;
+                    }
+                }
+            }
+        }
         void AddPlayers()
         {
             Players[0] = new Guy("Fer", 10);

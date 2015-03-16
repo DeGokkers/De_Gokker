@@ -18,7 +18,6 @@ namespace De_Gokkers
         public string winner;
         public PictureBox MyPictureBox = null;
 
-
         public Hare(PictureBox pictureBox, int raceTrackLength, string name)
         {
             MyPictureBox = pictureBox;
@@ -41,13 +40,9 @@ namespace De_Gokkers
             {
                 if (intRandomNumber > ((MaxRandom / 5) * i)) // De if checkt of random number groter is dan een (nummer/5)
                 {
-                    distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
-
-                    if (Location > 50)
-                    {
-                        winner = Name;
-                        MessageBox.Show(winner);
-                    }
+                   // distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
+                    distance = 5;
+                    
                 }
             }
 
