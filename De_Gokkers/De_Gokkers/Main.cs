@@ -117,89 +117,13 @@ namespace De_Gokkers
                 btn_Bet.Enabled = true;
             }
             //OPTIMALISATIEw
-            if (Hares[0].MyPictureBox.Location.X <= 0)
-            {
-                AmountOfWinners++;
-                winner = "Speedy (Zwart)";
-                
-                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                
-
-                Player1.Stop();
-                Player2.Play();
-
-                for (int i = 0; i < Flip1.Length; i++)
-                {
-                    img_Hare1.Image = Flip1[i];
-                    img_Hare1.Refresh();
-                    Thread.Sleep(100);
-                }
-
-                img_Hare1.Image = Properties.Resources.Hare_1;
-            }
-            if (Hares[1].MyPictureBox.Location.X <= 0)
-            {
-                winner = "Slowy (Rood)";
-                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                Player1.Stop();
-                Player2.Play();
-
-                for (int i = 0; i < Flip2.Length; i++)
-                {
-                    img_Hare2.Image = Flip2[i];
-                    img_Hare2.Refresh();
-                    Thread.Sleep(100);
-                }
-
-                img_Hare2.Image = Properties.Resources.Hare_2; 
-            }
-            if (Hares[2].MyPictureBox.Location.X <= 0)
-            {
-                winner = "Turtle (Blauw)";
-                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                Player1.Stop();
-                Player2.Play();
-
-                for (int i = 0; i < Flip3.Length; i++)
-                {
-                    img_Hare3.Image = Flip3[i];
-                    img_Hare3.Refresh();
-                    Thread.Sleep(100);
-                }
-
-                img_Hare3.Image = Properties.Resources.Hare_3;
-            }
-            if (Hares[3].MyPictureBox.Location.X <= 0)
-            {
-                winner = "Flying (Groen)";
-                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                Player1.Stop();
-                Player2.Play();
-
-                for (int i = 0; i < Flip4.Length; i++)
-                {
-                    img_Hare4.Image = Flip4[i];
-                    img_Hare4.Refresh();
-                    Thread.Sleep(100);
-                }
-
-                img_Hare4.Image = Properties.Resources.Hare_4;
-            }
-
-            for (int i = 0; i < playerHare.Length; i++)
-            {
-                AddPlayerCashLabel();
-                if (playerHare[i] == winner)
-                {
-                    Players[i].Collect(playerBet[i]);
-                    lbl_PlayerCash[i].Text = Players[i].UpdateLabels();
-
-                    playerHare[0] = null;
-                    playerHare[1] = null;
-                    playerHare[2] = null;  
-                }
-            }
+            CheckHaseLocations();
         }
+            
+
+              
+            
+
 
         void AddHares()
         {
@@ -225,9 +149,8 @@ namespace De_Gokkers
                         img_Hare1.Image = Properties.Resources.Hare_1;
                         img_Hare1.Image = Flip1[e];
                         img_Hare1.Refresh();
-                        
+                        Thread.Sleep(100);
                     }
-                    Thread.Sleep(100);
                         break;
                     case 1:
                             winner = "Slowy (Rood)";
@@ -237,8 +160,9 @@ namespace De_Gokkers
                         img_Hare2.Image = Properties.Resources.Hare_2;
                         img_Hare2.Image = Flip2[e];
                         img_Hare2.Refresh();
+                        Thread.Sleep(100);
                     }
-                    Thread.Sleep(100);
+                    
                         break;
                     case 2:
                         winner = "Turtle (Blauw)";
@@ -247,8 +171,10 @@ namespace De_Gokkers
                         img_Hare3.Image = Properties.Resources.Hare_3;
                         img_Hare3.Image = Flip3[e];
                         img_Hare3.Refresh();
+                        Thread.Sleep(100);
                         }
-                        Thread.Sleep(300);
+                        
+
                         break;
                     case 3:
                         winner = "Flying (Groen)";
@@ -258,8 +184,9 @@ namespace De_Gokkers
                         img_Hare4.Image = Properties.Resources.Hare_4;
                         img_Hare4.Image = Flip4[e];
                         img_Hare4.Refresh();
+                        Thread.Sleep(100);
+
                         }
-                        Thread.Sleep(400);
                         break;
                     }
                 }

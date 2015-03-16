@@ -121,7 +121,7 @@ namespace De_Gokkers
 
         private void Hare_Load(object sender, EventArgs e)
         {
-
+        
         }
     }
 }
