@@ -76,6 +76,12 @@ namespace De_Gokkers
             btn_Bet.Text = "Reset!";
             Lock(true);
             AddHares();
+
+            img_Hare1.Image = Properties.Resources.Hare_1_2;
+            img_Hare2.Image = Properties.Resources.Hare_2_2;
+            img_Hare3.Image = Properties.Resources.Hare_3_2;
+            img_Hare4.Image = Properties.Resources.Hare_4_2;
+
             foreach (Hare hare in Hares)
             {
                 for (int i = 2; (0 < Hares[0].GetLoc() && 0 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && 0 < Hares[3].GetLoc()); )
