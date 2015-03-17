@@ -30,8 +30,7 @@ namespace De_Gokkers
         }
         public bool Run()
         {
-            //Random iets = new Random();
-            //int distance = iets.Next(5, 10);
+
             Random rand = new Random();
             int MaxRandom = 961;
             int intRandomNumber = rand.Next(1, MaxRandom); // Grotere getallen range om het meer accurate te laten verlopen. 
@@ -40,19 +39,17 @@ namespace De_Gokkers
             {
                 if (intRandomNumber > ((MaxRandom / 5) * i)) // De if checkt of random number groter is dan een (nummer/5)
                 {
-                   // distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
-                    distance = 5;
+                    distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
                 }
             }
+
             if (MyPictureBox.Location.X > RaceTrackLength)
             {
                 return true;
             }
+
             else
             {
-                //  Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
-                //Point NewPos = new Point(MyPictureBox.Location.X - distance, MyPictureBox.Location.Y);
-                //MyPictureBox.Location = NewPos;
                 MyPictureBox.Left -= distance;
                 MyPictureBox.Refresh();
                 return false;

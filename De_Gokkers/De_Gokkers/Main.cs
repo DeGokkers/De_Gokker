@@ -10,35 +10,37 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
-
 namespace De_Gokkers
 {
     public partial class Main : Form
     {
-
         public int AmountOfWinners = 0;
+        string winner;
+        int playerCash;
+        string[] playerHare = new string[3];
+        int[] playerBet = new int[3];
         protected string select = "Klik hier om een haas te selecteren";
+
+        Hare[] Hares = new Hare[4];
+        Guy[] Players = new Guy[3];
+        Label[] lbl_PlayerCash = new Label[3];
+
         SoundPlayer Player1 = new SoundPlayer();
         SoundPlayer Player2 = new SoundPlayer();
         SoundPlayer Player3 = new SoundPlayer();
-        Hare[] Hares = new Hare[4];
-        Guy[] Players = new Guy[3];
-        string winner;
-        string[] playerHare = new string[3];
-        int[] playerBet = new int[3];
-        bool runLock = false;
-        Label[] lbl_PlayerCash = new Label[3];
 
-        Image[] Flip1 = new Image[13] { Properties.Resources.Hare1_1, Properties.Resources.Hare1_2, Properties.Resources.Hare1_3, Properties.Resources.Hare1_4, Properties.Resources.Hare1_5, Properties.Resources.Hare1_6, Properties.Resources.Hare1_7, Properties.Resources.Hare1_8, Properties.Resources.Hare1_9, Properties.Resources.Hare1_10, Properties.Resources.Hare1_11, Properties.Resources.Hare1_12, Properties.Resources.Hare1_13};
-        Image[] Flip2 = new Image[13] { Properties.Resources.Hare2_1, Properties.Resources.Hare2_2, Properties.Resources.Hare2_3, Properties.Resources.Hare2_4, Properties.Resources.Hare2_5, Properties.Resources.Hare2_6, Properties.Resources.Hare2_7, Properties.Resources.Hare2_8, Properties.Resources.Hare2_9, Properties.Resources.Hare2_10, Properties.Resources.Hare2_11, Properties.Resources.Hare2_12, Properties.Resources.Hare2_13, };
-        Image[] Flip3 = new Image[13] { Properties.Resources.Hare3_1, Properties.Resources.Hare3_2, Properties.Resources.Hare3_3, Properties.Resources.Hare3_4, Properties.Resources.Hare3_5, Properties.Resources.Hare3_6, Properties.Resources.Hare3_7, Properties.Resources.Hare3_8, Properties.Resources.Hare3_9, Properties.Resources.Hare3_10, Properties.Resources.Hare3_11, Properties.Resources.Hare3_12, Properties.Resources.Hare3_13, };
-        Image[] Flip4 = new Image[13] { Properties.Resources.Hare4_1, Properties.Resources.Hare4_2, Properties.Resources.Hare4_3, Properties.Resources.Hare4_4, Properties.Resources.Hare4_5, Properties.Resources.Hare4_6, Properties.Resources.Hare4_7, Properties.Resources.Hare4_8, Properties.Resources.Hare4_9, Properties.Resources.Hare4_10, Properties.Resources.Hare4_11, Properties.Resources.Hare4_12, Properties.Resources.Hare4_13, };
+        Image[] Flip1 = new Image[13] {Properties.Resources.Hare1_1, Properties.Resources.Hare1_2, Properties.Resources.Hare1_3, Properties.Resources.Hare1_4, Properties.Resources.Hare1_5, Properties.Resources.Hare1_6, Properties.Resources.Hare1_7, Properties.Resources.Hare1_8, Properties.Resources.Hare1_9, Properties.Resources.Hare1_10, Properties.Resources.Hare1_11, Properties.Resources.Hare1_12, Properties.Resources.Hare1_13};
+        Image[] Flip2 = new Image[13] {Properties.Resources.Hare2_1, Properties.Resources.Hare2_2, Properties.Resources.Hare2_3, Properties.Resources.Hare2_4, Properties.Resources.Hare2_5, Properties.Resources.Hare2_6, Properties.Resources.Hare2_7, Properties.Resources.Hare2_8, Properties.Resources.Hare2_9, Properties.Resources.Hare2_10, Properties.Resources.Hare2_11, Properties.Resources.Hare2_12, Properties.Resources.Hare2_13};
+        Image[] Flip3 = new Image[13] {Properties.Resources.Hare3_1, Properties.Resources.Hare3_2, Properties.Resources.Hare3_3, Properties.Resources.Hare3_4, Properties.Resources.Hare3_5, Properties.Resources.Hare3_6, Properties.Resources.Hare3_7, Properties.Resources.Hare3_8, Properties.Resources.Hare3_9, Properties.Resources.Hare3_10, Properties.Resources.Hare3_11, Properties.Resources.Hare3_12, Properties.Resources.Hare3_13};
+        Image[] Flip4 = new Image[13] {Properties.Resources.Hare4_1, Properties.Resources.Hare4_2, Properties.Resources.Hare4_3, Properties.Resources.Hare4_4, Properties.Resources.Hare4_5, Properties.Resources.Hare4_6, Properties.Resources.Hare4_7, Properties.Resources.Hare4_8, Properties.Resources.Hare4_9, Properties.Resources.Hare4_10, Properties.Resources.Hare4_11, Properties.Resources.Hare4_12, Properties.Resources.Hare4_13};
 
+        public Main()
+        {
+            InitializeComponent();
+        }
 
-        int playerCash;
         private void UpdateWinner()
         {
-
             for (int i = 0; i < 3; i++)
             {
                 if (Hares[i].AmountOfWinners == 1)
@@ -56,11 +58,6 @@ namespace De_Gokkers
             }
         }
 
-        public Main()
-        {
-            InitializeComponent();
-        }
-
         private void Main_Load(object sender, EventArgs e)
         {
             AddPlayers();
@@ -72,7 +69,6 @@ namespace De_Gokkers
             btn_Bet.Enabled = false;
             num_AmountMoney.Enabled = false;
             list_Announce.Enabled = false;
-
 
             AddHares();
             for (int i = 0; i < 4; i++)
@@ -94,11 +90,6 @@ namespace De_Gokkers
             Lock(true);
             AddHares();
 
-            img_Hare1.Image = Properties.Resources.Hare_1_2;
-            img_Hare2.Image = Properties.Resources.Hare_2_2;
-            img_Hare3.Image = Properties.Resources.Hare_3_2;
-            img_Hare4.Image = Properties.Resources.Hare_4_2;
-
             foreach (Hare hare in Hares)
             {
                 for (int i = 2; (0 < Hares[0].GetLoc() && 0 < Hares[1].GetLoc() && 0 < Hares[2].GetLoc() && 0 < Hares[3].GetLoc()); )
@@ -113,7 +104,6 @@ namespace De_Gokkers
                 }
                 btn_Bet.Enabled = true;
             }
-            //OPTIMALISATIEw
             CheckHaseLocations();
         }
 
@@ -132,52 +122,58 @@ namespace De_Gokkers
             {
                 if (Hares[i].MyPictureBox.Location.X < 0)
                 {
+                    Music();
                     switch(i)
                     {
-                    case 0:
+                        case 0:
                             winner = "Speedy (Zwart)";
-                    for (int e = 0; e < Flip1.Length; e++)
-                    {
-                        img_Hare1.Image = Properties.Resources.Hare_1;
-                        img_Hare1.Image = Flip1[e];
-                        img_Hare1.Refresh();
-                        Thread.Sleep(100);
-                    }
-                        break;
-                    case 1:
-                            winner = "Slowy (Rood)";
 
-                    for (int e = 0; e < Flip2.Length; e++)
-                    {
-                        img_Hare2.Image = Properties.Resources.Hare_2;
-                        img_Hare2.Image = Flip2[e];
-                        img_Hare2.Refresh();
-                        Thread.Sleep(100);
-                    }
-                    
-                        break;
-                    case 2:
-                        winner = "Turtle (Blauw)";
-                            for (int e = 0; e < Flip3.Length; e++)
+                        for (int e = 0; e < Flip1.Length; e++)
                         {
-                        img_Hare3.Image = Properties.Resources.Hare_3;
-                        img_Hare3.Image = Flip3[e];
-                        img_Hare3.Refresh();
-                        Thread.Sleep(100);
+                            img_Hare1.Image = Flip1[e];
+                            img_Hare1.Refresh();
+                            Thread.Sleep(100);
+                            img_Hare1.Image = Properties.Resources.Hare_1;
+                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                         }
-                        
-
                         break;
-                    case 3:
-                        winner = "Flying (Groen)";
+                        case 1:
+                            winner = "Slowy (Rood)";
+                            
+
+                        for (int e = 0; e < Flip2.Length; e++)
+                        {
+                            img_Hare2.Image = Flip2[e];
+                            img_Hare2.Refresh();
+                            Thread.Sleep(100);
+                            img_Hare2.Image = Properties.Resources.Hare_2;
+                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                        }
+                        break;
+
+                        case 2:
+                            winner = "Turtle (Blauw)";
+
+                        for (int e = 0; e < Flip3.Length; e++)
+                        {
+                            img_Hare3.Image = Flip3[e];
+                            img_Hare3.Refresh();
+                            Thread.Sleep(100);
+                            img_Hare3.Image = Properties.Resources.Hare_3;
+                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                        }
+                        break;
+
+                        case 3:
+                            winner = "Flying (Groen)";
 
                         for (int e = 0; e < Flip4.Length; e++)
                         {
-                        img_Hare4.Image = Properties.Resources.Hare_4;
-                        img_Hare4.Image = Flip4[e];
-                        img_Hare4.Refresh();
-                        Thread.Sleep(100);
-
+                            img_Hare4.Image = Flip4[e];
+                            img_Hare4.Refresh();
+                            Thread.Sleep(100);
+                            img_Hare4.Image = Properties.Resources.Hare_4;
+                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
                         }
                         break;
                     }
@@ -186,9 +182,9 @@ namespace De_Gokkers
         }
         void AddPlayers()
         {
-            Players[0] = new Guy("Fer", 10);
-            Players[1] = new Guy("Lidy", 10);
-            Players[2] = new Guy("Sietse", 10);
+            Players[0] = new Guy("Fer", 45);
+            Players[1] = new Guy("Lidy", 75);
+            Players[2] = new Guy("Sietse", 50);
         }
 
         void AddPlayerCashLabel()
@@ -198,13 +194,19 @@ namespace De_Gokkers
             lbl_PlayerCash[2] = lbl_Player3Cash;
         }
 
+        void Music()
+        {
+            Player1.Stop();
+            Player2.Play();
+        }
+
         private void btn_Bet_Click(object sender, EventArgs e)
         {
             int betAmount = Convert.ToInt32(num_AmountMoney.Value);
             if (btn_Bet.Text == "Reset!")
             {
                 Lock(false);
-                btn_Bet.Text = "Wed!";
+                btn_Bet.Text = "Wedt!";
                 lbl_Winner.Text = winner + ": Heeft de vorige ronde \ngewonnen!";
                 Hares[0].TakeStartingPosition(91);
                 img_Hare1.Image = Properties.Resources.Hare_1;
@@ -236,6 +238,7 @@ namespace De_Gokkers
                     }
                 }
             }
+
             else
             {
                 if (rdio_Player1.Checked == true)
@@ -366,7 +369,7 @@ namespace De_Gokkers
                     rdio_Player3.Enabled = false;
                 else
                     rdio_Player3.Enabled = true;
-                
+
                 btn_Run.Enabled = true;
             }
         }
@@ -407,15 +410,6 @@ namespace De_Gokkers
             }
         }
 
-        private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void resetAllesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
         private void NoHareSelected()
         {
             for (int i = list_Announce.Items.Count - 1; i >= 0; i--)
@@ -425,6 +419,16 @@ namespace De_Gokkers
                     list_Announce.Items.RemoveAt(i);
             }
             list_Announce.Items.Add("Selecteer een Haas!");
+        }
+
+        private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void resetAllesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

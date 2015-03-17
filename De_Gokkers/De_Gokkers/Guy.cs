@@ -17,8 +17,6 @@ namespace De_Gokkers
 
         public Guy()
         {
-            name = "Bert";
-            cash = 1337;
         }
 
         public Guy(string name, int cash)

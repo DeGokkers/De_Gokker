@@ -84,7 +84,7 @@
             this.btn_Bet.Size = new System.Drawing.Size(83, 23);
             this.btn_Bet.TabIndex = 0;
             this.btn_Bet.TabStop = false;
-            this.btn_Bet.Text = "Wed!";
+            this.btn_Bet.Text = "Wedt!";
             this.btn_Bet.UseVisualStyleBackColor = true;
             this.btn_Bet.Click += new System.EventHandler(this.btn_Bet_Click);
             // 
