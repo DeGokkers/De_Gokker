@@ -53,10 +53,7 @@ namespace De_Gokkers
                         lbl_Winner.Text = lbl_Winner.Text + "\nen " + winner;
                     }
                 }
-
             }
-            
-            
         }
 
         public Main()
@@ -119,11 +116,6 @@ namespace De_Gokkers
             //OPTIMALISATIEw
             CheckHaseLocations();
         }
-            
-
-              
-            
-
 
         void AddHares()
         {
@@ -132,14 +124,14 @@ namespace De_Gokkers
             Hares[2] = new Hare(img_Hare3, 1031, "Turtle (Blauw)");
             Hares[3] = new Hare(img_Hare4, 1031, "Flying (Groen)");
         }
+
         void CheckHaseLocations()
         {
             int AmountOfHases = Hares.Length;
             for (int i = 0; i < AmountOfHases; i++)
             {
-                if (Hares[i].MyPictureBox.Location.X <= 0)
+                if (Hares[i].MyPictureBox.Location.X < 0)
                 {
-                    AmountOfHases++;
                     switch(i)
                     {
                     case 0:

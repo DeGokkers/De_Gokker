@@ -42,12 +42,8 @@ namespace De_Gokkers
                 {
                    // distance = i; // Pakt het getal van hoevaak het geloopt is aka 1 tm 5
                     distance = 5;
-                    
                 }
             }
-
-
-
             if (MyPictureBox.Location.X > RaceTrackLength)
             {
                 return true;
