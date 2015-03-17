@@ -122,7 +122,7 @@ namespace De_Gokkers
             {
                 if (Hares[i].MyPictureBox.Location.X < 0)
                 {
-                    Music();
+                    PlayMusic();
                     switch(i)
                     {
                         case 0:
@@ -194,7 +194,7 @@ namespace De_Gokkers
             lbl_PlayerCash[2] = lbl_Player3Cash;
         }
 
-        void Music()
+        void PlayMusic()
         {
             Player1.Stop();
             Player2.Play();
