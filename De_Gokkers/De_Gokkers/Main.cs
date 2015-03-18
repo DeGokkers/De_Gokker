@@ -120,7 +120,7 @@ namespace De_Gokkers
             int AmountOfHases = Hares.Length;
             for (int i = 0; i < AmountOfHases; i++)
             {
-                if (Hares[i].MyPictureBox.Location.X < 0)
+                if (Hares[i].MyPictureBox.Location.X <= 0)
                 {
                     PlayMusic();
                     switch(i)

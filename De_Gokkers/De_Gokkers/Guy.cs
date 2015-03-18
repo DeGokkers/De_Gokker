@@ -15,10 +15,6 @@ namespace De_Gokkers
         public RadioButton MyRadiobutton;
         public Label MyLabel;
 
-        public Guy()
-        {
-        }
-
         public Guy(string name, int cash)
         {
             this.name = name;
@@ -36,8 +32,6 @@ namespace De_Gokkers
 
         public bool PlaceBet(int amount)
         {
-            //Plaats een nieuwe weddenschap en sla het op in de variable MyBet.
-            //Retourneer een true als de gokker genoeg geld heeft om te wedden
             if (amount <= cash)
             {
                 this.cash -= amount;
@@ -46,7 +40,7 @@ namespace De_Gokkers
             else
                 return false;
         }
-
+            
         public void ClearBet()
         { 
             //Maak de weddenschap leeg
@@ -72,54 +66,6 @@ namespace De_Gokkers
         public string GetName()
         {
             return Name;
-        }
-
-        private void InitializeComponent()
-        {
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // lbl_Player1Cash
-            // 
-            this.lbl_Player1Cash.Location = new System.Drawing.Point(72, 14);
-            this.lbl_Player1Cash.Size = new System.Drawing.Size(50, 26);
-            this.lbl_Player1Cash.Text = "€ 10";
-            // 
-            // lbl_Player3Cash
-            // 
-            this.lbl_Player3Cash.Location = new System.Drawing.Point(72, 63);
-            this.lbl_Player3Cash.Size = new System.Drawing.Size(50, 26);
-            this.lbl_Player3Cash.Text = "€ 10";
-            // 
-            // lbl_Player2Cash
-            // 
-            this.lbl_Player2Cash.Location = new System.Drawing.Point(72, 39);
-            this.lbl_Player2Cash.Size = new System.Drawing.Size(50, 26);
-            this.lbl_Player2Cash.Text = "€ 10";
-            // 
-            // Guy
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1002, 617);
-            this.Name = "Guy";
-            this.Load += new System.EventHandler(this.Guy_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Hare1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_AmountMoney)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
-        }
-
-        private void Guy_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
