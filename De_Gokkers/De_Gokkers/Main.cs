@@ -21,14 +21,17 @@ namespace De_Gokkers
         int[] playerBet = new int[3];
         protected string select = "Klik hier om een haas te selecteren";
 
+        //De overige objecten die nodig zijn voor de functionaliteit.
         Hare[] Hares = new Hare[4];
         Guy[] Players = new Guy[3];
         Label[] lbl_PlayerCash = new Label[3];
 
+        //Hier worden de muziek spelers aangemaakt.
         SoundPlayer Player1 = new SoundPlayer();
         SoundPlayer Player2 = new SoundPlayer();
         SoundPlayer Player3 = new SoundPlayer();
 
+        //Hier worden de backflips gemaakt.
         Image[] Flip1 = new Image[13] {Properties.Resources.Hare1_1, Properties.Resources.Hare1_2, Properties.Resources.Hare1_3, Properties.Resources.Hare1_4, Properties.Resources.Hare1_5, Properties.Resources.Hare1_6, Properties.Resources.Hare1_7, Properties.Resources.Hare1_8, Properties.Resources.Hare1_9, Properties.Resources.Hare1_10, Properties.Resources.Hare1_11, Properties.Resources.Hare1_12, Properties.Resources.Hare1_13};
         Image[] Flip2 = new Image[13] {Properties.Resources.Hare2_1, Properties.Resources.Hare2_2, Properties.Resources.Hare2_3, Properties.Resources.Hare2_4, Properties.Resources.Hare2_5, Properties.Resources.Hare2_6, Properties.Resources.Hare2_7, Properties.Resources.Hare2_8, Properties.Resources.Hare2_9, Properties.Resources.Hare2_10, Properties.Resources.Hare2_11, Properties.Resources.Hare2_12, Properties.Resources.Hare2_13};
         Image[] Flip3 = new Image[13] {Properties.Resources.Hare3_1, Properties.Resources.Hare3_2, Properties.Resources.Hare3_3, Properties.Resources.Hare3_4, Properties.Resources.Hare3_5, Properties.Resources.Hare3_6, Properties.Resources.Hare3_7, Properties.Resources.Hare3_8, Properties.Resources.Hare3_9, Properties.Resources.Hare3_10, Properties.Resources.Hare3_11, Properties.Resources.Hare3_12, Properties.Resources.Hare3_13};
