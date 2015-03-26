@@ -324,7 +324,7 @@ namespace De_Gokkers
                         slct_Hare.Enabled = false;
 
                         Players[2].PlaceBet(Convert.ToInt32(num_AmountMoney.Value));
-                        lbl_Player3Cash.Text = Players[2].UpdateLabels();
+                        lbl_Player3Cash.Text = Players[2].UpdateLabels();   
                     }
                     else
                     {
@@ -412,6 +412,7 @@ namespace De_Gokkers
                 list_Announce.Enabled = true;
             }
         }
+
 
         private void NoHareSelected()
         {
