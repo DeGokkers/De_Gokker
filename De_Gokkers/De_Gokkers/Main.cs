@@ -248,7 +248,7 @@ namespace De_Gokkers
                 {
                     playerCash = Players[0].GetCash();
 
-                    if (slct_Hare.Text == select)
+                    if (slct_Hare.Text == select || slct_Hare.Text == "")
                     {
                         NoHareSelected();
                     }
@@ -277,7 +277,7 @@ namespace De_Gokkers
                 {
                     playerCash = Players[1].GetCash();
 
-                    if (slct_Hare.Text == select)
+                    if (slct_Hare.Text == select || slct_Hare.Text == "")
                     {
                         NoHareSelected();
                     }
@@ -306,7 +306,7 @@ namespace De_Gokkers
                 {
                     playerCash = Players[2].GetCash();
 
-                    if (slct_Hare.Text == select)
+                    if (slct_Hare.Text == select || slct_Hare.Text == "")
                     {
                         NoHareSelected();
                     }
