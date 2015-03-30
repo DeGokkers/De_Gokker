@@ -14,7 +14,7 @@ namespace De_Gokkers
 {
     public partial class Main : Form
     {
-        public int AmountOfWinners = 0;
+        public int amountOfWinners = 0;
         string winner;
         int playerCash;
         string[] playerHare = new string[3];
