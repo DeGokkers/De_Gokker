@@ -14,7 +14,7 @@ namespace De_Gokkers
 {
     public partial class Main : Form
     {
-        public int amountOfWinners = 0;
+        public int AmountOfWinners = 0;
         string winner;
         int playerCash;
         string[] playerHare = new string[3];
@@ -46,14 +46,14 @@ namespace De_Gokkers
         {
             for (int i = 0; i < 3; i++)
             {
-                if (Hares[i].amountOfWinners == 1)
+                if (Hares[i].AmountOfWinners == 1)
                 {
                     lbl_Winner.Text = winner + " heeft deze ronde \ngewonnen!";
                 }
                 else
                 {
                     lbl_Winner.Text = lbl_Winner.Text + "\nNet als " + winner;
-                    if (Hares[i].amountOfWinners > 2)
+                    if (Hares[i].AmountOfWinners > 2)
                     {
                         lbl_Winner.Text = lbl_Winner.Text + "\nen " + winner;
                     }
@@ -120,66 +120,88 @@ namespace De_Gokkers
 
         void CheckHaseLocations()
         {
-            int AmountOfHases = Hares.Length;
-            for (int i = 0; i < AmountOfHases; i++)
+            if (Hares[0].MyPictureBox.Location.X <= 0)
             {
-                if (Hares[i].MyPictureBox.Location.X <= 0)
+                AmountOfWinners++;
+                winner = "Speedy (Zwart)";
+                
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                
+
+                Player1.Stop();
+                Player2.Play();
+
+                for (int i = 0; i < Flip1.Length; i++)
                 {
-                    PlayMusic();
-                    switch(i)
-                    {
-                        case 0:
-                            winner = "Speedy (Zwart)";
+                    img_Hare1.Image = Flip1[i];
+                    img_Hare1.Refresh();
+                    Thread.Sleep(100);
+                }
 
-                        for (int e = 0; e < Flip1.Length; e++)
-                        {
-                            img_Hare1.Image = Flip1[e];
-                            img_Hare1.Refresh();
-                            Thread.Sleep(100);
-                            img_Hare1.Image = Properties.Resources.Hare_1;
-                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                        }
-                        break;
-                        case 1:
-                            winner = "Slowy (Rood)";
-                            
+                img_Hare1.Image = Properties.Resources.Hare_1;
+            }
+            if (Hares[1].MyPictureBox.Location.X <= 0)
+            {
+                winner = "Slowy (Rood)";
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                Player1.Stop();
+                Player2.Play();
 
-                        for (int e = 0; e < Flip2.Length; e++)
-                        {
-                            img_Hare2.Image = Flip2[e];
-                            img_Hare2.Refresh();
-                            Thread.Sleep(100);
-                            img_Hare2.Image = Properties.Resources.Hare_2;
-                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                        }
-                        break;
+                for (int i = 0; i < Flip2.Length; i++)
+                {
+                    img_Hare2.Image = Flip2[i];
+                    img_Hare2.Refresh();
+                    Thread.Sleep(100);
+                }
 
-                        case 2:
-                            winner = "Turtle (Blauw)";
+                img_Hare2.Image = Properties.Resources.Hare_2; 
+            }
+            if (Hares[2].MyPictureBox.Location.X <= 0)
+            {
+                winner = "Turtle (Blauw)";
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                Player1.Stop();
+                Player2.Play();
 
-                        for (int e = 0; e < Flip3.Length; e++)
-                        {
-                            img_Hare3.Image = Flip3[e];
-                            img_Hare3.Refresh();
-                            Thread.Sleep(100);
-                            img_Hare3.Image = Properties.Resources.Hare_3;
-                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                        }
-                        break;
+                for (int i = 0; i < Flip3.Length; i++)
+                {
+                    img_Hare3.Image = Flip3[i];
+                    img_Hare3.Refresh();
+                    Thread.Sleep(100);
+                }
 
-                        case 3:
-                            winner = "Flying (Groen)";
+                img_Hare3.Image = Properties.Resources.Hare_3;
+            }
+            if (Hares[3].MyPictureBox.Location.X <= 0)
+            {
+                winner = "Flying (Groen)";
+                lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
+                Player1.Stop();
+                Player2.Play();
 
-                        for (int e = 0; e < Flip4.Length; e++)
-                        {
-                            img_Hare4.Image = Flip4[e];
-                            img_Hare4.Refresh();
-                            Thread.Sleep(100);
-                            img_Hare4.Image = Properties.Resources.Hare_4;
-                            lbl_Winner.Text = winner + ": Heeft deze ronde \ngewonnen!";
-                        }
-                        break;
-                    }
+                for (int i = 0; i < Flip4.Length; i++)
+                {
+                    img_Hare4.Image = Flip4[i];
+                    img_Hare4.Refresh();
+                    Thread.Sleep(100);
+                }
+
+                img_Hare4.Image = Properties.Resources.Hare_4;
+            }
+
+            for (int i = 0; i < playerHare.Length; i++)
+            {
+                AddPlayerCashLabel();
+                if (playerHare[i] == winner)
+                {
+                    Players[i].Collect(playerBet[i]);
+                    lbl_PlayerCash[i].Text = Players[i].UpdateLabels();
+
+
+
+                    playerHare[0] = null;
+                    playerHare[1] = null;
+                    playerHare[2] = null;
                 }
             }
         }
