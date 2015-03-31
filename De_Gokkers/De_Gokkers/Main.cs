@@ -46,14 +46,14 @@ namespace De_Gokkers
         {
             for (int i = 0; i < 3; i++)
             {
-                if (Hares[i].AmountOfWinners == 1)
+                if (Hares[i].amountOfWinners == 1)
                 {
                     lbl_Winner.Text = winner + " heeft deze ronde \ngewonnen!";
                 }
                 else
                 {
                     lbl_Winner.Text = lbl_Winner.Text + "\nNet als " + winner;
-                    if (Hares[i].AmountOfWinners > 2)
+                    if (Hares[i].amountOfWinners > 2)
                     {
                         lbl_Winner.Text = lbl_Winner.Text + "\nen " + winner;
                     }
