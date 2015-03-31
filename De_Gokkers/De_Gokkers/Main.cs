@@ -197,7 +197,7 @@ namespace De_Gokkers
                     Players[i].Collect(playerBet[i]);
                     lbl_PlayerCash[i].Text = Players[i].UpdateLabels();
 
-
+                    //line
 
                     playerHare[0] = null;
                     playerHare[1] = null;
